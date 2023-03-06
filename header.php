@@ -22,21 +22,34 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri() . '/MorphSVGPlugin3.js';?>"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script>
+
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
-	<?php wp_head(); ?>
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+	<?php wp_head();?>
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<nav class="relative bg-white sticky top-0 z-30 w-full px-2 py-2 bg-white sm:px-4 shadow-sm">
-		<div class="container mx-auto flex justify-between items-center sm:pr-10">
+	<nav class="relative bg-white sticky top-0 z-30 w-full bg-white shadow-sm">
+		<div class="container mx-auto flex justify-between items-center px-5 py-4">
+			<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+				if ($custom_logo_id) :
+					$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+			?>
 			<a href="<?php echo get_home_url(); ?>" name="logo">
 				<span class="text-2xl font-extrabold text-blue-600">
-					 <img alt="logo" class="max-w-[170px]" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_default.png">
+					 <img alt="logo" class="max-w-[170px]" src="<?php echo $image[0]; ?>">
 				</span>
 			</a>
+			<?php endif; ?>
 			<?php 
 				wp_nav_menu(array(
 					'menu'				=> "Main menu", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
