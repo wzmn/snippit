@@ -4,14 +4,6 @@
 get_header();
 
 ?>
-<style>
-	.container {
-		background: white;
-	}
-	body {
-		background: #fafafa;
-	}
-</style>
 		<div class="container mx-auto mb-40" hero>
 			<style>
 				.hero-blue-square, .hero-green-square {
@@ -31,7 +23,7 @@ get_header();
 				}
 
 			</style>
-			<div class="banner flex items-center justify-center min-h-[50vh] relative text-center truncate whitespace-normal">
+			<div class="banner flex items-center justify-center min-h-[80vh] relative text-center truncate whitespace-normal">
 				<div class="w-full md:w-4/6">
 					<div class="font-light mb-10">YOUR DAILY NEEDS, JUST A CLICK AWAY</div>
 					<div class="text-7xl">
@@ -144,7 +136,7 @@ get_header();
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-shadow.png" class="absolute h-full arrowish z-0 hidden xl:block"  data-aos="fade-right" data-aos-delay="150">
 		</div>
-		<div class="container mx-auto mb-40 py-10" how-it-works>
+		<div class="container mx-auto mb-40 py-10 shadow" how-it-works>
 			<style>
 				.block .curve {
 					border-radius: 3vw;
@@ -237,7 +229,7 @@ get_header();
 			</div>
 		</div> -->
 
-		<div class="container mx-auto mb-40" download-now>
+		<div class="container mx-auto mb-40 shadow" download-now>
 			<style>
 				.download {
 					border-radius: 50px;
@@ -302,7 +294,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto mb-40 p-10" join-now>
+		<div class="container mx-auto mb-40 p-10 shadow" join-now>
 			<style>
 				/* .blue-corner, .green-corner, .blue-square, .green-square {
 					z-index: -1;

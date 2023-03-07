@@ -20,7 +20,7 @@
 				Essential Services, at Your Fingertips
 			</div>
 			<div class="flex mb-10 flex-col md:flex-row">
-				<div class="flex-1">
+				<div class="flex-1 mb-10">
 				<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 					if ($custom_logo_id) { ?>
 						<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[190px] mb-3">
@@ -37,7 +37,7 @@
 					</div>
 
 				</div>
-				<div class="flex-1">
+				<div class="flex-1 mb-10">
 					<div class="font-bold">Company</div>
 					<ul class="list-none">
 						<li class="py-1">About Us</li>
@@ -45,7 +45,7 @@
 						<li class="py-1">Marketplace</li>
 					</ul>
 				</div>
-				<div class="flex-1">
+				<div class="flex-1 mb-10">
 					<div class="font-bold">Media</div>
 					<ul class="list-none">
 						<li class="py-1">About Us</li>
@@ -53,7 +53,7 @@
 						<li class="py-1">Marketplace</li>
 					</ul>
 				</div>
-				<div class="flex-1">
+				<div class="flex-1 mb-10">
 					<div class="font-bold">Contact</div>
 					<ul class="list-none">
 						<li class="py-1">About Us</li>
@@ -61,7 +61,7 @@
 						<li class="py-1">Marketplace</li>
 					</ul>
 				</div>
-				<div class="flex-1">
+				<div class="flex-1 mb-10">
 					<div class="font-bold">Address</div>
 					<p>22-30 Wallace Avenue, Point Cook, VIC – 3030</p>
 				</div>
@@ -87,7 +87,7 @@
 		document.addEventListener("DOMContentLoaded", function(){
 			AOS.init();
 			ifExists('[how-it-works]', ()=>{
-				return;
+
 				let hiw = document.querySelector("[how-it-works]");
 				
 				tl = gsap.timeline({
