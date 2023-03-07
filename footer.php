@@ -61,6 +61,10 @@
 						<li class="py-1">Marketplace</li>
 					</ul>
 				</div>
+				<div class="flex-1">
+					<div class="font-bold">Address</div>
+					<p>22-30 Wallace Avenue, Point Cook, VIC – 3030</p>
+				</div>
 			</div>
 		</div>
 		<div class="container mx-auto">

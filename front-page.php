@@ -4,12 +4,50 @@
 get_header();
 
 ?>
+<style>
+	.container {
+		background: white;
+	}
+	body {
+		background: #fafafa;
+	}
+</style>
 		<div class="container mx-auto mb-40" hero>
-			<div class="banner relative truncate whitespace-normal">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.png" alt="">
+			<style>
+				.hero-blue-square, .hero-green-square {
+					/* z-index: -1; */
+				}
+				.hero-blue-square {
+					top: 50%;
+					left: 250px;
+					transform: translate(-50%, -50%);
+					max-width: 500px;
+				}
+				.hero-green-square {
+					top: 50%;
+					right: 250px;
+					transform: translate(50%, -50%);
+					max-width: 500px;
+				}
+
+			</style>
+			<div class="banner flex items-center justify-center min-h-[50vh] relative text-center truncate whitespace-normal">
+				<div class="w-full md:w-4/6">
+					<div class="font-light mb-10">YOUR DAILY NEEDS, JUST A CLICK AWAY</div>
+					<div class="text-7xl">
+						Essential Services, Simplified
+					</div>
+				</div>
+				<div class="absolute hero-blue-square">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/blue-overlay.png" data-aos="fade-left" data-aos-delay="200">
+				</div>
+				<div class="absolute hero-green-square">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/yellow-overlay.png" data-aos="fade-right">
+				</div>
 			</div>
+
 		</div>
-		<div class="container mx-auto mb-40" section2>
+		<!-- <div class="container mx-auto mb-40" section2>
 			<style>
 				.img-corner {
 					max-width: 100px;
@@ -27,7 +65,7 @@ get_header();
 					<p class="text-base leading-9" data-aos="fade-up" data-aos-delay="100">Say goodbye to the hassle of searching for separate services as Snippit provides you with a diverse range of services catering to all your requirements. From energy-saving solutions to home repairs and medical care, Snippit has got you covered. Get services that save you time & also fit your budget. Experience top-notch quality at budget-friendly prices.</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="container mx-auto mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
 		</div>
@@ -106,42 +144,42 @@ get_header();
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-shadow.png" class="absolute h-full arrowish z-0 hidden xl:block"  data-aos="fade-right" data-aos-delay="150">
 		</div>
-		<div class="container mx-auto mb-40" how-it-works>
+		<div class="container mx-auto mb-40 py-10" how-it-works>
 			<style>
 				.block .curve {
 					border-radius: 3vw;
 					overflow: hidden;
 				}
 			</style>
-			<div class="text-3xl font-bold">How it Works</div>
+			<div class="text-3xl font-bold pl-10">How it Works</div>
 			<div class="flex flex-wrap">
 				<div class="block w-3/6 text-center" data-aos="fade-right" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve">
+					<div class="m-4 md:m-12 curve max-h-[70vh]">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block1.png" class="parallax-block">
 					</div>
 					<div class="text-xl">All your essential services in one tap</div>
 				</div>
 				<div class="block w-3/6 text-center mt-28" data-aos="fade-left" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve">
+					<div class="m-4 md:m-12 curve max-h-[70vh]">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block3.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Login made easy. Effortless access to everything.</div>
 				</div>
 				<div class="block w-3/6 text-center" data-aos="fade-right" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve">
+					<div class="m-4 md:m-12 curve max-h-[70vh]">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block2.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Sign up in seconds, book an appointment</div>
 				</div>
 				<div class="block w-3/6 text-center mt-28" data-aos="fade-left" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve">
+					<div class="m-4 md:m-12 curve max-h-[70vh]">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block4.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Upgrade your energy, upgrade your life</div>
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto mb-40" testimonials>
+		<!-- <div class="container mx-auto mb-40" testimonials>
 			<style>
 				.testimonials [class|=test] {
 					top: calc(50% - 23px);
@@ -191,13 +229,13 @@ get_header();
 					</div>
 				</div>
 				<div class="test-left" data-aos="fade-right">
-					<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+					<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
 				</div>
 				<div class="test-right" data-aos="fade-left" data-aos-delay="200">
-					<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+					<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="container mx-auto mb-40" download-now>
 			<style>
@@ -205,7 +243,7 @@ get_header();
 					border-radius: 50px;
 				}
 			</style>
-			<div class="flex flex-col items-center py-20 md:py-36">
+			<div class="flex flex-col items-center py-20 md:py-48">
 				<div class="mb-10 text-4xl md:text-8xl" data-aos="fade-up">Download Now</div>
 				<div class="flex flex-col md:flex-row">
 					<button class="download text-xl shadow px-20 py-2 flex items-center mr-5 md:mr-20 mb-10 md:mb-0" data-aos="fade-up"  data-aos-delay="200">
@@ -264,11 +302,11 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto mb-40" join-now>
+		<div class="container mx-auto mb-40 p-10" join-now>
 			<style>
-				.blue-corner, .green-corner, .blue-square, .green-square {
+				/* .blue-corner, .green-corner, .blue-square, .green-square {
 					z-index: -1;
-				}
+				} */
 				.blue-corner {
 					max-width: 100px;
 					right: 0;
@@ -300,7 +338,7 @@ get_header();
 					<button class="download text-xl shadow px-20 py-2 flex items-center mr-5 md:mr-20 mb-10 md:mb-0" data-aos="fade-up">
 						<div>
 							<div class="font-semibold">
-								<a href="<?php echo get_site_url() . "/marketplace";?>">Join Now</a>
+								<a class="text-xl" href="<?php echo get_site_url() . "/marketplace";?>">Join Now</a>
 							</div>
 						</div>
 					</button>

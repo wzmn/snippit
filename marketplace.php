@@ -6,10 +6,10 @@
     	while ( have_posts() ) : the_post();
  ?>
 		<div class="container mx-auto mb-40" hero>
-			<div class="banner relative truncate whitespace-normal min-h-[400px] flex items-center">
-				<div class="w-full md:w-2/4">
-					<div class="font-light">SNIPPIT BUSINESSES</div>
-					<div class="text-6xl">
+			<div class="banner flex items-center justify-center min-h-[400px] relative text-center truncate whitespace-normal">
+				<div class="w-full md:w-4/6">
+					<div class="font-light mb-10">SNIPPIT BUSINESSES</div>
+					<div class="text-7xl">
 						Join the Business Revolution with Snippit!
 					</div>
 				</div>
