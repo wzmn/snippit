@@ -29,9 +29,9 @@ get_header();
 			</div>
 		</div>
 		<div class="container mx-auto mb-40" parallax>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
 		</div>
-		<div class="container mx-auto mb-40 relative" features>
+		<div class="container mx-auto mb-40 relative" features id="features">
 			<style>
 				.arrowish {
 					top: -2px;
@@ -106,35 +106,36 @@ get_header();
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-shadow.png" class="absolute h-full arrowish z-0 hidden xl:block"  data-aos="fade-right" data-aos-delay="150">
 		</div>
-		<div class="container mx-auto mb-40">
+		<div class="container mx-auto mb-40" how-it-works>
 			<style>
 				.block .curve {
 					border-radius: 3vw;
 					overflow: hidden;
 				}
 			</style>
+			<div class="text-3xl font-bold">How it Works</div>
 			<div class="flex flex-wrap">
 				<div class="block w-3/6 text-center" data-aos="fade-right" data-aos-offset="300">
 					<div class="m-4 md:m-12 curve">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block1.jpg" class="parallax-block">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block1.png" class="parallax-block">
 					</div>
 					<div class="text-xl">All your essential services in one tap</div>
 				</div>
 				<div class="block w-3/6 text-center mt-28" data-aos="fade-left" data-aos-offset="300">
 					<div class="m-4 md:m-12 curve">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block3.jpg" class="parallax-block">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block3.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Login made easy. Effortless access to everything.</div>
 				</div>
 				<div class="block w-3/6 text-center" data-aos="fade-right" data-aos-offset="300">
 					<div class="m-4 md:m-12 curve">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block2.jpg" class="parallax-block">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block2.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Sign up in seconds, book an appointment</div>
 				</div>
 				<div class="block w-3/6 text-center mt-28" data-aos="fade-left" data-aos-offset="300">
 					<div class="m-4 md:m-12 curve">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block4.jpg" class="parallax-block">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block4.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Upgrade your energy, upgrade your life</div>
 				</div>
@@ -197,7 +198,8 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto mb-40">
+
+		<div class="container mx-auto mb-40" download-now>
 			<style>
 				.download {
 					border-radius: 50px;
@@ -259,6 +261,61 @@ get_header();
 							<div class="font-semibold">PLAY STORE</div>
 						</div>
 					</button>
+				</div>
+			</div>
+		</div>
+		<div class="container mx-auto mb-40" join-now>
+			<style>
+				.blue-corner, .green-corner, .blue-square, .green-square {
+					z-index: -1;
+				}
+				.blue-corner {
+					max-width: 100px;
+					right: 0;
+					top: 0;
+				}
+				.green-corner {
+					max-width: 100px;
+					left: 0;
+					bottom: 0;
+				}
+				.blue-square {
+					top: 50%;
+					left: 25%;
+					transform: translate(-50%, -50%);
+					max-width: 500px;
+				}
+				.green-square {
+					top: 50%;
+					right: 25%;
+					transform: translate(50%, -50%);
+					max-width: 500px;
+				}
+
+			</style>
+			<div class="flex flex-col items-center py-20 md:py-36 px-10 relative">
+				<div class="mb-5 text-3xl md:text-3xl" data-aos="fade-up">Collaborate, upgrade, and grow with Snippit.</div>
+				<div class="mb-10 text-3xl md:text-3xl" data-aos="fade-up">The marketplace for energy efficiency buyers and sellers!</div>
+				<div class="flex flex-col md:flex-row">
+					<button class="download text-xl shadow px-20 py-2 flex items-center mr-5 md:mr-20 mb-10 md:mb-0" data-aos="fade-up">
+						<div>
+							<div class="font-semibold">
+								<a href="<?php echo get_site_url() . "/marketplace";?>">Join Now</a>
+							</div>
+						</div>
+					</button>
+				</div>
+				<div class="absolute blue-corner">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/corner-blue.png" data-aos="fade-left">
+				</div>
+				<div class="absolute green-corner">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/corner-green.png" data-aos="fade-right">
+				</div>
+				<div class="absolute blue-square">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/blue-overlay.png" data-aos="fade-left">
+				</div>
+				<div class="absolute green-square">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/green-overlay.png" data-aos="fade-right">
 				</div>
 			</div>
 		</div>

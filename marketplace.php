@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="container mx-auto mb-40" parallax>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
 		</div>
 		<style>
 			.image-container {
@@ -236,6 +236,7 @@
 					}, 0)
 					.to(svg, {
 						attr: { 
+							// zoom out
 							viewBox: "0 0 700 550"
 						},
 						duration: 0.1,
@@ -245,29 +246,29 @@
 						fill:"transparent", 
 						stroke:"black", 
 						duration: 0.2,
-					})
+					}, 1)
 					.to(rightEye, {
 						morphSVG:`.eye-right-${i}`,
-						duration: 0.1,
-					})
+						duration: 0.33,
+					}, 0)
 					.to(rightPupil, {
 						morphSVG:`.pupil-right-${i}`,
-						duration: 0.1,
-					})
+						duration: 0.33,
+					}, 0)
 					.to(leftEye, {
 						morphSVG:`.eye-left-${i}`,
-						duration: 0.1,
-					})
+						duration: 0.33,
+					}, 0)
 					.to(leftPupil, {
 						morphSVG:`.pupil-left-${i}`,
-						duration: 0.1,
-					})
+						duration: 0.33,
+					}, 0)
 					.to(svg, {
 						attr: { 
 							viewBox: viewBox[i]
 						},
 						duration: 0.3,
-					}, 2);
+					}, 3);
 				}
 
 				gsap.registerPlugin(ScrollTrigger);
@@ -294,7 +295,6 @@
 								delay: 0.1
 							},
 							onToggle: (self)=> {
-								console.log(image, self)
 								image.classList.toggle('wavy')
 							},
 							start: () => "top -" + (window.innerHeight * (i + 0.5)),

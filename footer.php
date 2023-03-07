@@ -80,33 +80,40 @@
 			document.querySelector('.mobile-menu').classList.toggle('active')
 			document.querySelector('body').classList.toggle('menu-open')
 		}
-		window.addEventListener('scroll',(event) => {
-			if (!document.body.classList.contains("home")) return;
-			if (window.scrollY > 2748 && window.scrollY < 3000) {
-				document.body.classList.add("green")
-			} else {
-				document.body.classList.remove("green")
-			}
-			if (window.scrollY > 3000 && window.scrollY < 3500) {
-				document.body.classList.add("cyan")
-			} else {
-				document.body.classList.remove("cyan")
-			}
-			if (window.scrollY > 3500 && window.scrollY < 3750) {
-				document.body.classList.add("yellow")
-			} else {
-				document.body.classList.remove("yellow")
-			}
-			if (window.scrollY > 3750 && window.scrollY < 4500) {
-				document.body.classList.add("blue")
-			} else {
-				document.body.classList.remove("blue")
-			}
-		});
-
 		document.addEventListener("DOMContentLoaded", function(){
-			//var controller = new ScrollMagic.Controller();
 			AOS.init();
+			ifExists('[how-it-works]', ()=>{
+				return;
+				let hiw = document.querySelector("[how-it-works]");
+				
+				tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: "[how-it-works]",
+						// markers: true,
+						start: () => "top center",
+						end: () => "+=" + hiw.offsetHeight,	
+						onLeave: ()=>{
+							gsap.to(document.body, {
+								background: "white"
+							})
+						},					
+						toggleActions: "play none reverse none",
+						invalidateOnRefresh: true,
+					}
+				});
+				console.log(tl)
+
+				tl.to(document.body, {
+					duration: 0.33,
+					background: "#e7efef"
+				}).to(document.body, {
+					duration: 0.33,
+					background: "#ecf6da"
+				}).to(document.body, {
+					duration: 0.33,
+					background: "#d6e9fb"
+				})
+			})
 			ifExists('.siema-testimonials', function (element) {
 				window.banner = new Siema({
 				  selector: '.siema-testimonials',
