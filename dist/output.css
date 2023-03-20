@@ -1420,6 +1420,14 @@ h1 {
   top: -1px;
 }
 
+.hide-inside {
+  display: none !important;
+}
+
+.home .hide-inside {
+  display: block !important;
+}
+
 body {
   transition: background 0.4s ease;
 }

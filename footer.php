@@ -39,32 +39,28 @@
 				</div>
 				<div class="flex-1 mb-10">
 					<div class="font-bold">Company</div>
-					<ul class="list-none">
-						<li class="py-1">About Us</li>
-						<li class="py-1">Why Snippit</li>
-						<li class="py-1">Marketplace</li>
-					</ul>
+					<p>22-30 Wallace Avenue, Point Cook, VIC – 3030</p>
 				</div>
 				<div class="flex-1 mb-10">
-					<div class="font-bold">Media</div>
+					<div class="font-bold">Quick Links</div>
 					<ul class="list-none">
-						<li class="py-1">About Us</li>
-						<li class="py-1">Why Snippit</li>
-						<li class="py-1">Marketplace</li>
+						<li class="py-1">Privacy Policy</li>
+						<li class="py-1">Refund Policy</li>
+						<li class="py-1">Terms & Conditions</li>
 					</ul>
 				</div>
 				<div class="flex-1 mb-10">
 					<div class="font-bold">Contact</div>
 					<ul class="list-none">
-						<li class="py-1">About Us</li>
-						<li class="py-1">Why Snippit</li>
-						<li class="py-1">Marketplace</li>
+						<li class="py-1">1300589704</li>
+						<li class="py-1">enquiries@snippit.com.au</li>
+						<li class="py-1">support@snippit.com.au</li>
 					</ul>
 				</div>
-				<div class="flex-1 mb-10">
+				<!-- <div class="flex-1 mb-10">
 					<div class="font-bold">Address</div>
 					<p>22-30 Wallace Avenue, Point Cook, VIC – 3030</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="container mx-auto">

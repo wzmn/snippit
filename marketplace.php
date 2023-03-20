@@ -182,12 +182,12 @@
 					</svg>
 				</div>
 				<div class="flex justify-between flex-col text-container relative">
-					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem] panel-text-1">
-						<div class="font-light">Experience Elevated Everywhere</div>
-						<div class="text-5xl mb-2">
+					<div class="flex flex-col justify-center pr-10 pl-4 panel-text panel-text-1">
+						<div class="font-light mb-5 text-2xl">Experience Elevated Everywhere</div>
+						<div class="mb-8 text-7xl">
 							Sustainable Future 
 						</div>
-						<p>Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
+						<p class="text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
 						<div class="font-light mb-5 text-2xl">Revolutionizing the Ordinary</div>
@@ -196,12 +196,12 @@
 						</div>
 						<p class="text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
 					</div>
-					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
-						<div class="font-light">Innovate, Delight, Expderience</div>
-						<div class="text-5xl mb-2">
+					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
+						<div class="font-light mb-5 text-2xl">Innovate, Delight, Expderience</div>
+						<div class="mb-8 text-7xl">
 							Assess with ease
 						</div>
-						<p>Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
+						<p class="text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-48">Let's get Started</div>

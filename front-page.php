@@ -136,7 +136,7 @@ get_header();
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-shadow.png" class="absolute h-full arrowish z-0 hidden xl:block"  data-aos="fade-right" data-aos-delay="150">
 		</div>
-		<div class="container mx-auto mb-40 py-10 shadow" how-it-works>
+		<div class="container mx-auto mb-40 py-10 shadow" how-it-works id="how-it-works">
 			<style>
 				.block .curve {
 					border-radius: 3vw;
