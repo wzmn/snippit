@@ -59,7 +59,7 @@ get_header();
 			</div>
 		</div> -->
 		<div class="container mx-auto mb-40" parallax>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
 		</div>
 		<div class="container mx-auto mb-40 relative" features id="features">
 			<style>
@@ -146,26 +146,26 @@ get_header();
 			<div class="text-3xl font-bold pl-10">How it Works</div>
 			<div class="flex flex-wrap">
 				<div class="block w-3/6 text-center" data-aos="fade-right" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve max-h-[70vh]">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block1.png" class="parallax-block">
+					<div class="m-4 [md:m-32] curve [max-h-[70vh]]">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-1.png" class="parallax-block">
 					</div>
 					<div class="text-xl">All your essential services in one tap</div>
 				</div>
 				<div class="block w-3/6 text-center mt-28" data-aos="fade-left" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve max-h-[70vh]">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block3.png" class="parallax-block">
+					<div class="m-4 [md:m-32] curve [max-h-[70vh]]">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-2.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Login made easy. Effortless access to everything.</div>
 				</div>
-				<div class="block w-3/6 text-center" data-aos="fade-right" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve max-h-[70vh]">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block2.png" class="parallax-block">
+				<div class="block w-3/6 text-center" data-aos-offset="300">
+					<div class="m-4 [md:m-32] curve [max-h-[70vh]]">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-3.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Sign up in seconds, book an appointment</div>
 				</div>
-				<div class="block w-3/6 text-center mt-28" data-aos="fade-left" data-aos-offset="300">
-					<div class="m-4 md:m-12 curve max-h-[70vh]">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block4.png" class="parallax-block">
+				<div class="block w-3/6 text-center mt-28" data-aos-offset="300">
+					<div class="m-4 [md:m-32] curve [max-h-[70vh]]">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-4.png" class="parallax-block">
 					</div>
 					<div class="text-xl">Upgrade your energy, upgrade your life</div>
 				</div>

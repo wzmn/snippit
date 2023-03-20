@@ -15,10 +15,18 @@
 				</div>
 			</div>
 		</div>
+		<div class="banner relative truncate whitespace-normal mb-40 mx-auto container min-h-[864px]">
+			<video autoplay muted loop playsinline>
+				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.mp4" type="video/mp4">
+			</video>
+		</div>
 		<div class="container mx-auto mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
 		</div>
 		<style>
+			.border-shadow {
+				box-shadow: 0px 3px 6px #0000000D;
+			}
 			.image-container {
 				width: 100%;
 				max-width: 350px;
@@ -70,6 +78,46 @@
 				position: absolute;
 				left: 1rem;
    				top: -1rem;
+			}
+			.loader svg {
+				width: 20px;
+				height: 20px;
+				fill: white;
+				opacity: 0;
+			}
+			.loader {
+				position: absolute;
+				width: 60px;
+				background: #0a84ff;
+				height: 100%;
+				top: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				left: calc(50% + 30px);
+			}
+			.loader.active svg {
+				animation: loader 8s infinite;
+				opacity: 1;
+			}
+			@keyframes loader {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(1440deg);
+				}
+			}
+			.error-message {
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			.has-error .error-message {
+				opacity: 1;
+			}
+			.error-message div {
+				color: red;
+				margin-bottom: 0.5rem;
 			}
 		</style>
 		<div class="container mx-auto mb-40">
@@ -141,12 +189,12 @@
 						</div>
 						<p>Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
 					</div>
-					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
-						<div class="font-light">Revolutionizing the Ordinary</div>
-						<div class="text-5xl mb-2">
+					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
+						<div class="font-light mb-5 text-2xl">Revolutionizing the Ordinary</div>
+						<div class="mb-8 text-7xl">
 							Stress-Free Appointments
 						</div>
-						<p>Say goodbye to waiting on hold and playing phone tag with receptionists. Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple</p>
+						<p class="text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-light">Innovate, Delight, Expderience</div>
@@ -156,20 +204,44 @@
 						<p>Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
-						<div class="font-semibold text-2xl mb-2 mt-28">Let's get Started</div>
+						<div class="font-semibold text-2xl mb-2 mt-48">Let's get Started</div>
 						<div class="font-light mb-2">Create your account</div>
 						<div>
-							<form action="/">
-								<label class="mb-2" for="email">
-									<div class="mb-3">E-mail</div>
-									<input class="border border-[#d4d4d8] mb-2 p-2 w-full" type="email" name="email" />
+							<form autocomplete="on">
+								<label class="mb-2" for="name">
+									<div class="mb-3">Company Name</div>
+									<input class="border-shadow mb-2 p-2 w-full" type="text" name="name" required />
 								</label>
-								<label for="password">
-									<div class="mb-3">Password</div>
-									<input class="mb-10 border border-[#d4d4d8] p-2 w-full" type="password" name="password" value=""/>
-								</label>
-								<div>
-									<input class="bg-blue p-2 text-white w-full" type="submit" value="Sign Up">
+								<div class="grid grid-cols-2 gap-x-4">
+									<label class="mb-2" for="abn">
+										<div class="mb-3">Company ABN</div>
+										<input class="border-shadow mb-2 p-2 w-full" type="text" name="abn" required />
+									</label>
+									<label class="mb-2" for="owner.email">
+										<div class="mb-3">Email</div>
+										<input class="border-shadow mb-2 p-2 w-full" type="email" name="owner.email" required />
+									</label>
+									<label class="mb-2" for="address.pincode">
+										<div class="mb-3">Company Pincode</div>
+										<input class="border-shadow mb-2 p-2 w-full" type="number" name="address.pincode" required />
+									</label>
+									<label class="mb-2"  for="owner.mobile_number">
+										<div class="mb-3">Mobile Number</div>
+										<input class="mb-10 border-shadow p-2 w-full" type="text" name="owner.mobile_number" value="" required />
+									</label>
+								</div>
+								<div class="relative">
+									<input class="bg-blue p-2 text-white w-full rounded-[0.375rem]" type="submit" value="Sign Up">
+									<div class="loader">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+											<path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/>
+										</svg>
+									</div>
+								</div>
+								<div class="error-message text-center py-4">
+									<div class="font-light">
+										An error has occured, please check the fields and try again
+									</div>
 								</div>
 							</form>
 						</div>
@@ -182,11 +254,6 @@
 							<feDisplacementMap in="SourceGraphic" in2="NOISE" scale="25"></feDisplacementMap>
 							<animate xlink:href="#turbulence" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
 						</filter>
-						<defs>
-							<pattern id="img1" patternUnits="userSpaceOnUse" x="0" y="0" height="100%" width="100%">
-								<image xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/block1.jpg"  x="0" y="0" height="650" width="100%" preserveAspectRatio=""/>
-							</pattern>
-						</defs>
 						<rect class="myfill" filter="url(#turbulence)" fill="url(#img1)" width="480" height="650"></rect>
 					</svg>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-yellow.png" class="absolute im-1"> 
@@ -204,7 +271,7 @@
 				document.querySelectorAll("circle").forEach( (a) => {
 					MorphSVGPlugin.convertToPath(a);
 				})
-
+				
 				let smiley = document.querySelector(".smiley");
 				let svg = smiley.querySelector("svg");
 				let smile = document.querySelector(".smile-0")
@@ -226,7 +293,6 @@
 					/*face3*/ "0 0 606.08 560",
 					/*face4*/ "0 0 563.01 546",
 				]
-
 				window.changeFace = function(i) {
 					tl = gsap.timeline();
 
@@ -276,24 +342,24 @@
 				gsap.set(".image-container>img", {
 					zIndex: (i, target, targets) => targets.length - i
 				});
-				gsap.set(".text-container>div", {
-					zIndex: (i, target, targets) => targets.length - i
-				});
+				// gsap.set(".text-container>div", {
+				// 	zIndex: (i, target, targets) => targets.length - i
+				// });
 
-				var images = gsap.utils.toArray('.image-container>img');
-				var texts = gsap.utils.toArray('.text-container>div');
-				var backgroundColors = ["#fbf7e3", "#e7efef", "#ecf6da", "#d6e9fb"];
+				let images = gsap.utils.toArray('.image-container>img');
+				let texts = gsap.utils.toArray('.text-container>div');
+				let backgroundColors = ["#fbf7e3", "#e7efef", "#ecf6da", "#d6e9fb"];
 
 				images.forEach((image, i) => {
 					if ( i == 3 ) return;
-					var tl = gsap.timeline({
+					let tl = gsap.timeline({
 						scrollTrigger: {
 							trigger: "#pin",
-							snap: {
-								snapTo: 1,
-								duration: { min: 0.4, max: 1 },
-								delay: 0.1
-							},
+							// snap: {
+							// 	snapTo: 0.5,
+							// 	duration: { min: 0.4, max: 1 },
+							// 	delay: 0.1
+							// },
 							onToggle: (self)=> {
 								image.classList.toggle('wavy')
 							},
@@ -311,17 +377,17 @@
 				});
 
 				texts.forEach((text, i) => {
-					var tl = gsap.timeline({
+					let tl = gsap.timeline({
 						scrollTrigger: {
 							trigger: "#pin",
 							start: () => "top -" + (window.innerHeight * i),
 							end: () => "+=" + window.innerHeight,
 							scrub: true,
-							snap: {
-								snapTo: 0.5,
-								duration: { min: 0.7, max: 1.7 },
-								delay: 0.1
-							},
+							// snap: {
+							// 	snapTo: 0.3,
+							// 	duration: { min: 0.7, max: 1 },
+							// 	delay: 0.2
+							// },
 							onEnter: ()=> {
 								changeFace(i)
 								document.body.style.background = backgroundColors[i];
@@ -334,6 +400,14 @@
 							invalidateOnRefresh: true,
 						}
 					})
+					if ( i == 3 ) {
+						tl.to(text, {
+							duration: 0.33,
+							opacity: 1,
+							y: "0%"
+						});
+						return;
+					};
 					tl.to(text, {
 						duration: 0.33,
 						opacity: 1,
@@ -341,7 +415,7 @@
 					}).to(text, {
 						duration: 0.33,
 						opacity: 0,
-						y: "-100%"
+						//y: "-100%"
 					}, 0.66);
 				});
 
@@ -360,19 +434,96 @@
 						})
 					},
 					onLeave: () => {
-							gsap.to(document.body, {
-							duration: 0.33,
-							background: "white"
-						})
+						// gsap.to(document.body, {
+						// 	duration: 0.33,
+						// 	background: "white"
+						// })
 					},
 					onLeaveBack: () => {
-							gsap.to(document.body, {
+						gsap.to(document.body, {
 							duration: 0.33,
 							background: "white"
 						})
 					},
 					invalidateOnRefresh: true,
 				});
+
+
+				document.forms[0].addEventListener("submit", (event) => {
+					event.preventDefault();
+					let form = event.target;
+					let loader = form.querySelector(".loader");
+					let error_message = form.querySelector(".error-message");
+					function addFormError(id, msg){
+						let html = document.createElement("div");
+						html.classList.add("font-light")
+						html.classList.add("mb-2")
+						html.id = id;
+						html.innerHTML = msg;
+						error_message.appendChild(html)
+					}
+
+					let output = new FormData(form)
+					output.append("status", "2");
+					output.append("owner.first_name", "fn");
+					output.append("owner.last_name", "ln");
+					output.append("company_type", "channel_partner");
+					let payload = {
+						owner: {},
+						address: {}
+					};
+
+					for (const [key, value] of output) {
+						let ownerObj = key.match(/(?:owner.)(.+)/);
+						let addressObj = key.match(/(?:address.)(.+)/);
+						
+						if (!!ownerObj){
+							payload["owner"][`${ownerObj[1]}`] = value
+							continue;
+						}
+						if (!!addressObj){
+							payload["address"][addressObj[1]] = value;
+							continue;
+						}
+						payload[key] = value;
+					}
+
+					loader.classList.toggle("active")
+
+					fetch("https://uat-services.snippit.com.au/api/v1/companies/", {
+						method: "POST",
+						headers: {
+							'Accept': 'application/json',
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(payload),
+					}).then(function(data){
+						console.error(data.status)
+						loader.classList.toggle("active")
+
+						data.json().then((res) => {
+							if (data.status !== 200){
+								form.classList.add("has-error")
+							}else{
+								form.classList.remove("has-error")
+							}
+							if (res.constructor===Object){
+								for (err in res){
+									if (res[err].constructor === Object){
+										for (msg in res[err]){
+											addFormError(msg, `Error with <b>${msg.split("_").join(" ")}</b>: ${res[err][msg]}`)
+										}
+									}else{
+										addFormError(err, `Error with <b>${err.split("_").join(" ")}</b>: ${res[err]}`)
+									}
+								}
+							}
+							
+						})
+					});
+				})
+
+
 			})
 			
 		</script>

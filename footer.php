@@ -14,7 +14,7 @@
 ?>
 
 </main>
-	<footer>
+	<footer class="bg-white">
 		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t border-b px-5">
 			<div class="text-3xl md:text-5xl w-3/5 font-light my-20">
 				Essential Services, at Your Fingertips
@@ -75,21 +75,70 @@
 		
 	</footer>
 	<script type="text/javascript">
-		function ifExists(selector, cb){
-			if (!!document.querySelector(selector)){
-				cb(document.querySelector(selector))
-			}
-		}
+		((w)=>{
+			Object.assign(w.__proto__, {
+				// ********************************************
+				// Add your global functions and variables here
+				// ********************************************
+				fillForm(){
+					let d  = document;
+					d.querySelector(`[name="name"]`).value = "XYZ69 LLC"
+					d.querySelector(`[name="abn"]`).value = "ABNXYZ6972"
+					d.querySelector(`[name="owner.email"]`).value = "wisemanf@cogncise.com"
+					d.querySelector(`[name="address.pincode"]`).value = "452001"
+					d.querySelector(`[name="owner.mobile_number"]`).value = "+611300589704"
+					document.querySelector(`[type="submit"]`).click()
+				},
+				ifExists(s, cb){
+					if (typeof s === 'string'){
+						if (!!d.querySelector(s)){
+							if (cb){
+								cb(Array.from(d.querySelectorAll(s)));
+							}else{
+								return true;
+							}
+						}else{
+							return false;
+						}
+					}else{
+						console.warn("Not a selector")
+					}					
+				}
+			})
+		})(window)
+
+
 		function toggleMobileMenu(){
 			document.querySelector('.mobile-menu').classList.toggle('active')
 			document.querySelector('body').classList.toggle('menu-open')
 		}
+
 		document.addEventListener("DOMContentLoaded", function(){
 			AOS.init();
-			ifExists('[how-it-works]', ()=>{
-
-				let hiw = document.querySelector("[how-it-works]");
+			ifExists('[hero] div.absolute>img', (e) => {
+				let hero = document.querySelector("[hero]");
 				
+				let tl = gsap.timeline({
+					duration: 0.1,
+					scrollTrigger: {
+						trigger: hero,
+						start: () => "top top",
+						end: () => "+=1000 center",
+						//markers: true,
+						onUpdate: self => {
+							e[0].style.transform = `rotate(${Math.round(self.progress.toFixed(4) * 180)}deg)`
+							e[1].style.transform = `rotate(-${Math.round(self.progress.toFixed(4) * 180)}deg)`
+						},
+						onEnterBack : ()=> {
+
+						},
+						toggleActions: "play none reverse none",
+						invalidateOnRefresh: true,
+					}
+				});
+			})
+			ifExists('[how-it-works]', ()=>{
+				let hiw = document.querySelector("[how-it-works]");
 				tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: "[how-it-works]",
@@ -101,11 +150,15 @@
 								background: "white"
 							})
 						},					
+						onLeaveBack: ()=>{
+							gsap.to(document.body, {
+								background: "white"
+							})
+						},	
 						toggleActions: "play none reverse none",
 						invalidateOnRefresh: true,
 					}
 				});
-				console.log(tl)
 
 				tl.to(document.body, {
 					duration: 0.33,
@@ -140,8 +193,8 @@
 			ifExists('.parallax', function(){
 				let image = document.getElementsByClassName('parallax');
 				new simpleParallax(image, {
-					delay: .6,
-					scale: 2,
+					delay: 0.8,
+					scale: 1.3,
 					transition: 'cubic-bezier(0,0,0,1)'
 				});
 			})
