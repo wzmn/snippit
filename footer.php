@@ -75,7 +75,7 @@
 		
 	</footer>
 	<script type="text/javascript">
-		((w)=>{
+		((w, d)=>{
 			Object.assign(w.__proto__, {
 				// ********************************************
 				// Add your global functions and variables here
@@ -105,7 +105,7 @@
 					}					
 				}
 			})
-		})(window)
+		})(window, document)
 
 
 		function toggleMobileMenu(){
