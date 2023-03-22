@@ -100,9 +100,11 @@
 							<a href="/privacy-policy/">Privacy Policy</a>
 						</li>
 						<li class="py-1">
-							<a href=""></a>
+							<a href="/refund-policy/">Refund Policy</a>
 						</li>
-						<li class="py-1">Terms & Conditions</li>
+						<li class="py-1">
+							<a href="/terms-conditions/">Terms & Conditions</a>
+						</li>
 					</ul>
 				</div>
 				<div class="flex-1 mb-5">
