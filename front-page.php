@@ -39,25 +39,11 @@ get_header();
 			</div>
 
 		</div>
-		<!-- <div class="container mx-auto mb-20 md:mb-40" section2>
-			<style>
-				.img-corner {
-					max-width: 100px;
-					left: -39px;
-					z-index: -1;
-					bottom: -50px;
-				}
-			</style>
-			<div class="flex">
-				<div class="w-1/4 relative">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/section-2.png" alt="section 2" data-aos="fade-up">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/corner-blue.png" alt="blue-corner" class="absolute img-corner" data-aos="fade-right">
-				</div>	
-				<div class="flex items-center w-3/4">
-					<p class="text-base leading-9" data-aos="fade-up" data-aos-delay="100">Say goodbye to the hassle of searching for separate services as Snippit provides you with a diverse range of services catering to all your requirements. From energy-saving solutions to home repairs and medical care, Snippit has got you covered. Get services that save you time & also fit your budget. Experience top-notch quality at budget-friendly prices.</p>
-				</div>
-			</div>
-		</div> -->
+		<div class="banner relative truncate whitespace-normal mb-20 md:mb-40 mx-auto container">
+			<video autoplay muted loop playsinline>
+				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/home.mp4" type="video/mp4">
+			</video>
+		</div>
 		<div class="container mx-auto mb-20 md:mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
 		</div>
@@ -228,7 +214,6 @@ get_header();
 				</div>
 			</div>
 		</div> -->
-
 		<div class="container mx-auto mb-20 md:mb-40 shadow" download-now>
 			<style>
 				.download {

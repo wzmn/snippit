@@ -265,9 +265,6 @@
 			</div>
 		</div>
 		<script>
-
-
-
 			document.addEventListener("DOMContentLoaded", function() {
 				document.querySelectorAll("circle").forEach( (a) => {
 					MorphSVGPlugin.convertToPath(a);
