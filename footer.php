@@ -14,10 +14,9 @@
 ?>
 <style>
 	.social-icons a {
-		background: red;
 		padding: 0px 8px;
 		border-radius: 50%;
-		color: antiquewhite;
+		color: white;
 		fill: white;
 		font-size: 1rem;
 		display: flex;
@@ -26,8 +25,8 @@
 		justify-content: center;
 		align-items: center;
 	}
-	a.twitter {
-		background: #1da1f2;
+	a.facebook {
+		background: #1877f2;
 	}
 	a.linkedin {
 		background: #004182;
@@ -54,13 +53,13 @@
 					<div class="mb-3">One stop platform for essential services</div>
 
 					<div class="flex social-icons">
-						<a href="#" class="mb-2 mr-2 twitter">
-							<i class="fa fa-twitter"></i>
+						<a href="https://www.facebook.com/Snippit-105872775751433" target="_blank" class="mb-2 mr-2 facebook">
+							<i class="fa fa-facebook"></i>
 						</a>
-						<a href="#" class="mb-2 mr-2 linkedin">
+						<a href="https://www.linkedin.com/company/snippit-pty-ltd/" target="_blank" class="mb-2 mr-2 linkedin">
 							<i class="fa fa-linkedin"></i>
 						</a>
-						<a href="#" class="mb-2 mr-2 instagram">
+						<a href="https://www.instagram.com/snippit_pty/" target="_blank" class="mb-2 mr-2 instagram">
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 								<g>
 									<g>
@@ -92,13 +91,17 @@
 				</div>
 				<div class="flex-1 mb-5">
 					<div class="font-bold">Company</div>
-					<p class="text-base py-1">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
+					<p class="text-base py-1 mb-0">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
 				</div>
 				<div class="flex-1 mb-5">
 					<div class="font-bold">Quick Links</div>
 					<ul class="list-none">
-						<li class="py-1">Privacy Policy</li>
-						<li class="py-1">Refund Policy</li>
+						<li class="py-1">
+							<a href="/privacy-policy/">Privacy Policy</a>
+						</li>
+						<li class="py-1">
+							<a href=""></a>
+						</li>
 						<li class="py-1">Terms & Conditions</li>
 					</ul>
 				</div>

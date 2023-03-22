@@ -183,25 +183,25 @@
 				</div>
 				<div class="flex justify-between flex-col text-container relative">
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text panel-text-1">
-						<div class="font-light mb-5 text-2xl">Experience Elevated Everywhere</div>
-						<div class="mb-8 text-5xl md:text-7xl">
+						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Experience Elevated Everywhere</div>
+						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Sustainable Future 
 						</div>
-						<p class="text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
+						<p class="text-base md:text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
-						<div class="font-light mb-5 text-2xl">Revolutionizing the Ordinary</div>
-						<div class="mb-8 text-5xl md:text-7xl">
+						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Revolutionizing the Ordinary</div>
+						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Stress-Free Appointments
 						</div>
-						<p class="text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
+						<p class="text-base md:text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
-						<div class="font-light mb-5 text-2xl">Innovate, Delight, Expderience</div>
-						<div class="mb-8 text-5xl md:text-7xl">
+						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Innovate, Delight, Expderience</div>
+						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Assess with ease
 						</div>
-						<p class="text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
+						<p class="text-base md:text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-48">Let's get Started</div>
@@ -212,7 +212,7 @@
 									<div class="mb-3">Company Name</div>
 									<input class="border-shadow mb-2 p-2 w-full" type="text" name="name" required />
 								</label>
-								<div class="grid grid-cols-2 gap-x-4">
+								<div class="grid md:grid-cols-2 md:gap-x-4 gap-x-0 grid-cols-1">
 									<label class="mb-2" for="abn">
 										<div class="mb-3">Company ABN</div>
 										<input class="border-shadow mb-2 p-2 w-full" type="text" name="abn" required />

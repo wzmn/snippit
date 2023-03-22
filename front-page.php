@@ -78,7 +78,7 @@ get_header();
 				}
 			</style>
 			<div class="flex md:min-h-[400px] shadow flex-col lg:flex-row" data-aos="fade-right" data-aos-delay="50">
-				<div class="w-full lg:w-72 text-4xl px-10 flex flex-col relative items-center mb-10 justify-between">
+				<div class="w-full lg:w-72 text-3xl px-10 flex flex-col relative items-center mb-10 justify-between">
 					<div class="marker mb-10" data-aos-delay="100" data-aos="fade-down">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/green.png" class="max-w-[60px]">
 					</div>
@@ -238,7 +238,7 @@ get_header();
 			<div class="flex flex-col items-center py-20 md:py-48">
 				<div class="mb-10 text-4xl md:text-8xl" data-aos="fade-up">Download Now</div>
 				<div class="flex flex-col md:flex-row">
-					<button class="download text-xl shadow px-20 py-2 flex items-center mr-5 md:mr-20 mb-10 md:mb-0" data-aos="fade-up"  data-aos-delay="200">
+					<button class="download text-xl shadow px-10 md:px-20 py-2 flex items-center mr-0 md:mr-20 mb-10 md:mb-0" data-aos="fade-up"  data-aos-delay="200">
 						<svg xmlns="http://www.w3.org/2000/svg" width="28.74" height="35.253" viewBox="0 0 28.74 35.253" class="mr-5">
 						<g id="apple-logo" transform="translate(-2.104)">
 							<g id="Group_1147" data-name="Group 1147" transform="translate(2.104)">
@@ -252,7 +252,7 @@ get_header();
 							<div class="font-semibold">APP STORE</div>
 						</div>
 					</button>
-					<button class="download text-xl shadow px-20 py-2 flex items-center" data-aos="fade-up"  data-aos-delay="400">
+					<button class="download text-xl shadow px-10 md:px-20 py-2 flex items-center" data-aos="fade-up"  data-aos-delay="400">
 						<svg id="google-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mr-5" width="31.585" height="35.184" viewBox="0 0 31.585 35.184">
 							<defs>
 								<linearGradient id="linear-gradient" x1="0.915" y1="17.626" x2="-0.383" y2="16.957" gradientUnits="objectBoundingBox">
@@ -294,7 +294,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 p-10 shadow" join-now>
+		<div class="container mx-auto md:mb-40 p-10 shadow" join-now>
 			<style>
 				/* .blue-corner, .green-corner, .blue-square, .green-square {
 					z-index: -1;
@@ -323,11 +323,11 @@ get_header();
 				}
 
 			</style>
-			<div class="flex flex-col items-center py-20 md:py-36 px-10 relative">
-				<div class="mb-5 text-3xl md:text-3xl" data-aos="fade-up">Collaborate, upgrade, and grow with Snippit.</div>
-				<div class="mb-10 text-3xl md:text-3xl" data-aos="fade-up">The marketplace for energy efficiency buyers and sellers!</div>
+			<div class="flex flex-col items-center py-20 md:py-36 relative">
+				<div class="mb-5 text-3xl md:text-3xl font-light" data-aos="fade-up">Collaborate, upgrade, and grow with Snippit.</div>
+				<div class="mb-10 text-3xl md:text-3xl font-light" data-aos="fade-up">The marketplace for energy efficiency buyers and sellers!</div>
 				<div class="flex flex-col md:flex-row">
-					<button class="download text-xl shadow px-20 py-2 flex items-center mr-5 md:mr-20 mb-10 md:mb-0" data-aos="fade-up">
+					<button class="download text-xl shadow px-10 md:px-20 py-2 flex items-center mr-5 md:mr-20 mb-10 md:mb-0" data-aos="fade-up">
 						<div>
 							<div class="font-semibold">
 								<a class="text-xl" href="<?php echo get_site_url() . "/marketplace";?>">Join Now</a>
