@@ -200,34 +200,34 @@
 				tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: "[how-it-works]",
-						// markers: true,
+						//markers: true,
 						start: () => "top center",
 						end: () => "+=" + hiw.offsetHeight,	
-						onLeave: ()=>{
-							gsap.to(document.body, {
-								background: "white"
-							})
-						},					
-						onLeaveBack: ()=>{
-							gsap.to(document.body, {
-								background: "white"
-							})
-						},	
+						// onLeave: ()=>{
+						// 	gsap.to(document.body, {
+						// 		background: "white"
+						// 	})
+						// },					
+						// onLeaveBack: ()=>{
+						// 	gsap.to(document.body, {
+						// 		background: "white"
+						// 	})
+						// },	
 						toggleActions: "play none reverse none",
 						invalidateOnRefresh: true,
 					}
 				});
 
-				tl.to(document.body, {
-					duration: 0.33,
-					background: "#e7efef"
-				}).to(document.body, {
-					duration: 0.33,
-					background: "#ecf6da"
-				}).to(document.body, {
-					duration: 0.33,
-					background: "#d6e9fb"
-				})
+				// tl.to(document.body, {
+				// 	// duration: 0.33,
+				// 	background: "#e7efef"
+				// }).to(document.body, {
+				// 	// duration: 0.33,
+				// 	background: "#ecf6da"
+				// }).to(document.body, {
+				// 	// duration: 0.33,
+				// 	background: "#d6e9fb"
+				// })
 			})
 			ifExists('.siema-testimonials', function (element) {
 				window.banner = new Siema({

@@ -149,25 +149,25 @@ get_header();
 					<div class="m-4 md:ml-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-1.png" class="parallax-block">
 					</div>
-					<div class="md:ml-32 md:text-xl">All your essential services in one tap</div>
+					<div class="md:ml-32 md:text-xl mr-4">All your essential services in one tap</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6 mt-14 md:mt-28" data-aos="fade-left" data-aos-offset="300">
 					<div class="m-4 md:mr-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-2.png" class="parallax-block">
 					</div>
-					<div class="md:mr-32 md:text-xl">Login made easy. Effortless access to everything.</div>
+					<div class="md:mr-32 md:text-xl ml-4">Login made easy. Effortless access to everything.</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6" data-aos-offset="300">
 					<div class="m-4 md:ml-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-3.png" class="parallax-block">
 					</div>
-					<div class="md:ml-32 md:text-xl">Sign up in seconds, book an appointment</div>
+					<div class="md:ml-32 md:text-xl mr-4">Sign up in seconds, book an appointment</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6 mt-14 md:mt-28" data-aos-offset="300">
 					<div class="m-4 md:mr-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-4.png" class="parallax-block">
 					</div>
-					<div class="md:mr-32 md:text-xl">Upgrade your energy, upgrade your life</div>
+					<div class="md:mr-32 md:text-xl ml-4">Upgrade your energy, upgrade your life</div>
 				</div>
 			</div>
 		</div>
