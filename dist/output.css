@@ -681,20 +681,28 @@ video {
   margin-right: 0.5rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mr-0 {
+  margin-right: 0px;
 }
 
 .mt-48 {
   margin-top: 12rem;
 }
 
-.mr-0 {
-  margin-right: 0px;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -933,6 +941,10 @@ video {
   column-gap: 1rem;
 }
 
+.gap-x-0 {
+  column-gap: 0px;
+}
+
 .gap-x-10 {
   column-gap: 2.5rem;
 }
@@ -943,10 +955,6 @@ video {
 
 .gap-y-6 {
   row-gap: 1.5rem;
-}
-
-.gap-x-0 {
-  column-gap: 0px;
 }
 
 .truncate {
@@ -1112,6 +1120,16 @@ video {
   padding-right: 2rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1132,11 +1150,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1145,11 +1158,6 @@ video {
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .px-0 {
@@ -2245,16 +2253,16 @@ body.menu-open:after {
     margin-right: 5rem;
   }
 
-  .md\:mb-52 {
-    margin-bottom: 13rem;
-  }
-
   .md\:mb-5 {
     margin-bottom: 1.25rem;
   }
 
   .md\:mb-8 {
     margin-bottom: 2rem;
+  }
+
+  .md\:mb-52 {
+    margin-bottom: 13rem;
   }
 
   .md\:block {
@@ -2279,10 +2287,6 @@ body.menu-open:after {
 
   .md\:min-h-\[400px\] {
     min-height: 400px;
-  }
-
-  .md\:min-h-\[864px\] {
-    min-height: 864px;
   }
 
   .md\:w-2\/4 {
@@ -2386,32 +2390,24 @@ body.menu-open:after {
     line-height: 1;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:mb-40 {
-    margin-bottom: 10rem;
-  }
-
   .lg\:block {
     display: block;
   }
 
   .lg\:min-h-\[300px\] {
     min-height: 300px;
-  }
-
-  .lg\:min-h-\[864px\] {
-    min-height: 864px;
   }
 
   .lg\:w-72 {
