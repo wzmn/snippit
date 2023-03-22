@@ -12,36 +12,89 @@
  */
 
 ?>
-
+<style>
+	.social-icons a {
+		background: red;
+		padding: 0px 8px;
+		border-radius: 50%;
+		color: antiquewhite;
+		fill: white;
+		font-size: 1rem;
+		display: flex;
+		height: 30px;
+		width: 30px;
+		justify-content: center;
+		align-items: center;
+	}
+	a.twitter {
+		background: #1da1f2;
+	}
+	a.linkedin {
+		background: #004182;
+	}
+	a.instagram {
+		background: #405de6;
+	}
+</style>
 </main>
 	<footer class="bg-white">
 		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t border-b px-5">
 			<div class="text-3xl md:text-5xl w-3/5 font-light my-20">
 				Essential Services, at Your Fingertips
 			</div>
-			<div class="flex mb-10 flex-col md:flex-row">
-				<div class="flex-1 mb-10">
+			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
+				<div class="flex-1 mb-5">
 				<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 					if ($custom_logo_id) { ?>
-						<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[190px] mb-3">
+						<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[170px] mb-3">
 					<?php }
 						
 				?>
 					
 					<div class="mb-3">One stop platform for essential services</div>
 
-					<div class="flex">
-						<i class="fa-brands mr-5 text-white text-xl fa-twitter"></i>
-						<i class="fa-brands mr-5 text-white text-xl fa-linkedin"></i>
-						<i class="fa-brands mr-5 text-white text-xl fa-instagram"></i>
+					<div class="flex social-icons">
+						<a href="#" class="mb-2 mr-2 twitter">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="#" class="mb-2 mr-2 linkedin">
+							<i class="fa fa-linkedin"></i>
+						</a>
+						<a href="#" class="mb-2 mr-2 instagram">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								<g>
+									<g>
+										<path d="M404.831,94.739c-6.853,0-12.43,5.577-12.43,12.43s5.577,12.43,12.43,12.43c6.854,0,12.43-5.576,12.43-12.43
+											S411.685,94.739,404.831,94.739z"/>
+									</g>
+								</g>
+								<g>
+									<g>
+										<path d="M256,145.804c-60.762,0-110.196,49.434-110.196,110.196c0,60.762,49.434,110.197,110.196,110.197
+											c60.763,0,110.197-49.434,110.197-110.196C366.197,195.239,316.763,145.804,256,145.804z"/>
+									</g>
+								</g>
+								<g>
+									<g>
+										<path d="M371.643,0H140.357C62.964,0,0,62.964,0,140.358v231.285C0,449.037,62.964,512,140.357,512h231.286
+											C449.037,512,512,449.036,512,371.643V140.358C512,62.964,449.037,0,371.643,0z M256,396.432
+											c-77.435,0-140.431-62.997-140.431-140.432S178.566,115.57,256,115.57S396.432,178.566,396.432,256S333.434,396.432,256,396.432z
+											M404.831,149.836c-23.526,0-42.666-19.14-42.666-42.666c0-23.526,19.14-42.667,42.666-42.667
+											c23.526,0,42.666,19.14,42.666,42.666S428.357,149.836,404.831,149.836z"/>
+									</g>
+
+							</svg>
+						</a>
+						<!-- <i class="fa fa-facebook mb-2 mr-5"></i> -->
+						<!-- <i class="fa fa-instagram mb-2 mr-5"></i> -->
 					</div>
 
 				</div>
-				<div class="flex-1 mb-10">
+				<div class="flex-1 mb-5">
 					<div class="font-bold">Company</div>
-					<p>22-30 Wallace Avenue, Point Cook, VIC – 3030</p>
+					<p class="text-base py-1">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
 				</div>
-				<div class="flex-1 mb-10">
+				<div class="flex-1 mb-5">
 					<div class="font-bold">Quick Links</div>
 					<ul class="list-none">
 						<li class="py-1">Privacy Policy</li>
@@ -49,12 +102,12 @@
 						<li class="py-1">Terms & Conditions</li>
 					</ul>
 				</div>
-				<div class="flex-1 mb-10">
+				<div class="flex-1 mb-5">
 					<div class="font-bold">Contact</div>
 					<ul class="list-none">
-						<li class="py-1">1300589704</li>
-						<li class="py-1">enquiries@snippit.com.au</li>
-						<li class="py-1">support@snippit.com.au</li>
+						<li class="py-1"><i class="fa fa-phone mr-2"></i>+61 1300 589 704</li>
+						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>enquiries@snippit.com.au</li>
+						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>support@snippit.com.au</li>
 					</ul>
 				</div>
 				<!-- <div class="flex-1 mb-10">
@@ -65,7 +118,7 @@
 		</div>
 		<div class="container mx-auto">
 			<div class="flex justify-center p-5">
-				<div>Copyright © 2022 - 2023 Snippit all rights reserved </div>
+				<div class="text-sm">Copyright © 2022 - 2023 Snippit all rights reserved </div>
 			</div>
 		</div>
 		
@@ -119,7 +172,7 @@
 					scrollTrigger: {
 						trigger: hero,
 						start: () => "top top",
-						end: () => "+=1000 center",
+						end: () => "+=800 center",
 						//markers: true,
 						onUpdate: self => {
 							e[0].style.transform = `rotate(${Math.round(self.progress.toFixed(4) * 180)}deg)`

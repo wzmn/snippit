@@ -39,22 +39,9 @@ h1 {
 .home .hide-inside {
 	display: block !important;
 }
-body {
-  transition: background 0.4s ease;
+.main-page {
+  overflow-x: hidden;
 }
-body.green {
-  background: #97dc211a;
-}
-body.yellow {
-  background: #fed0001a;
-}
-body.cyan {
-  background: #32d0d11a;
-}
-body.blue {
-  background: #0a84ff1a;
-}
-
 
 .circle {
     height: 500px;

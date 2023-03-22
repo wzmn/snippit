@@ -5,22 +5,22 @@
 	if ( have_posts() ) :
     	while ( have_posts() ) : the_post();
  ?>
-		<div class="container mx-auto mb-40" hero>
+		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner flex items-center justify-center min-h-[400px] relative text-center truncate whitespace-normal">
-				<div class="w-full md:w-4/6">
+				<div class="w-full md:w-4/6 px-5">
 					<div class="font-light mb-10">SNIPPIT BUSINESSES</div>
-					<div class="text-7xl">
+					<div class="text-5xl md:text-7xl">
 						Join the Business Revolution with Snippit!
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="banner relative truncate whitespace-normal mb-40 mx-auto container min-h-[864px]">
+		<div class="banner relative truncate whitespace-normal mb-20 md:mb-40 mx-auto container md:min-h-[864px]">
 			<video autoplay muted loop playsinline>
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.mp4" type="video/mp4">
 			</video>
 		</div>
-		<div class="container mx-auto mb-40" parallax>
+		<div class="container mx-auto mb-20 md:mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
 		</div>
 		<style>
@@ -120,10 +120,10 @@
 				margin-bottom: 0.5rem;
 			}
 		</style>
-		<div class="container mx-auto mb-40">
+		<div class="container mx-auto mb-20 md:mb-40">
 
 			<div class="relative flex justify-between" id="pin">
-				<div class="smiley">
+				<div class="smiley hidden md:block">
 					<svg id="smiley" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.75 536.55">
 						<defs>
 							<style>
@@ -184,21 +184,21 @@
 				<div class="flex justify-between flex-col text-container relative">
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text panel-text-1">
 						<div class="font-light mb-5 text-2xl">Experience Elevated Everywhere</div>
-						<div class="mb-8 text-7xl">
+						<div class="mb-8 text-5xl md:text-7xl">
 							Sustainable Future 
 						</div>
 						<p class="text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
 						<div class="font-light mb-5 text-2xl">Revolutionizing the Ordinary</div>
-						<div class="mb-8 text-7xl">
+						<div class="mb-8 text-5xl md:text-7xl">
 							Stress-Free Appointments
 						</div>
 						<p class="text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
 						<div class="font-light mb-5 text-2xl">Innovate, Delight, Expderience</div>
-						<div class="mb-8 text-7xl">
+						<div class="mb-8 text-5xl md:text-7xl">
 							Assess with ease
 						</div>
 						<p class="text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
@@ -247,7 +247,7 @@
 						</div>
 					</div>	
 				</div>
-				<div class="image-container relative">
+				<div class="image-container relative hidden lg:block">
 					<svg class="absolute">
 						<filter id="wavy">
 							<feTurbulence id="turbulence" numOctaves="1" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
@@ -288,8 +288,8 @@
 				];
 
 				let viewBox = [
-					/*face1*/ "0 0 509.75 536.55",
-					/*face2*/ "0 0 705.12 512.98",
+					/*face1*/ "0 0 509.75 537",
+					/*face2*/ "0 0 705.12 513",
 					/*face3*/ "0 0 606.08 560",
 					/*face4*/ "0 0 563.01 546",
 				]

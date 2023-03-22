@@ -16,12 +16,12 @@ while ( have_posts() ) :
 	the_post();
 	//get_template_part( 'template-parts/content/content-page' );
 	?>
-	<div class="container mx-auto py-10">
+	<div class="container mx-auto py-10 px-5">
 		<h1>
 			<?php echo get_the_title();?>
 		</h1>
 	</div>
-	<div class="container mx-auto py-10">
+	<div class="container mx-auto py-10 px-5">
 		<?php the_content(); ?>
 	</div>
 

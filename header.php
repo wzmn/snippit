@@ -76,4 +76,4 @@
 				) );
 			?>
 	</nav>
-	<main class="font-regular relative">
+	<main class="font-regular relative main-page">
