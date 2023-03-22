@@ -77,7 +77,7 @@
 				border-radius: 20px;
 				position: absolute;
 				left: 1rem;
-   				top: -1rem;
+   				top: -3rem;
 			}
 			.loader svg {
 				width: 20px;
@@ -303,7 +303,7 @@
 					.to(svg, {
 						attr: { 
 							// zoom out
-							viewBox: "0 0 700 550"
+							viewBox: "0 0 700 560"
 						},
 						duration: 0.1,
 					}, 0)
@@ -333,8 +333,8 @@
 						attr: { 
 							viewBox: viewBox[i]
 						},
-						duration: 0.3,
-					}, 3);
+						duration: 0.1,
+					}, 0);
 				}
 
 				gsap.registerPlugin(ScrollTrigger);
