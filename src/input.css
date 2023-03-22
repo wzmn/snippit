@@ -681,6 +681,14 @@ align-items: center;
     height: 100%;
     position: absolute;
   } */
+  .mobile-menu .title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 20px;
+  }
+  .admin-bar .mobile-menu {
+    top: 46px;
+  } 
   .mobile-menu {
     z-index: 99;
     top: 0;
