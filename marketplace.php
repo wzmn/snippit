@@ -15,14 +15,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="banner relative truncate whitespace-normal mb-20 md:mb-40 mx-auto container md:min-h-[864px]">
+		<div class="banner relative truncate whitespace-normal mb-20 md:mb-40 mx-auto container [lg:min-h-[864px]]">
 			<video autoplay muted loop playsinline>
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.mp4" type="video/mp4">
 			</video>
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40" parallax>
+		<!-- <div class="container mx-auto mb-20 md:mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
-		</div>
+		</div> -->
 		<style>
 			.border-shadow {
 				box-shadow: 0px 3px 6px #0000000D;
@@ -61,7 +61,8 @@
 				background: white;
 			}
 			.image-container > img.wavy {
-				filter: url(#wavy);
+				/* filter: url(#wavy);
+				transform: scale(1.2); */
 			}
 			.image-container > img:hover {
 				transform:scale(1.1) skewY(-4deg) rotate(1deg);
