@@ -61,7 +61,7 @@ get_header();
 		<div class="container mx-auto mb-20 md:mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 relative" features id="features">
+		<div class="container mx-auto mb-20 md:mb-40 relative" features>
 			<style>
 				.arrowish {
 					top: -2px;
@@ -136,7 +136,7 @@ get_header();
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-shadow.png" class="absolute h-full arrowish z-0 hidden xl:block"  data-aos="fade-right" data-aos-delay="150">
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 py-10 shadow px-5" how-it-works id="how-it-works">
+		<div class="container mx-auto mb-20 md:mb-40 py-10 shadow px-5" how-it-works>
 			<style>
 				.block .curve {
 					border-radius: 3vw;

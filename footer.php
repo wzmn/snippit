@@ -51,7 +51,7 @@
 				?>
 					
 					<div class="mb-3">One stop platform for essential services</div>
-
+					<div class="mb-3">ABN - 30 664 818 848</div>
 					<div class="flex social-icons">
 						<a href="https://www.facebook.com/Snippit-105872775751433" target="_blank" class="mb-2 mr-2 facebook">
 							<i class="fa fa-facebook"></i>
@@ -84,13 +84,11 @@
 
 							</svg>
 						</a>
-						<!-- <i class="fa fa-facebook mb-2 mr-5"></i> -->
-						<!-- <i class="fa fa-instagram mb-2 mr-5"></i> -->
 					</div>
 
 				</div>
 				<div class="flex-1 mb-5">
-					<div class="font-bold">Company</div>
+					<div class="font-bold">Address</div>
 					<p class="text-base py-1 mb-0">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
 				</div>
 				<div class="flex-1 mb-5">
@@ -115,10 +113,6 @@
 						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>support@snippit.com.au</li>
 					</ul>
 				</div>
-				<!-- <div class="flex-1 mb-10">
-					<div class="font-bold">Address</div>
-					<p>22-30 Wallace Avenue, Point Cook, VIC – 3030</p>
-				</div> -->
 			</div>
 		</div>
 		<div class="container mx-auto">
@@ -129,19 +123,28 @@
 		
 	</footer>
 	<script type="text/javascript">
-		((w, d)=>{
+		((w, d, g)=>{
 			Object.assign(w.__proto__, {
 				// ********************************************
 				// Add your global functions and variables here
 				// ********************************************
+				smoothScrollTo(){
+					Array.from(d.querySelectorAll("[href*='#']:not([onclick])")).map((s, idx)=>{
+						s.addEventListener("click", function(event){
+							gsap.to(w, {
+								scrollTo: d.querySelector(`[${event.target.hash.substr(1)}]`).offsetTop,
+								duration: idx + 2
+							})
+						})
+					})
+				},
 				fillForm(){
-					let d  = document;
 					d.querySelector(`[name="name"]`).value = "XYZ69 LLC"
 					d.querySelector(`[name="abn"]`).value = "ABNXYZ6972"
 					d.querySelector(`[name="owner.email"]`).value = "wisemanf@cogncise.com"
 					d.querySelector(`[name="address.pincode"]`).value = "452001"
 					d.querySelector(`[name="owner.mobile_number"]`).value = "+611300589704"
-					document.querySelector(`[type="submit"]`).click()
+					d.querySelector(`[type="submit"]`).click()
 				},
 				ifExists(s, cb){
 					if (typeof s === 'string'){
@@ -159,7 +162,7 @@
 					}					
 				}
 			})
-		})(window, document)
+		})(window, document, gsap)
 
 
 		function toggleMobileMenu(){
@@ -169,6 +172,7 @@
 
 		document.addEventListener("DOMContentLoaded", function(){
 			AOS.init();
+			smoothScrollTo();
 			ifExists('[hero] div.absolute>img', (e) => {
 				let hero = document.querySelector("[hero]");
 				
