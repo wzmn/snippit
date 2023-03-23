@@ -5,6 +5,15 @@
 	if ( have_posts() ) :
     	while ( have_posts() ) : the_post();
  ?>
+ <style>
+	@media only screen and (max-width: 768px) {
+		div.smiley {
+			width: 120px;
+			height: 125px;
+			padding: 40px 30px;
+		}
+	}
+ </style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner flex items-center justify-center min-h-[400px] relative text-center truncate whitespace-normal">
 				<div class="w-full md:w-4/6 px-5">
@@ -124,7 +133,7 @@
 		<div class="container mx-auto mb-20 md:mb-40">
 
 			<div class="relative flex justify-between" id="pin">
-				<div class="smiley hidden md:block">
+				<div class="smiley">
 					<svg id="smiley" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.75 536.55">
 						<defs>
 							<style>
@@ -188,7 +197,7 @@
 						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Sustainable Future 
 						</div>
-						<p class="text-base md:text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-effecient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
+						<p class="text-base md:text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-efficient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
 						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Revolutionizing the Ordinary</div>
@@ -198,11 +207,11 @@
 						<p class="text-base md:text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
-						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Innovate, Delight, Expderience</div>
+						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Innovate, Delight, Experience</div>
 						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Assess with ease
 						</div>
-						<p class="text-base md:text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home a or office to bve more enviromentally friendly and cost-effective.</p>
+						<p class="text-base md:text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home or office to be more environmentally friendly and cost-effective.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-48">Let's get Started</div>

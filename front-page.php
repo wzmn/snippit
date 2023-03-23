@@ -31,10 +31,10 @@ get_header();
 					</div>
 				</div>
 				<div class="absolute hero-blue-square">
-					<img src="<?php echo get_stylesheet_directory_uri();?>/images/blue-overlay.png" data-aos="fade-left" data-aos-delay="200">
+					<img class="rotating" src="<?php echo get_stylesheet_directory_uri();?>/images/blue-overlay.png" data-aos="fade-left" data-aos-delay="200">
 				</div>
 				<div class="absolute hero-green-square">
-					<img src="<?php echo get_stylesheet_directory_uri();?>/images/yellow-overlay.png" data-aos="fade-right">
+					<img class="rotating-ccw" src="<?php echo get_stylesheet_directory_uri();?>/images/yellow-overlay.png" data-aos="fade-right">
 				</div>
 			</div>
 
@@ -115,7 +115,7 @@ get_header();
 							<div class="font-bold mb-5 text-xl">
 								Best of Both Worlds
 							</div>
-							<p>Snippit strikes the perfect balance between affordibility and qaulity, providing you with services that meet your budget and exceed your expectations.</p>
+							<p>Snippit strikes the perfect balance between affordibility and quality, providing you with services that meet your budget and exceed your expectations.</p>
 						</div>
 					</div>
 				</div>
@@ -141,7 +141,7 @@ get_header();
 					<div class="m-4 md:mr-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-2.png" class="parallax-block">
 					</div>
-					<div class="md:mr-32 md:text-xl ml-4">Login made easy. Effortless access to everything.</div>
+					<div class="md:mr-32 md:text-xl ml-4">Seamless Access, Effortless Usage: Snippit Makes it Easy</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6" data-aos-offset="300">
 					<div class="m-4 md:ml-32 curve">

@@ -765,14 +765,6 @@ video {
   width: 60%;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-3\/6 {
   width: 50%;
 }
@@ -1336,10 +1328,6 @@ video {
   line-height: 5rem;
 }
 
-.leading-9 {
-  line-height: 2.25rem;
-}
-
 .text-\[\#33ced0\] {
   --tw-text-opacity: 1;
   color: rgb(51 206 208 / var(--tw-text-opacity));
@@ -1447,6 +1435,10 @@ h1 {
   overflow-x: hidden;
 }
 
+.banner {
+  height: calc(100vh - 100px);
+}
+
 .circle {
   height: 500px;
   width: 500px;
@@ -1535,6 +1527,34 @@ div.wpforms-container-full form.wpforms-form button[type=submit]:hover {
     transform: translateY(0px);
     z-index: 1;
   }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotating 15s linear infinite;
+}
+
+@keyframes rotating-ccw {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotating-ccw {
+  animation: rotating-ccw 17s linear infinite;
 }
 
 .bg-gradient {
@@ -2110,6 +2130,31 @@ circle {
   padding-left: 6px;
   position: relative;
   top: -1px;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-2 {
+  animation: float 4.2s ease-in-out infinite;
 }
 
 /* .mobile-menu::after {
