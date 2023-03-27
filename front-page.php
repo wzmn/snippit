@@ -47,7 +47,7 @@ get_header();
 		<div class="container mx-auto mb-20 md:mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 relative" features>
+		<div class="container mx-auto mb-20 md:mb-40 relative" id="features">
 			<style>
 				.arrowish {
 					top: -2px;
@@ -122,7 +122,7 @@ get_header();
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-shadow.png" class="absolute h-full arrowish z-0 hidden xl:block"  data-aos="fade-right" data-aos-delay="150">
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 py-10 shadow px-5" how-it-works>
+		<div class="container mx-auto mb-20 md:mb-40 py-10 shadow px-5" id="how-it-works">
 			<style>
 				.block .curve {
 					border-radius: 3vw;
@@ -132,24 +132,28 @@ get_header();
 			<div class="text-xl md:text-3xl font-bold pl-0 md:pl-10">How it Works</div>
 			<div class="flex flex-wrap">
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6" data-aos="fade-right" data-aos-offset="300">
+					<div class="md:ml-32 md:text-xl mr-4 flex justify-center">Step 1</div>
 					<div class="m-4 md:ml-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-1.png" class="parallax-block">
 					</div>
 					<div class="md:ml-32 md:text-xl mr-4">All your essential services in one tap</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6 mt-14 md:mt-28" data-aos="fade-left" data-aos-offset="300">
+					<div class="md:mr-32 md:text-xl mr-4 flex justify-center">Step 2</div>
 					<div class="m-4 md:mr-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-2.png" class="parallax-block">
 					</div>
 					<div class="md:mr-32 md:text-xl ml-4">Seamless Access, Effortless Usage: Snippit Makes it Easy</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6" data-aos-offset="300">
+					<div class="md:ml-32 md:text-xl mr-4 flex justify-center">Step 3</div>
 					<div class="m-4 md:ml-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-3.png" class="parallax-block">
 					</div>
 					<div class="md:ml-32 md:text-xl mr-4">Sign up in seconds, book an appointment</div>
 				</div>
 				<div class="aos-animate aos-init block flex flex-col justify-center text-center w-3/6 mt-14 md:mt-28" data-aos-offset="300">
+					<div class="md:mr-32 md:text-xl mr-4 flex justify-center">Step 4</div>
 					<div class="m-4 md:mr-32 curve">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hiw-4.png" class="parallax-block">
 					</div>

@@ -13,6 +13,102 @@
 			padding: 40px 30px;
 		}
 	}
+	.border-shadow {
+		box-shadow: 0px 3px 6px #0000000D;
+	}
+	.image-container {
+		width: 100%;
+		max-width: 350px;
+		right: 1rem;
+		overflow: hidden;
+	}
+	.panel-text {
+		width: 100%;
+		transform: translateY(100%);
+		opacity: 0;
+		position: absolute;
+		height: 100%;
+	}
+	.panel-text:before {
+		content: " ";
+		background: url('<?php echo get_stylesheet_directory_uri();?>/images/square-overlay.png');
+		position: absolute;
+		height: 100px;
+		width: 100px;
+	}
+	.text-container {
+		position: relative;
+		width: 100%;
+	}
+	.panel-text-1 {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	.image-container > img {
+		transition: all 0.3s ease;
+		filter: none;
+		background: white;
+	}
+	.image-container > img.wavy {
+		/* filter: url(#wavy);
+		transform: scale(1.2); */
+	}
+	.image-container > img:hover {
+		transform:scale(1.1) skewY(-4deg) rotate(1deg);
+	}
+	#pin {
+		height: 650px;
+	}
+	.smiley {
+		width: 180px;
+		height: 185px;
+		padding: 60px 50px;
+		background-color: #FED000;
+		border-radius: 20px;
+		position: absolute;
+		left: 1rem;
+		top: -3rem;
+	}
+	.loader svg {
+		width: 20px;
+		height: 20px;
+		fill: white;
+		opacity: 0;
+	}
+	.loader {
+		position: absolute;
+		width: 60px;
+		background: #0a84ff;
+		height: 100%;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		left: calc(50% + 30px);
+	}
+	.loader.active svg {
+		animation: loader 8s infinite;
+		opacity: 1;
+	}
+	@keyframes loader {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(1440deg);
+		}
+	}
+	.error-message {
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	}
+	.has-error .error-message {
+		opacity: 1;
+	}
+	.error-message div {
+		color: red;
+		margin-bottom: 0.5rem;
+	}
  </style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner flex items-center justify-center min-h-[400px] relative text-center truncate whitespace-normal">
@@ -32,104 +128,7 @@
 		<!-- <div class="container mx-auto mb-20 md:mb-40" parallax>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
 		</div> -->
-		<style>
-			.border-shadow {
-				box-shadow: 0px 3px 6px #0000000D;
-			}
-			.image-container {
-				width: 100%;
-				max-width: 350px;
-				right: 1rem;
-				overflow: hidden;
-			}
-			.panel-text {
-				width: 100%;
-				transform: translateY(100%);
-				opacity: 0;
-				position: absolute;
-				height: 100%;
-			}
-			.panel-text:before {
-				content: " ";
-				background: url('<?php echo get_stylesheet_directory_uri();?>/images/square-overlay.png');
-				position: absolute;
-				height: 100px;
-				width: 100px;
-			}
-			.text-container {
-				position: relative;
-				width: 100%;
-			}
-			.panel-text-1 {
-				opacity: 1;
-				transform: translateY(0%);
-			}
-			.image-container > img {
-				transition: all 0.3s ease;
-				filter: none;
-				background: white;
-			}
-			.image-container > img.wavy {
-				/* filter: url(#wavy);
-				transform: scale(1.2); */
-			}
-			.image-container > img:hover {
-				transform:scale(1.1) skewY(-4deg) rotate(1deg);
-			}
-			#pin {
-				height: 650px;
-			}
-			.smiley {
-				width: 180px;
-				height: 185px;
-				padding: 60px 50px;
-				background-color: #FED000;
-				border-radius: 20px;
-				position: absolute;
-				left: 1rem;
-   				top: -3rem;
-			}
-			.loader svg {
-				width: 20px;
-				height: 20px;
-				fill: white;
-				opacity: 0;
-			}
-			.loader {
-				position: absolute;
-				width: 60px;
-				background: #0a84ff;
-				height: 100%;
-				top: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				left: calc(50% + 30px);
-			}
-			.loader.active svg {
-				animation: loader 8s infinite;
-				opacity: 1;
-			}
-			@keyframes loader {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(1440deg);
-				}
-			}
-			.error-message {
-				opacity: 0;
-				transition: opacity 0.5s ease;
-			}
-			.has-error .error-message {
-				opacity: 1;
-			}
-			.error-message div {
-				color: red;
-				margin-bottom: 0.5rem;
-			}
-		</style>
+
 		<div class="container mx-auto mb-20 md:mb-40">
 
 			<div class="relative flex justify-between" id="pin">

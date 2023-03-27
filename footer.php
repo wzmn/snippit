@@ -18,6 +18,10 @@
 		bottom: 20px;
 		left: 20px;
 	}
+	.download {
+		background: white;
+		border-radius: 50%;
+	}
 	.social-icons a {
 		padding: 0px 8px;
 		border-radius: 50%;
@@ -42,7 +46,7 @@
 </style>
 </main>
 	<div class="download-fixed">
-		<button class="download flex items-center px-3 py-2 shadow float mb-5">
+		<button class="download flex items-center px-3 py-2 shadow float mb-6">
 			<svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 28.74 35.253" class="">
 			<g id="apple-logo" transform="translate(-2.104)">
 				<g id="Group_1147" data-name="Group 1147" transform="translate(2.104)">
@@ -180,15 +184,16 @@
 				// ********************************************
 				// Add your global functions and variables here
 				// ********************************************
-				smoothScrollTo(){
-					Array.from(d.querySelectorAll("[href*='#']:not([onclick])")).map((s, idx)=>{
+				smoothScrollTo(selector){
+					d.querySelectorAll(selector).length ? Array.from(d.querySelectorAll(selector)).map((s, idx)=>{
 						s.addEventListener("click", function(event){
+							event.preventDefault();
 							gsap.to(w, {
-								scrollTo: d.querySelector(`[${event.target.hash.substr(1)}]`).offsetTop,
-								duration: idx + 2
+								scrollTo: d.querySelector(`#${event.target.hash.substr(1)}`).offsetTop,
+								duration: 4
 							})
 						})
-					})
+					}) : "xxx";
 				},
 				fillForm(){
 					d.querySelector(`[name="name"]`).value = "XYZ69 LLC"
@@ -224,7 +229,7 @@
 
 		document.addEventListener("DOMContentLoaded", function(){
 			AOS.init();
-			smoothScrollTo();
+			smoothScrollTo("[href*='#']:not([onclick])");
 			ifExists('[hero] div.absolute>img', (e) => {
 				let hero = document.querySelector("[hero]");
 				
