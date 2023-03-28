@@ -12,38 +12,6 @@
  */
 
 ?>
-<style>
-	.download-fixed {
-		position: fixed;
-		bottom: 20px;
-		left: 20px;
-	}
-	.download {
-		background: white;
-		border-radius: 50%;
-	}
-	.social-icons a {
-		padding: 0px 8px;
-		border-radius: 50%;
-		color: white;
-		fill: white;
-		font-size: 1rem;
-		display: flex;
-		height: 30px;
-		width: 30px;
-		justify-content: center;
-		align-items: center;
-	}
-	a.facebook {
-		background: #1877f2;
-	}
-	a.linkedin {
-		background: #004182;
-	}
-	a.instagram {
-		background: #405de6;
-	}
-</style>
 </main>
 	<div class="download-fixed">
 		<button class="download flex items-center px-3 py-2 shadow float mb-6">
