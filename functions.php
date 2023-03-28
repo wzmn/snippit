@@ -371,43 +371,43 @@ add_action( 'after_setup_theme', 'cogncise_setup' );
 function cogncise_widgets_init() {
 
 	register_sidebars(
-		4,
+		1,
 		array(
 			'name'          => esc_html__( 'Footer 1', 'cogncise' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget flex-1 mb-5 %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<div class="font-bold">',
+			'after_title'   => '</div>',
 		),
-		array(
-			'name'          => esc_html__( 'Footer 2', 'cogncise' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		),
-		array(
-			'name'          => esc_html__( 'Footer 3', 'cogncise' ),
-			'id'            => 'sidebar-3',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		),		
-		array(
-			'name'          => esc_html__( 'Footer 4', 'cogncise' ),
-			'id'            => 'sidebar-4',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+		// array(
+		// 	'name'          => esc_html__( 'Footer 2', 'cogncise' ),
+		// 	'id'            => 'sidebar-2',
+		// 	'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget flex-1 mb-5 %2$s">',
+		// 	'after_widget'  => '</section>',
+		// 	'before_title'  => '<div class="font-bold">',
+		// 	'after_title'   => '</div>',
+		// ),
+		// array(
+		// 	'name'          => esc_html__( 'Footer 3', 'cogncise' ),
+		// 	'id'            => 'sidebar-3',
+		// 	'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget flex-1 mb-5 %2$s">',
+		// 	'after_widget'  => '</section>',
+		// 	'before_title'  => '<div class="font-bold">',
+		// 	'after_title'   => '</div>',
+		// ),		
+		// array(
+		// 	'name'          => esc_html__( 'Footer 4', 'cogncise' ),
+		// 	'id'            => 'sidebar-4',
+		// 	'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'cogncise' ),
+		// 	'before_widget' => '<section id="%1$s" class="widget flex-1 mb-5 %2$s">',
+		// 	'after_widget'  => '</section>',
+		// 	'before_title'  => '<div class="font-bold">',
+		// 	'after_title'   => '</div>',
+		// )
 	);
 }
 add_action( 'widgets_init', 'cogncise_widgets_init' );

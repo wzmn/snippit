@@ -14,7 +14,7 @@
 ?>
 </main>
 	<div class="download-fixed">
-		<button class="download flex items-center px-3 py-2 shadow float mb-6">
+		<button class="download-btn flex items-center px-3 py-2 shadow float mb-6">
 			<svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 28.74 35.253" class="">
 			<g id="apple-logo" transform="translate(-2.104)">
 				<g id="Group_1147" data-name="Group 1147" transform="translate(2.104)">
@@ -24,7 +24,7 @@
 			</g>
 			</svg>
 		</button>
-		<button class="download flex items-center px-3 py-2 shadow float-2">
+		<button class="download-btn flex items-center px-3 py-2 shadow float-2">
 			<svg id="google-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="29" height="36" viewBox="0 0 31.585 35.184">
 				<defs>
 					<linearGradient id="linear-gradient" x1="0.915" y1="17.626" x2="-0.383" y2="16.957" gradientUnits="objectBoundingBox">
@@ -67,12 +67,12 @@
 			</div>
 			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
 				<div class="flex-1 mb-5">
-				<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-					if ($custom_logo_id) { ?>
-						<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[170px] mb-3">
-					<?php }
-						
-				?>
+					<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+						if ($custom_logo_id) { ?>
+							<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[170px] mb-3">
+						<?php }
+							
+					?>
 					
 					<div class="mb-3">One stop platform for essential services</div>
 					<div class="mb-3">ABN - 30 664 818 848</div>
@@ -122,7 +122,7 @@
 							<a href="/privacy-policy/">Privacy Policy</a>
 						</li>
 						<li class="py-1">
-							<a href="/refund-policy/">Refund Policy</a>
+							<a href="/user-agreement/">User Agreement</a>
 						</li>
 						<li class="py-1">
 							<a href="/terms-conditions/">Terms & Conditions</a>
