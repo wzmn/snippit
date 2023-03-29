@@ -98,16 +98,16 @@
 			transform: rotate(1440deg);
 		}
 	}
-	.error-message {
-		opacity: 0;
-		transition: opacity 0.5s ease;
-	}
-	.has-error .error-message {
-		opacity: 1;
-	}
 	.error-message div {
+		/* opacity: 0;
+		transition: opacity 0.5s ease; */
+	}
+	.has-error .error-message div {
 		color: red;
 		margin-bottom: 0.5rem;
+	}
+	.error-message div {
+		
 	}
  </style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
@@ -214,9 +214,19 @@
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-48">Let's get Started</div>
-						<div class="font-light mb-2">Create your account</div>
+						<div class="font-light mb-2">Create your account as</div>
 						<div>
 							<form autocomplete="on">
+								<div class="flex mb-2">
+									<label class="flex items-center mb-2 py-1 mr-5" for="seller">
+										<input type="radio" class="mr-2" id="seller" value="service_provider" name="company_type" checked>
+										<span>Seller</span>
+									</label>
+									<label class="flex items-center mb-2 py-1" for="buyer">
+										<input type="radio" class="mr-2" id="buyer" value="channel_partner" name="company_type">
+										<span>Buyer</span>
+									</label>
+								</div>
 								<label class="mb-2" for="name">
 									<div class="mb-3">Company Name</div>
 									<input class="border-shadow mb-2 p-2 w-full" type="text" name="name" required />
@@ -248,9 +258,10 @@
 									</div>
 								</div>
 								<div class="error-message text-center py-4">
-									<div class="font-light">
+									<!-- <div class="font-light">
 										An error has occured, please check the fields and try again
-									</div>
+									</div> -->
+									<div class="messages"></div>
 								</div>
 							</form>
 						</div>
@@ -459,7 +470,7 @@
 					event.preventDefault();
 					let form = event.target;
 					let loader = form.querySelector(".loader");
-					let error_message = form.querySelector(".error-message");
+					let error_message = form.querySelector(".error-message>.messages");
 					function addFormError(id, msg){
 						let html = document.createElement("div");
 						html.classList.add("font-light")
@@ -473,7 +484,9 @@
 					output.append("status", "2");
 					output.append("owner.first_name", "fn");
 					output.append("owner.last_name", "ln");
-					output.append("company_type", "channel_partner");
+
+					//output.append("company_type", "channel_partner");
+
 					let payload = {
 						owner: {},
 						address: {}
@@ -482,7 +495,7 @@
 					for (const [key, value] of output) {
 						let ownerObj = key.match(/(?:owner.)(.+)/);
 						let addressObj = key.match(/(?:address.)(.+)/);
-						
+						console.log(key, value)
 						if (!!ownerObj){
 							payload["owner"][`${ownerObj[1]}`] = value
 							continue;
@@ -495,8 +508,9 @@
 					}
 
 					loader.classList.toggle("active")
-
-					fetch("https://uat-services.snippit.com.au/api/v1/companies/", {
+					const api = `https://uat-services.snippit.com.au/api/v1/companies/`;
+					// const mock = `https://7ac49849-ee4e-4143-a782-e77dc4fbbbe0.mock.pstmn.io/api/v1/companies/`;
+					fetch(api, {
 						method: "POST",
 						headers: {
 							'Accept': 'application/json',
@@ -504,27 +518,30 @@
 						},
 						body: JSON.stringify(payload),
 					}).then(function(data){
-						console.error(data.status)
 						loader.classList.toggle("active")
 
 						data.json().then((res) => {
-							if (data.status !== 200){
+							// remove old messages
+							error_message.querySelectorAll("div").forEach(s=>s.remove())
+							if (data.status !== 201){
 								form.classList.add("has-error")
-							}else{
-								form.classList.remove("has-error")
-							}
-							if (res.constructor===Object){
-								for (err in res){
-									if (res[err].constructor === Object){
-										for (msg in res[err]){
-											addFormError(msg, `Error with <b>${msg.split("_").join(" ")}</b>: ${res[err][msg]}`)
+								addFormError(999, 'An error has occured, please check the fields and try again');
+								if (res.constructor===Object){
+									for (err in res){
+										if (res[err].constructor === Object){
+											for (msg in res[err]){
+												addFormError(msg, `Error with <b>${msg.split("_").join(" ")}</b>: ${res[err][msg]}`)
+											}
+										}else{
+											addFormError(err, `Error with <b>${err.split("_").join(" ")}</b>: ${res[err]}`)
 										}
-									}else{
-										addFormError(err, `Error with <b>${err.split("_").join(" ")}</b>: ${res[err]}`)
 									}
 								}
+							}else{
+								form.classList.remove("has-error");
+								addFormError(1, "Registered sucessfully, <br> please check your e-mail for further instructions.");
+								form.reset();
 							}
-							
 						})
 					});
 				})

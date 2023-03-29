@@ -40,7 +40,7 @@ get_header();
 
 		</div>
 		<div class="banner relative truncate whitespace-normal mb-20 md:mb-40 mx-auto container">
-			<video autoplay muted loop playsinline>
+			<video autoplay muted loop playsinline poster="<?php echo get_stylesheet_directory_uri(); ?>/images/home-poster.png">
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/home.mp4" type="video/mp4">
 			</video>
 		</div>

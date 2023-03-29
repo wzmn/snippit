@@ -415,7 +415,7 @@ ul, ol {
   list-style-type: disc;
 }
 
-nav ul {
+nav ul, .sidebar ul {
   list-style-type: none;
 }
 
