@@ -194,27 +194,28 @@
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text panel-text-1">
 						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Experience Elevated Everywhere</div>
 						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
-							Sustainable Future 
+							Dynamic Deals
 						</div>
-						<p class="text-base md:text-xl font-light">Whether you're looking for LED light bulbs, smart thermostats, or energy-efficient appliances, Snippit has got you covered. So why wait? Start making a difference for the planet and your wallet now!</p>
+						<p class="text-base md:text-xl font-light">Whether you're looking for lighting products, heat pumps or any other energy efficiency upgrade, Snippit has got you covered. So why wait? Start making a difference for the planet and your business now!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
 						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Revolutionizing the Ordinary</div>
 						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Stress-Free Appointments
 						</div>
-						<p class="text-base md:text-xl font-light">Say goodbye to waiting on hold and playing phone tag with receptionists. <br>Enjoy the convenience of booking appointments anytime, anywhere, with just a few simple clicks.</p>
+						<p class="text-base md:text-xl font-light">With Snippit app, finding quality opportunities has never been easier. Our certified and validated leads mean less stress for you and more opportunities to grow your business!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
 						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Innovate, Delight, Experience</div>
 						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
 							Assess with ease
 						</div>
-						<p class="text-base md:text-xl font-light">Assessing your products has never been easier! With just a few simple steps, you can upgrade your home or office to be more environmentally friendly and cost-effective.</p>
+						<p class="text-base md:text-xl font-light">Get the full picture with Snippit - Our assessment feature simplifies the process, making it easy for you to make informed decisions with confidence.</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-48">Let's get Started</div>
-						<div class="font-light mb-2">Create your account as</div>
+						<div class="text-xl mb-5">Register with Snippit and get a chance to win an iPhone!</div>
+						<div class="font-light mb-1">Create your account as</div>
 						<div>
 							<form autocomplete="on">
 								<div class="flex mb-2">
@@ -279,7 +280,7 @@
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-yellow.png" class="absolute im-1"> 
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-cyan.png" class="absolute">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-green.png" class="absolute">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block5.png" class="absolute">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-iphone.png" class="absolute">
 				</div>
 			</div>
 		</div>
