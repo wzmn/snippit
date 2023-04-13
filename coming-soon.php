@@ -1,3 +1,10 @@
+<?php 
+
+	/* Template Name: Coming Soon */ 
+
+	if ( have_posts() ) :
+    	while ( have_posts() ) : the_post();
+ ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> <?php cogncise_the_html_classes(); ?>>
 <head>
@@ -110,3 +117,8 @@
 //   floating({});
 </script>
 </body>
+<?php 
+		endwhile;
+	endif;
+
+?>
