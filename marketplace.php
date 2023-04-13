@@ -54,7 +54,7 @@
 		transform: scale(1.2); */
 	}
 	.image-container > img:hover {
-		transform:scale(1.1) skewY(-4deg) rotate(1deg);
+		/* transform:scale(1.1) skewY(-4deg) rotate(1deg); */
 	}
 	#pin {
 		height: 650px;
@@ -125,10 +125,6 @@
 				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.mp4" type="video/mp4">
 			</video>
 		</div>
-		<!-- <div class="container mx-auto mb-20 md:mb-40" parallax>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.jpeg" class="parallax">
-		</div> -->
-
 		<div class="container mx-auto mb-20 md:mb-40">
 
 			<div class="relative flex justify-between" id="pin">
@@ -259,9 +255,6 @@
 									</div>
 								</div>
 								<div class="error-message text-center py-4">
-									<!-- <div class="font-light">
-										An error has occured, please check the fields and try again
-									</div> -->
 									<div class="messages"></div>
 								</div>
 							</form>

@@ -11,11 +11,11 @@
 
 ?>
 
-<section class="no-results not-found">
+<section class="container mx-auto no-results not-found px-5 py-10">
 	<header class="page-header alignwide">
 		<?php if ( is_search() ) : ?>
 
-			<h1 class="page-title">
+			<h1 class="page-title mb-5">
 				<?php
 				printf(
 					/* translators: %s: Search term. */
@@ -53,7 +53,7 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentytwentyone' ); ?></p>
+			<p class="font-light text-2xl"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentytwentyone' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>

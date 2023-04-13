@@ -21,7 +21,7 @@ get_header(); ?>
 		<h1 class="page-title"><?php single_post_title(); ?></h1>
 	</header><!-- .page-header -->
 <?php endif; ?>
-
+<div class="container">
 <?php
 if ( have_posts() ) {
 
@@ -40,6 +40,6 @@ if ( have_posts() ) {
 	// If no content, include the "No posts found" template.
 	get_template_part( 'template-parts/content/content-none' );
 
-}
-
-get_footer();
+} ?>
+</div>
+<?php get_footer();?>

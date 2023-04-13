@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage cogncise
  * @since Twenty Twenty-One 1.0
  */
 
@@ -13,12 +13,13 @@ get_header();
 
 if ( have_posts() ) {
 	?>
+	<div class="container mx-auto px-5">
 	<header class="page-header alignwide">
-		<h1 class="page-title">
+		<h1 class="page-title mb-10">
 			<?php
 			printf(
 				/* translators: %s: Search term. */
-				esc_html__( 'Results for "%s"', 'twentytwentyone' ),
+				esc_html__( 'Results for "%s"', 'cogncise' ),
 				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 			);
 			?>
@@ -34,7 +35,7 @@ if ( have_posts() ) {
 					'We found %d result for your search.',
 					'We found %d results for your search.',
 					(int) $wp_query->found_posts,
-					'twentytwentyone'
+					'cogncise'
 				)
 			),
 			(int) $wp_query->found_posts
@@ -55,11 +56,12 @@ if ( have_posts() ) {
 	} // End the loop.
 
 	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
+	cogncise_the_posts_navigation();
 
 	// If no content, include the "No posts found" template.
 } else {
 	get_template_part( 'template-parts/content/content-none' );
-}
+} ?>
+</div>
 
-get_footer();
+<?php get_footer(); ?>

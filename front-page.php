@@ -6,147 +6,10 @@ get_header();
 ?>
 
 	<style>
-		@-webkit-keyframes criss-cross-left {
-		0% {
-			left: -20px;
-		}
-		50% {
-			left: 50%;
-			width: 20px;
-			height: 20px;
-		}
-		100% {
-			left: 50%;
-			width: 375px;
-			height: 375px;
-		}
-		}
-
-		@keyframes criss-cross-left {
-		0% {
-			left: -20px;
-		}
-		50% {
-			left: 50%;
-			width: 20px;
-			height: 20px;
-		}
-		100% {
-			left: 50%;
-			width: 375px;
-			height: 375px;
-		}
-		}
-		@-webkit-keyframes criss-cross-right {
-		0% {
-			right: -20px;
-		}
-		50% {
-			right: 50%;
-			width: 20px;
-			height: 20px;
-		}
-		100% {
-			right: 50%;
-			width: 375px;
-			height: 375px;
-		}
-		}
-		@keyframes criss-cross-right {
-		0% {
-			right: -20px;
-		}
-		50% {
-			right: 50%;
-			width: 20px;
-			height: 20px;
-		}
-		99% {
-			right: 50%;
-			width: 375px;
-			height: 375px;
-		}
-		100% {
-			right: 50%;
-			width: 375px;
-			height: 375px;
-			background-color: #32d0d1;
-		}
-		}
-		.btn-11 {
-			position: relative;
-			overflow: hidden;
-			color: #000;
-			transition: all 0.8s ease !important;
-		}
-		.btn-11:before {
-			position: absolute;
-			top: 50%;
-			content: "";
-			width: 20px;
-			height: 20px;
-			background-color: #3b9dff;
-			border-radius: 50%;
-		}
-		.btn-11:after {
-			position: absolute;
-			top: 50%;
-			content: "";
-			width: 20px;
-			height: 20px;
-			background-color: #97dc21;
-			border-radius: 50%;
-		}
-		.btn-11:before {
-			left: -20px;
-			transform: translate(-50%, -50%);
-		}
-		.btn-11:after {
-			right: -20px;
-			transform: translate(50%, -50%);
-		}
-		.btn-11:hover {
-			color: white;
-			scale: 1.1;
-		}
-		.btn-11:hover div {
-
-		}
-		.btn-11:hover:before {
-		-webkit-animation: criss-cross-left 0.8s both;
-				animation: criss-cross-left 0.8s both;
-		-webkit-animation-direction: alternate;
-				animation-direction: alternate;
-		}
-		.btn-11:hover:after {
-		-webkit-animation: criss-cross-right 0.8s both;
-				animation: criss-cross-right 0.8s both;
-		-webkit-animation-direction: alternate;
-				animation-direction: alternate;
-		}
-		.blue-corner {
-			max-width: 100px;
-			right: 0;
-			top: 0;
-		}
-		.green-corner {
-			max-width: 100px;
-			left: 0;
-			bottom: 0;
-		}
-		.blue-square {
-			top: 50%;
-			left: 25%;
-			transform: translate(-50%, -50%);
-			max-width: 500px;
-		}
-		.green-square {
-			top: 50%;
-			right: 25%;
-			transform: translate(50%, -50%);
-			max-width: 500px;
-		}
-
+	 [join-now] {
+		overflow: hidden;
+		background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.png');
+	}
 	</style>
 		<div class="container mx-auto" hero>
 			<style>
@@ -262,7 +125,7 @@ get_header();
 			<div class="max-w-6xl md:text-3xl mx-auto px-5 text-2xl text-center mb-16 md:leading-loose">
 				We exclusively devote ourselves to connecting you with services that meet your budget and exceed your expectations.
 			</div>
-			<div class="flex flex-col md:flex-row justify-center">
+			<div class="flex flex-col md:flex-row justify-center items-center">
 				<button class="download z-10 text-xl shadow px-10 md:px-20 py-2 flex items-center mb-10 md:mb-0 btn-11 bg-white" data-aos="fade-up">
 					<div class="z-10">
 						<div class="font-semibold">
@@ -272,9 +135,6 @@ get_header();
 				</button>
 			</div>
 		</div>
-		<!-- <div class="container mx-auto mb-20 md:mb-40" parallax>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/parallax.png" class="parallax">
-		</div> -->
 		<div class="container mx-auto mb-20 md:mb-40 relative" id="features">
 			<style>
 				.arrowish {
@@ -284,6 +144,7 @@ get_header();
 				}
 				@media (max-width: 1024px) {
 					.marker {
+						display: none;
 						position: absolute;
 						left: -10px;
 						transform: rotate(270deg) translateX(50%);
@@ -314,10 +175,7 @@ get_header();
 				.images-container .color-line::after {
 					right: 0;
 				}
-				.images-container>.flex:nth-child(1) {
-					top: 100px;
-					left: 100px;
-				}
+
 				.images-container>.flex:nth-child(1) .color-line {
 					background: #32d0d1; /* cyan */
 					left: -60px;
@@ -333,18 +191,34 @@ get_header();
 				.images-container .flex .image{
 					z-index: -1;
 				}
-				.images-container>.flex:nth-child(2) .image img {
-					transform: skewY(-5deg);
+				@media not all and (min-width: 640px) {
+					
 				}
-				.images-container>.flex:nth-child(3) .image img {
-					transform: skewY(5deg);
+
+				@media not all and (min-width: 1024px) {
+					.images-container>.flex:nth-child(1) .color-line {
+						right: -60px;
+						left: initial;
+					}
 				}
-				.images-container {
-					top: -100px;
-    				position: relative;
+				@media not all and (max-width: 1024px) {
+					.images-container {
+						top: -100px;
+						position: relative;
+					}
+					.images-container>.flex:nth-child(1) {
+						top: 100px;
+						left: 100px;
+					}
+					.images-container>.flex:nth-child(2) .image img {
+						transform: skewY(5deg);
+					}
+					.images-container>.flex:nth-child(3) .image img {
+						transform: skewY(-5deg);
+					}
 				}
 			</style>
-			<div class="flex justify-between">
+			<div class="flex justify-between px-5 mb-5">
 				<div class="marker" data-aos-delay="100" data-aos="fade-down">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/green.png" class="max-w-[60px]">
 				</div>
@@ -358,8 +232,8 @@ get_header();
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue.png" class="max-w-[60px]">
 				</div>
 			</div>
-			<div class="flex flex-col lg:flex-row" data-aos="fade-right" data-aos-delay="50">
-				<div class="w-full lg:w-72 text-3xl pr-10 flex flex-col relative items-center mb-10 justify-center">
+			<div class="flex flex-col lg:flex-row px-5" data-aos="fade-right" data-aos-delay="50">
+				<div class="w-full lg:w-72 text-3xl flex flex-col relative items-center mb-10 justify-center">
 					<div data-aos="fade-right" data-aos-delay="100">
 						<span class="text-base">
 						Features
@@ -374,38 +248,38 @@ get_header();
 					</div>
 				</div>
 				<div class="flex flex-col flex-wrap justify-center lg:flex-row w-full z-10 images-container">
-					<div class="flex justify-center px-5 relative w-full">
-						<div class="lg:w-3/6 flex flex-row-reverse md:flex-row">
+					<div class="flex justify-center px-5 relative w-full mb-10">
+						<div class="lg:w-3/6 flex flex-col-reverse md:flex-row-reverse lg:flex-row items-center">
 							<div class="image" data-aos="fade-up" data-aos-offset="200">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right.png" class="max-w-[190px] mb-5">
 							</div>
-							<div class="flex flex-col items-center justify-center pb-6 text-center px-10">
+							<div class="flex flex-col items-center justify-center pb-6 text-center xl:px-10">
 								<div class="font-bold mb-3 text-xl" data-aos-delay="100" data-aos="fade-left">
 									Never Miss a Beat with Snippit!
 								</div>
-								<div class="color-line mb-3" data-aos-delay="200" data-aos="fade-left"></div>
+								<div class="color-line mb-3 hidden md:block" data-aos-delay="200" data-aos="fade-left"></div>
 								<p data-aos-delay="300" data-aos="fade-left">Our easy-to-use platform simplifies scheduling and setting up essential services so you can focus on what matters.</p>
 							</div>
 						</div>
 					</div>
-					<div class="flex flex-row items-center relative px-5 w-full lg:w-3/6">
+					<div class="flex flex-col-reverse md:flex-row items-center relative px-5 w-full lg:w-3/6 mb-10 md:mb-0">
 						<div class="image" data-aos="fade-right" data-aos-offset="200">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left.png" class="max-w-[190px] mb-5">
 						</div>
-						<div class="flex flex-col items-center justify-center pb-6 text-center px-10">
+						<div class="flex flex-col items-center justify-center pb-6 text-center xl:px-10">
 							<div class="font-bold mb-3 text-xl" data-aos-delay="400" data-aos="fade-left">
 								Your One-Stop Shop
 							</div>
-							<div class="color-line mb-3" data-aos-delay="500" data-aos="fade-left"></div>
+							<div class="color-line mb-3 hidden md:block" data-aos-delay="500" data-aos="fade-left"></div>
 							<p data-aos-delay="600" data-aos="fade-left">Snippit has everything you need for a simplified life, from energy efficiency to home repairs, and even healthcare services.</p>
 						</div>
 					</div>
-					<div class="flex flex-row items-center relative px-5 w-full lg:w-3/6">
-						<div class="flex flex-col items-center justify-center pb-6 text-center px-10">
+					<div class="flex flex-col md:flex-row items-center relative px-5 w-full lg:w-3/6 ">
+						<div class="flex flex-col items-center justify-center pb-6 text-center xl:px-10">
 							<div class="font-bold mb-3 text-xl" data-aos-delay="700" data-aos="fade-right">
 								Get The Right Pro For The Job!
 							</div>
-							<div class="color-line mb-3" data-aos-delay="800" data-aos="fade-right"></div>
+							<div class="color-line mb-3 hidden md:block" data-aos-delay="800" data-aos="fade-right"></div>
 							<p data-aos-delay="900" data-aos="fade-right">Snippit lets you easily connect with qualified and certified professionals for any task at hand.</p>
 						</div>
 						<div class="image" data-aos="fade-left" data-aos-offset="200">
@@ -451,9 +325,8 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="container flex flex-col items-center justify-center min-h-[473px] mx-auto p-10 relative truncate" join-now>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.png" class="absolute">
-			<div class="text-5xl z-10 mb-10 text-center">Join the Business Revolution with Snippit!</div>
+		<div class="bg-center bg-cover container flex flex-col items-center justify-center min-h-[473px] mx-auto p-10 relative" join-now>
+			<div class="text-3xl md:text-5xl z-10 mb-10 text-center">Join the Business Revolution with Snippit!</div>
 			<div class="flex flex-col md:flex-row justify-center">
 				<button class="download z-10 text-xl shadow px-10 md:px-20 py-3 flex items-center mb-10 md:mb-0 btn-11 bg-white" data-aos="fade-up">
 					<div class="z-10">

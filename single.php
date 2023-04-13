@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage cogncise
  * @since Twenty Twenty-One 1.0
  */
 
@@ -33,8 +33,8 @@ while ( have_posts() ) :
 	}
 
 	// Previous/next post navigation.
-	$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
-	$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+	$twentytwentyone_next = is_rtl() ? cogncise_get_icon_svg( 'ui', 'arrow_left' ) : cogncise_get_icon_svg( 'ui', 'arrow_right' );
+	$twentytwentyone_prev = is_rtl() ? cogncise_get_icon_svg( 'ui', 'arrow_right' ) : cogncise_get_icon_svg( 'ui', 'arrow_left' );
 
 	$twentytwentyone_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
 	$twentytwentyone_previous_label = esc_html__( 'Previous post', 'twentytwentyone' );

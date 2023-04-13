@@ -242,7 +242,21 @@ div.wpforms-container-full form.wpforms-form button[type=submit]:hover {
 .bg-gradient {
     background-image: linear-gradient(to right, #009bff , #32d0d1);
 }
-
+.nav-links {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #e9e9e9;
+  justify-content: space-evenly;
+  padding: 15px 10px;
+  align-items: center;
+}
+.page-numbers {
+  display: flex;
+}
+.page-numbers svg {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .item {
     position: absolute;
     width: 100px;
@@ -895,4 +909,145 @@ align-items: center;
     width: 100%;
     height: 200%;
     z-index: 98;
+  }
+
+  @-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+  }
+
+  @keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+  }
+  @-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+  }
+  @keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  99% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+    background-color: #32d0d1;
+  }
+  }
+  .btn-11 {
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    transition: all 0.8s ease !important;
+  }
+  .btn-11:before {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #3b9dff;
+    border-radius: 50%;
+  }
+  .btn-11:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #97dc21;
+    border-radius: 50%;
+  }
+  .btn-11:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+  .btn-11:after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+  .btn-11:hover {
+    color: white;
+    scale: 1.1;
+  }
+  .btn-11:hover div {
+
+  }
+  .btn-11:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+      animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+  }
+  .btn-11:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+      animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+  }
+  .blue-corner {
+    max-width: 100px;
+    right: 0;
+    top: 0;
+  }
+  .green-corner {
+    max-width: 100px;
+    left: 0;
+    bottom: 0;
+  }
+  .blue-square {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+  }
+  .green-square {
+    top: 50%;
+    right: 25%;
+    transform: translate(50%, -50%);
+    max-width: 500px;
   }
