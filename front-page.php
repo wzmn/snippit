@@ -34,10 +34,11 @@ get_header();
 
 			</style>
 			<div class="banner flex items-center justify-center min-h-[80vh] relative text-center truncate whitespace-normal flex-col">
-				<div class="w-full md:w-4/6 max-w-[775px] px-5">
-					<div class="text-5xl md:text-7xl mb-10">
-						Where Convenience Meets Necessity
+				<div class="w-full md:w-4/6 px-5">
+					<div class="text-5xl md:text-6xl mb-5">
+						Search. Compare. Save on your Essential Services  
 					</div>
+					<div id="app" class="text-4xl mb-5"></div>
 					<p class="font-light text-xl mb-16">Wide range of essential services, from energy efficiency to home repairs to medical care and more.</p>
 				</div>
 				<div class="flex flex-col justify-center md:flex-row md:items-center">
@@ -337,6 +338,7 @@ get_header();
 				</button>
 			</div>
 		</div>
+
 	<?php 
 
 	get_footer();

@@ -27,7 +27,11 @@
     position: relative;
   }
   .main-page>div {
-    /* background: white; */
+    background: url('<?php echo get_stylesheet_directory_uri() . "/images/cutout/background.png"; ?>');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: contain;
   }
   .float-container div * {
     width: initial !important;

@@ -60,6 +60,45 @@
 			</svg>
 		</button>
 	</div>
+	<style>
+		.newsletter .wpforms-field-container {
+
+		}
+		.wpforms-field-label {
+			font-weight: 700;font-family: Poppins, sans-serif;
+			font-size: 1rem;
+		}
+		.wpforms-container .wpforms-field.wpforms-field-email {
+			display: flex;
+			flex-direction: column;
+			min-height: 150px;
+			justify-content: space-between;
+		}
+		.wpforms-container form {
+			padding-right: 5rem;
+
+		}
+		.wpforms-container input[type="email"].wpforms-field-small {
+			padding: 0.25rem;
+			border: 1px solid #c7c7c7;
+			width: 100%;
+			max-width: initial;
+		}
+		.wpforms-container .wpforms-field-description {
+			color: grey;	
+		}
+		.wpforms-container .wpforms-submit {
+			padding: 0.5rem;
+			color: white;
+			border-radius: 0.375rem;
+			width: 100%;
+			background: rgb(10,132,255);
+		}
+		.wpforms-confirmation-container p {
+			font-weight: 700;
+			color: #27ae60;
+		}
+	</style>
 	<footer class="bg-white">
 		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t border-b px-5">
 			<div class="text-3xl md:text-5xl w-3/5 font-light my-20">
@@ -114,27 +153,36 @@
 				<div class="flex-1 mb-5">
 					<div class="font-bold">Address</div>
 					<p class="text-base py-1 mb-0">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
+					<div class="newsletter">
+						<?php echo do_shortcode('[wpforms id="782" title="false"]');?>
+					</div>
 				</div>
 				<div class="flex-1 mb-5">
 					<div class="font-bold">Quick Links</div>
 					<ul class="list-none">
 						<li class="py-1">
-							<a href="/privacy-policy/">Privacy Policy</a>
+							<a href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a>
 						</li>
 						<li class="py-1">
-							<a href="/user-agreement/">User Agreement</a>
+							<a href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a>
 						</li>
 						<li class="py-1">
-							<a href="/terms-conditions/">Terms & Conditions</a>
+							<a href="<?php echo get_post_permalink(get_page_by_path('/terms-conditions/', OBJECT, 'page')->ID);?>">Terms & Conditions</a>
 						</li>
 					</ul>
 				</div>
 				<div class="flex-1 mb-5">
 					<div class="font-bold">Contact</div>
 					<ul class="list-none">
-						<li class="py-1"><i class="fa fa-phone mr-2"></i>+61 1300 589 704</li>
-						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>enquiries@snippit.com.au</li>
-						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>support@snippit.com.au</li>
+						<li class="py-1"><i class="fa fa-phone mr-2"></i>
+							<a href="tel:+61 1300 589 704">+61 1300 589 704</a>
+						</li>
+						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>
+							<a href="mailto:enquiries@snippit.com.au">enquiries@snippit.com.au</a>
+						</li>
+						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>
+							<a href="mailto:support@snippit.com.au">support@snippit.com.au</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -185,15 +233,13 @@
 					}else{
 						console.warn("Not a selector")
 					}					
+				},
+				toggleMobileMenu(){
+					d.querySelector('.mobile-menu').classList.toggle('active')
+					d.querySelector('body').classList.toggle('menu-open')
 				}
 			})
-		})(window, document, gsap)
-
-
-		function toggleMobileMenu(){
-			document.querySelector('.mobile-menu').classList.toggle('active')
-			document.querySelector('body').classList.toggle('menu-open')
-		}
+		})(window, document, gsap) 
 
 		document.addEventListener("DOMContentLoaded", function(){
 			AOS.init();
@@ -225,34 +271,12 @@
 				tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: "[how-it-works]",
-						//markers: true,
 						start: () => "top center",
 						end: () => "+=" + hiw.offsetHeight,	
-						// onLeave: ()=>{
-						// 	gsap.to(document.body, {
-						// 		background: "white"
-						// 	})
-						// },					
-						// onLeaveBack: ()=>{
-						// 	gsap.to(document.body, {
-						// 		background: "white"
-						// 	})
-						// },	
 						toggleActions: "play none reverse none",
 						invalidateOnRefresh: true,
 					}
 				});
-
-				// tl.to(document.body, {
-				// 	// duration: 0.33,
-				// 	background: "#e7efef"
-				// }).to(document.body, {
-				// 	// duration: 0.33,
-				// 	background: "#ecf6da"
-				// }).to(document.body, {
-				// 	// duration: 0.33,
-				// 	background: "#d6e9fb"
-				// })
 			})
 			ifExists('.siema-testimonials', function (element) {
 				window.banner = new Siema({
@@ -289,6 +313,31 @@
 					transition: 'cubic-bezier(0,0,0,1)'
 				});
 			})
+			ifExists('#app', function(){
+				var app = document.getElementById('app');
+
+				var typewriter = new Typewriter(app, {
+					loop: true,
+					delay: 50
+				});
+
+				typewriter.typeString('Energy Effeciency')
+					.pauseFor(2500)
+					.deleteAll()
+					.typeString('Supermarket')
+					.pauseFor(2500)
+					.deleteAll()
+					.typeString('Construction')
+					.pauseFor(2500)
+					.deleteAll()
+					.typeString('Medical')
+					.pauseFor(2500)
+					.deleteAll()
+					.start();
+			})
+			// 
+			// End DOMContentLoaded
+			// 
 		})
 
 	</script>
