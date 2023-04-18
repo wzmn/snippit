@@ -38,7 +38,7 @@ get_header();
 					<div class="text-5xl md:text-7xl mb-5	">
 						Search. Compare. Save   
 					</div>
-					<div class="text-4xl mb-5">on your Essential Services</div>
+					<div class="text-4xl mb-5">On your Essential Services</div>
 					<div id="app" class="text-3xl mb-10 font-light"></div>
 					<!-- <p class="font-light text-xl mb-16">Wide range of essential services, from energy efficiency to home repairs to medical care and more.</p> -->
 				</div>
