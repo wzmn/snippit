@@ -154,11 +154,10 @@
 					<div class="font-bold">Address</div>
 					<p class="text-base py-1 mb-0">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
 					<div class="newsletter">
-						<?php 
-					if(get_field('shortcode', 'option')){
-						$shortcode = get_field('shortcode', 'option'); 
-						echo do_shortcode($shortcode);
-					}
+					<?php 
+						if(get_field('shortcode', 'option')){
+							echo do_shortcode(get_field('shortcode', 'option'));
+						}
 					?>
 					</div>
 				</div>
@@ -326,7 +325,7 @@
 					delay: 50
 				});
 
-				typewriter.typeString('Energy Effeciency')
+				typewriter.typeString('Energy Efficiency')
 					.pauseFor(2500)
 					.deleteAll()
 					.typeString('Supermarket')

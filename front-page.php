@@ -35,11 +35,12 @@ get_header();
 			</style>
 			<div class="banner flex items-center justify-center min-h-[80vh] relative text-center truncate whitespace-normal flex-col">
 				<div class="w-full md:w-4/6 px-5">
-					<div class="text-5xl md:text-6xl mb-5">
-						Search. Compare. Save on your Essential Services  
+					<div class="text-5xl md:text-7xl mb-5	">
+						Search. Compare. Save   
 					</div>
-					<div id="app" class="text-4xl mb-5"></div>
-					<p class="font-light text-xl mb-16">Wide range of essential services, from energy efficiency to home repairs to medical care and more.</p>
+					<div class="text-4xl mb-5">on your Essential Services</div>
+					<div id="app" class="text-3xl mb-10 font-light"></div>
+					<!-- <p class="font-light text-xl mb-16">Wide range of essential services, from energy efficiency to home repairs to medical care and more.</p> -->
 				</div>
 				<div class="flex flex-col justify-center md:flex-row md:items-center">
 					<div>
