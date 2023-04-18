@@ -154,7 +154,12 @@
 					<div class="font-bold">Address</div>
 					<p class="text-base py-1 mb-0">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
 					<div class="newsletter">
-						<?php echo do_shortcode('[wpforms id="782" title="false"]');?>
+						<?php 
+					if(get_field('shortcode', 'option')){
+						$shortcode = get_field('shortcode', 'option'); 
+						echo do_shortcode($shortcode);
+					}
+					?>
 					</div>
 				</div>
 				<div class="flex-1 mb-5">
