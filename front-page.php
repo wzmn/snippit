@@ -8,7 +8,7 @@ get_header();
 	<style>
 	 [join-now] {
 		overflow: hidden;
-		background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.png');
+		background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.jpg');
 	}
 	</style>
 		<div class="container mx-auto" hero>
