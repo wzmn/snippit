@@ -261,7 +261,7 @@ get_header();
 						<div class="flex flex-col">
 							<div class="text-xl font-semibold mb-5">Providing quality services you can count on.</div>
 							<div>
-								<button class="bg-blue text-white px-10 py-5">Join Now</button>
+								<a href="<?php echo get_post_permalink(get_page_by_path('/marketplace/', OBJECT, 'page')->ID);?>" class="bg-blue text-white px-10 py-5">Join Now</a>
 							</div>
 						</div>
 					</div>
