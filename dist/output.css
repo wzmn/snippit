@@ -730,10 +730,6 @@ nav ul, .sidebar ul {
   min-height: 80vh;
 }
 
-.min-h-\[473px\] {
-  min-height: 473px;
-}
-
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -1041,16 +1037,16 @@ nav ul, .sidebar ul {
   padding: 1.25rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-3 {
@@ -1117,6 +1113,11 @@ nav ul, .sidebar ul {
   padding-bottom: 10rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1147,11 +1148,6 @@ nav ul, .sidebar ul {
   padding-right: 1.5rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pl-4 {
   padding-left: 1rem;
 }
@@ -1170,6 +1166,10 @@ nav ul, .sidebar ul {
 
 .pl-0 {
   padding-left: 0px;
+}
+
+.pr-40 {
+  padding-right: 10rem;
 }
 
 .pr-10 {
@@ -2528,8 +2528,8 @@ body.menu-open:after {
     line-height: 1;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
+  .md\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
@@ -2541,11 +2541,6 @@ body.menu-open:after {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
   }
 
   .md\:text-2xl {

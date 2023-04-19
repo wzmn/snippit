@@ -330,8 +330,8 @@ get_header();
 		<div join-now>
 			<div class="container mx-auto">
 				<div class="flex">
-					<div class="flex flex-1 flex-col justify-between py-16 pr-40 pl-4">
-						<div class="flex flex-col">
+					<div class="flex flex-1 flex-col justify-center pr-40 pl-4">
+						<div class="flex flex-col mb-10">
 							<div class="text-2xl mb-5">
 								Join the Business 
 							</div>
@@ -340,7 +340,7 @@ get_header();
 							</div>
 						</div>
 						<div class="flex flex-col">
-							<div class="text-xl font-semibold mb-5">Providing quality services you can count on.</div>
+							<div class="text-xl font-semibold mb-10">Providing quality services you can count on.</div>
 							<div>
 								<a href="<?php echo get_post_permalink(get_page_by_path('/marketplace/', OBJECT, 'page')->ID);?>" class="bg-blue text-white px-10 py-5">Join Now</a>
 							</div>
