@@ -1051,3 +1051,8 @@ align-items: center;
     transform: translate(50%, -50%);
     max-width: 500px;
   }
+
+
+  #menu-main li:last-child a {
+    padding-right: 0px;
+  }
