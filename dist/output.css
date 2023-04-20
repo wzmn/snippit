@@ -1200,6 +1200,10 @@ nav ul, .sidebar ul {
   padding-left: 7rem;
 }
 
+.pr-0 {
+  padding-right: 0px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2519,6 +2523,10 @@ body.menu-open:after {
     padding-top: 0px;
   }
 
+  .md\:pr-40 {
+    padding-right: 10rem;
+  }
+
   .md\:text-\[10rem\] {
     font-size: 10rem;
   }
@@ -2580,6 +2588,10 @@ body.menu-open:after {
 
   .lg\:p-6 {
     padding: 1.5rem;
+  }
+
+  .lg\:pr-40 {
+    padding-right: 10rem;
   }
 }
 
