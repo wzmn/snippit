@@ -31,6 +31,9 @@ get_header();
 		height: 100%;
 		width: 100%;
 	}
+	[video] video {
+		max-height: calc(100vh - 110px);
+	}
 	@media (max-width: 768px) {
 		[join-now]:before {
 			content: none;
@@ -40,7 +43,7 @@ get_header();
 		}
 	}
 	</style>
-		<div class="container mx-auto" hero>
+		<div class="container mx-auto mb-20 md:mb-0" hero>
 			<style>
 				.download {
 					border-radius: 50px;
@@ -62,7 +65,7 @@ get_header();
 				}
 
 			</style>
-			<div class="banner flex items-center justify-center min-h-[80vh] relative text-center truncate whitespace-normal flex-col">
+			<div class="banner flex items-center justify-center min-h-[80vh] relative text-center whitespace-normal flex-col">
 				<div class="w-full md:w-4/6 px-5">
 					<div class="text-5xl md:text-7xl mb-5	">
 						Search. Compare. Save   

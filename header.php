@@ -45,11 +45,6 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<style>
-		#menu-main li:last-child a {
-			padding-right: 0px;
-		}
-	</style>
 	<nav class="relative bg-white sticky top-0 z-30 w-full bg-white shadow-sm">
 		<div class="container mx-auto flex justify-between items-center px-5 py-4">
 			<?php $custom_logo_id = get_theme_mod( 'custom_logo' );

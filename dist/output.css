@@ -2405,12 +2405,12 @@ body.menu-open:after {
     margin-bottom: 2.5rem;
   }
 
-  .md\:mr-20 {
-    margin-right: 5rem;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:mr-20 {
+    margin-right: 5rem;
   }
 
   .md\:mb-40 {
