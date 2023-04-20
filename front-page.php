@@ -5,12 +5,41 @@ get_header();
 
 ?>
 
-	<style>
-	[join-now] {
-		background: rgb(248,248,248);
-		background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 49%, rgba(225,241,254,1) 50%, rgba(225,241,254,1) 100%);
-	}
-	</style>
+		<style>
+			[join-now] {
+				position: relative;
+				/* background: rgb(248,248,248);
+				background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 49%, rgba(225,241,254,1) 50%, rgba(225,241,254,1) 100%); */
+			}
+			[join-now]:before {
+				content: " ";
+				position: absolute;
+				top: 0;
+				right: -50%;
+				z-index: -1;
+				background-color: #e2f2ff;
+				height: 100%;
+				width: 100%;
+			}
+			[join-now]:after {
+				content: " ";
+				position: absolute;
+				top: 0;
+				right: 50%;
+				z-index: -1;
+				background-color: #f8f8f8;
+				height: 100%;
+				width: 100%;
+			}
+			@media (max-width: 768px) {
+				[join-now]:before {
+					content: none;
+				}
+				[join-now]:after {
+					right: 0;
+				}
+			}
+		</style>
 		<div class="container mx-auto" hero>
 			<style>
 				.download {
@@ -234,23 +263,11 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<!-- <div class="bg-center bg-cover container flex flex-col items-center justify-center min-h-[473px] mx-auto p-10 relative" join-now>
-			<div class="text-3xl md:text-5xl z-10 mb-10 text-center">Join the Business Revolution with Snippit!</div>
-			<div class="flex flex-col md:flex-row justify-center">
-				<button class="download z-10 text-xl shadow px-10 md:px-20 py-3 flex items-center mb-10 md:mb-0 btn-11 bg-white" data-aos="fade-up">
-					<div class="z-10">
-						<div class="font-semibold">
-							<a class="text-xl" href="<?php echo get_site_url() . "/marketplace";?>">Join Now</a>
-						</div>
-					</div>
-				</button>
-			</div>
-		</div> -->
 		<div join-now>
 			<div class="container mx-auto">
 				<div class="flex">
-					<div class="flex flex-1 flex-col justify-between py-16 pr-40 pl-4">
-						<div class="flex flex-col">
+					<div class="flex flex-1 flex-col justify-between py-16 pl-4">
+						<div class="flex flex-col pr-0 lg:pr-40">
 							<div class="text-2xl mb-5">
 								Join the Business 
 							</div>
@@ -259,13 +276,18 @@ get_header();
 							</div>
 						</div>
 						<div class="flex flex-col">
-							<div class="text-xl font-semibold mb-5">Providing quality services you can count on.</div>
+							<div class="text-xl font-semibold mb-10">Providing quality services you can count on.</div>
 							<div>
 								<a href="<?php echo get_post_permalink(get_page_by_path('/marketplace/', OBJECT, 'page')->ID);?>" class="bg-blue text-white px-10 py-5">Join Now</a>
 							</div>
 						</div>
 					</div>
-					<div class="flex-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.jpg" class="flex-1"></div>
+					<div class="flex-1 hidden md:flex justify-center items-center">
+						<div>
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.jpg">
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
