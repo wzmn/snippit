@@ -52,7 +52,8 @@ h1 {
   overflow-x: hidden;
 }
 .banner {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 137px);
+  overflow: hidden;
 }
 .circle {
     height: 500px;

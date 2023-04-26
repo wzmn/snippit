@@ -338,7 +338,46 @@
 					.pauseFor(2500)
 					.deleteAll()
 					.start();
-			})
+
+				let tl = gsap.timeline();
+				let mm = gsap.matchMedia();
+
+				const mobileAnimation = () => {
+					tl.to(".fade-down", {duration: 0.5, opacity: 1, y: 0})
+					tl.to(".service", {duration: 0.7, opacity: 1, bottom: "-20px"});
+					tl.to(".service", {duration: 0.3, scale: "1"});
+					tl.to(".blue", {x: "-50%", duration: 0.5, opacity: 1, left: "50%"})
+					tl.to(".blue", {x: "0%", duration: 1, opacity: 1, right: "-100%", left: "initial"}, "+=2");
+					tl.to(".yellow", {x: "-50%", duration: 0.5, opacity: 1, left: "50%"});
+					tl.to(".yellow", {x: "0%", duration: 1, opacity: 1, right: "-100%", left: "initial"}, "+=2");
+					tl.to(".cyan", {x: "-50%", duration: 0.5, opacity: 1, left: "50%"});
+					tl.to(".cyan", {x: "0%", duration: 1, opacity: 1, right: "-100%", left: "initial"}, "+=2");
+					tl.to(".green", {x: "-50%", duration: 0.5, opacity: 1, left: "50%"});
+					tl.to(".green", {x: "0%", duration: 1, opacity: 1, right: "-100%", left: "initial"}, "+=2");
+				} 
+				
+				const desktopAnimation = () => {
+					tl.to(".fade-down", {duration: 0.5, opacity: 1, y: 0})
+					tl.to(".service", {x: 0, y: "30px", bottom: 0, duration: 0.5, opacity: 1});
+					tl.to(".service", {scale: 1, duration: 0.1});
+					tl.to(".yellow", {left: "19.7%", bottom: "-5%", duration: 0.5, opacity: 1});
+					tl.to(".arrow-left", {left: "27.6%", bottom: "38.1%", rotate: "0deg", duration: 0.5, opacity: 1, x: 0, y: 0});
+					tl.to(".blue", {left: "16.9%", bottom: "29%", duration: 0.5, opacity: 1});
+					tl.to(".arrow-right", {right: "27.9%", bottom: "49%", rotate: "0deg", duration: 0.5, opacity: 1});
+					tl.to(".cyan", {left: "68.9%", bottom: "32%", duration: 0.5, opacity: 1});
+					tl.to(".green", {left: "70.1%", bottom: "2.4%", duration: 0.5, opacity: 1});
+				}
+				mm.add("(min-width: 767px)", () => {
+					// desktop setup code here...
+					desktopAnimation()
+				});
+
+				mm.add("(max-width: 768px)", () => {
+					// mobile setup code here...
+					mobileAnimation()
+				});
+			}) // end #app
+
 			// 
 			// End DOMContentLoaded
 			// 
