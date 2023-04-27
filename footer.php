@@ -13,7 +13,7 @@
 
 ?>
 </main>
-	<div class="download-fixed">
+	<div class="download-fixed z-30">
 		<button class="download-btn flex items-center px-3 py-2 shadow float mb-6">
 			<svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 28.74 35.253" class="">
 			<g id="apple-logo" transform="translate(-2.104)">
@@ -61,8 +61,10 @@
 		</button>
 	</div>
 	<style>
-		.newsletter .wpforms-field-container {
-
+		@media (min-width: 1024px) {
+			.wpforms-container form {
+				padding-right: 5rem;
+			}
 		}
 		.wpforms-field-label {
 			font-weight: 700;font-family: Poppins, sans-serif;
@@ -74,10 +76,7 @@
 			min-height: 150px;
 			justify-content: space-between;
 		}
-		.wpforms-container form {
-			padding-right: 5rem;
 
-		}
 		.wpforms-container input[type="email"].wpforms-field-small {
 			padding: 0.25rem;
 			border: 1px solid #c7c7c7;
@@ -101,7 +100,7 @@
 	</style>
 	<footer class="bg-white">
 		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t border-b px-5">
-			<div class="text-3xl md:text-5xl w-3/5 font-light my-20">
+			<div class="text-3xl md:text-5xl w-full md:w-3/5 font-light my-20">
 				Essential Services, at Your Fingertips
 			</div>
 			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">

@@ -44,9 +44,6 @@ get_header();
 					rotate: -90deg;
 				}
 				@media (min-width: 768px) {
-					.bg-color {
-						max-height: 380px;
-					}
 					.green, .blue, .cyan, .yellow {
 						z-index: 0;
 					}
@@ -116,8 +113,8 @@ get_header();
 		<div class="container flex justify-center mb-20 md:mb-40 mx-auto py-0 md:py-36" ask-how>
 			<div class="lg:max-w-[60%] w-full px-5">
 				<div class="text-3xl md:text-5xl lg:text-7xl mb-10 px-10 lg:px-28 font-semibold text-center">Experience Convenience Like  <span class="text-blue">Never Before</span></div>
-				<div class="flex items-center justify-center">
-					<div class="bg-[#f4faff] rounded-[1rem] p-10 flex w-4/5 mr-0 md:mr-10 items-center">
+				<div class="flex items-center justify-center flex-col md:flex-row">
+					<div class="bg-[#f4faff] rounded-[1rem] md:mb-0 mb-10 p-10 flex w-4/5 mr-0 md:mr-10 items-center">
 						<img src="<?php echo get_stylesheet_directory_uri();?>/images/star.png" class="max-w-[60px] mr-5">
 						<p class="text-base font-semibold mb-0">Snippit's essential services deliver unparalleled value, making your everyday essentials <span class="text-blue">extraordinary</span></p>
 					</div>
@@ -129,44 +126,50 @@ get_header();
 		</div>
 		<div class="container mx-auto mb-20 md:mb-40 flex items-center flex-col px-5" id="features">
 			<div class="text-2xl mb-5">Features</div>
-			<div class="mb-20 font-semibold text-3xl">Solutions that fit your <span class="text-lime">specific needs</span></div>
+			<div class="mb-20 font-semibold text-3xl text-center">Solutions that fit your <span class="text-lime">specific needs</span></div>
 			<div class="flex flex-col lg:max-w-[80%] rows">
-				<div class="flex-row flex lg:space-x-28 space-x-0 mb-10">
+				<div class="flex-row flex lg:space-x-28 space-x-0">
 					<div class="flex-1">
-						<div class="bg-lime flex justify-center rounded-bl-curve">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-1.png" class="max-h-[500px]">
+						<div class="bg-lime flex justify-center items-center h-full rounded-bl-curve">
+							<div>
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-1.png" class="max-h-[500px]">
+							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
-						<div class="px-10">
-							<div class="text-3xl font-semibold mb-5">Your One-Stop Shop</div>
-							<p>Snippit has everything you need for a simplified life, from everry efficiency to home repairs and even health services.</p>
+						<div class="px-4 md:px-10">
+							<div class="text-xl md:text-3xl font-semibold mb-5">Your One-Stop Shop</div>
+							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
 				</div>
-				<div class="flex-row-reverse flex lg:space-x-28 space-x-0 mb-10">
+				<div class="flex-row-reverse flex lg:space-x-28 space-x-0">
 					<div class="flex-1">
-						<div class="bg-cyan flex justify-center rounded-br-curve">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-3.png" class="max-h-[500px]">
+						<div class="bg-cyan flex justify-center items-center h-full rounded-br-curve">
+							<div>
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-3.png" class="max-h-[500px]">
+							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
-						<div class="px-10">
-							<div class="text-3xl font-semibold mb-5">Get the Right Pro for the Job</div>
+						<div class="px-4 md:px-10">
+							<div class="text-xl md:text-3xl font-semibold mb-5">Get the Right Pro for the Job</div>
 							<p>Snippit let's you easily connect with qualified and certified professionals for any task at hand.</p>
 						</div>
 					</div>
 				</div>
 				<div class="flex-row flex lg:space-x-28 space-x-0">
 					<div class="flex-1">
-						<div class="bg-blue flex justify-center rounded-bl-curve">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-3.png" class="max-h-[500px]">
+						<div class="bg-blue flex justify-center items-center h-full rounded-bl-curve">
+							<div>
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-3.png" class="max-h-[500px]">
+							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
-						<div class="px-10">
-							<div class="text-3xl font-semibold mb-5">Never Miss A Beat With Snippit</div>
-							<p>Snippit has everything you need for a simplified life, from everry efficiency to home repairs and even health services.</p>
+						<div class="px-4 md:px-10">
+							<div class="text-xl md:text-3xl font-semibold mb-5">Never Miss A Beat With Snippit</div>
+							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
 				</div>
@@ -179,6 +182,7 @@ get_header();
 					max-width: 20%;
 					right: 0;
 					transform: translateY(calc(-100% - -1px));
+					min-width: 150px;
 				}
 				.bg-color {
 					width: 100%;
@@ -187,44 +191,44 @@ get_header();
 					min-height: 380px;
 					height: 100%;
 				}
-				.ss-container>.flex-1:nth-child(2) .upside-down {
+				.ss-container>.w-full:nth-child(2) .upside-down {
 					transform: rotate(180deg);
 				}
-				.ss-container>.flex-1:nth-child(4) .upside-down {
+				.ss-container>.w-full:nth-child(4) .upside-down {
 					transform: rotate(180deg);
 				}
 
 			</style>
-			<div class="flex flex-col items-end justify-center w-4/5 mb-10">
+			<div class="flex flex-col sm:items-end justify-center w-full sm:w-4/5 mb-10 items-center">
 				<div class="md:text-3xl font-light">How it Works</div>
-				<div class="flex items-baseline">
+				<div class="flex flex-col sm:flex-row items-baseline">
 					<div class="text-5xl">Functional.</div>
 					<div class="text-7xl font-bold text-cyan">Simple</div>
 				</div>
 			</div>
 			<div class="flex relative">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/how-it-works.png" class="absolute bg-img">
-				<div class="bg-[#52D49A] rounded-[2rem] bg-color"></div>
-				<div class="flex pt-10 ss-container">
-					<div class="flex flex-1 flex-col items-center">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f1.png" class="mb-10">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/yellow.png" class="max-w-[30px] mb-10">
-						<div class="px-20 text-xl">Sign up in a snap and access Snippit's power-packed app.</div>
+				<div class="bg-[#52D49A] rounded-[2rem] bg-color lg:max-h-[380px]"></div>
+				<div class="flex pt-10 ss-container w-full flex-col lg:flex-row">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f1.png" class="mb-10 max-w-[50%] lg:max-w-full">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/yellow.png" class="max-w-[30px] mb-10 hidden lg:block">
+						<div class="px-8 text-xl max-lg:text-white">Sign up in a snap and access Snippit's power-packed app.</div>
 					</div>
-					<div class="flex flex-1 flex-col items-center">
-						<div class="px-20 text-xl text-white">Pick from our range of essential services tailored to your needs.</div>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f2.png" class="mb-10">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cyan.png" class="max-w-[30px] mb-10 upside-down">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+						<div class="px-8 text-xl text-white">Pick from our range of essential services tailored to your needs.</div>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f2.png" class="mb-10 max-w-[50%] lg:max-w-full">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cyan.png" class="max-w-[30px] mb-10 hidden lg:block upside-down">
 					</div>
-					<div class="flex flex-1 flex-col items-center">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f3.png" class="mb-10">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/green.png" class="max-w-[30px] mb-10">
-						<div class="px-20 text-xl">Self-assess like a pro with Snippit's user-friendly interface.</div>
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f3.png" class="mb-10 max-w-[50%] lg:max-w-full">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/green.png" class="max-w-[30px] mb-10 hidden lg:block">
+						<div class="px-8 text-xl max-lg:text-white">Self-assess like a pro with Snippit's user-friendly interface.</div>
 					</div>
-					<div class="flex flex-1 flex-col items-center">
-						<div class="px-20 text-xl text-white">Stay updated on the go with timmely alerts for your selected service.</div>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f4.png" class="mb-10">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue.png" class="max-w-[30px] mb-10 upside-down">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+						<div class="px-8 text-xl text-white">Stay updated on the go with timely alerts for your selected service.</div>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f4.png" class="mb-10 max-w-[50%] lg:max-w-full">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue.png" class="max-w-[30px] mb-10 hidden lg:block upside-down">
 					</div>
 				</div>
 			</div>
@@ -274,14 +278,14 @@ get_header();
 							<div class="text-2xl mb-5">
 								Join the Business 
 							</div>
-							<div class="text-6xl">
+							<div class="text-4xl md:text-6xl mb-5">
 								Revolution with Snippit!
 							</div>
 						</div>
 						<div class="flex flex-col">
 							<div class="text-xl font-semibold mb-10">Providing quality services you can count on.</div>
 							<div>
-								<a href="<?php echo get_post_permalink(get_page_by_path('/marketplace/', OBJECT, 'page')->ID);?>" class="bg-blue text-white px-10 py-5">Join Now</a>
+								<a href="<?php echo get_post_permalink(get_page_by_path('/marketplace/', OBJECT, 'page')->ID);?>" class="bg-blue text-white px-10 py-5 rounded-[0.375rem]">Join Now</a>
 							</div>
 						</div>
 					</div>

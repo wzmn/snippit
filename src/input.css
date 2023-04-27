@@ -138,9 +138,7 @@ div.wpforms-container-full form.wpforms-form button[type=submit] {
 div.wpforms-container-full form.wpforms-form .wpforms-field-label {
   font-size: 14px;
 }
-div.wpforms-container-full form.wpforms-form button[type=submit]:hover {
 
-}
 .fade {
     transition: all 0.4s ease;
     position: absolute;
@@ -1015,9 +1013,7 @@ align-items: center;
     color: white;
     scale: 1.1;
   }
-  .btn-11:hover div {
 
-  }
   .btn-11:hover:before {
   -webkit-animation: criss-cross-left 0.8s both;
       animation: criss-cross-left 0.8s both;
