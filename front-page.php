@@ -4,7 +4,7 @@
 get_header();
 
 ?>
-		<div class="container mx-auto" hero>
+		<div class="container mx-auto mb-10" hero>
 			<style>
 				.magnet {
 					transition: transform .3s ease;
@@ -105,9 +105,9 @@ get_header();
 
 			</div>
 		</div>
-		<div class="flex justify-center mb-20 md:mb-40" video>
+		<div class="flex justify-center mb-20 md:mb-40 container mx-auto px-5" video>
 			<video autoplay muted loop playsinline poster="<?php echo get_stylesheet_directory_uri(); ?>/images/home-poster.png">
-				  <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/home.mp4" type="video/mp4">
+				<source src="<?php echo get_stylesheet_directory_uri(); ?>/images/home.mp4" type="video/mp4">
 			</video>
 		</div>
 		<div class="container flex justify-center mb-20 md:mb-40 mx-auto py-0 md:py-36" ask-how>
