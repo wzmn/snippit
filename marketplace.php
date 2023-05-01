@@ -216,7 +216,7 @@
 							<form autocomplete="on">
 								<div class="flex mb-2">
 									<label class="flex items-center mb-2 py-1 mr-5" for="seller">
-										<input type="radio" class="mr-2" id="seller" value="chanel_partner" name="company_type" checked>
+										<input type="radio" class="mr-2" id="seller" value="channel_partner" name="company_type" checked>
 										<span>Seller</span>
 									</label>
 									<label class="flex items-center mb-2 py-1" for="buyer">
