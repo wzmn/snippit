@@ -101,7 +101,7 @@
 	<footer class="bg-white">
 		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t border-b px-5">
 			<div class="text-3xl md:text-5xl w-full md:w-3/5 font-light my-20">
-				Essential Services, at Your Fingertips
+			Solutions That Fits Your Specific Needs & Budget.
 			</div>
 			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
 				<div class="flex-1 mb-5">
@@ -112,7 +112,7 @@
 							
 					?>
 					
-					<div class="mb-3">One stop platform for essential services</div>
+					<div class="mb-3">Search. Compare. Save.</div>
 					<div class="mb-3">ABN - 30 664 818 848</div>
 					<div class="flex social-icons">
 						<a href="https://www.facebook.com/Snippit-105872775751433" target="_blank" class="mb-2 mr-2 facebook">
@@ -357,7 +357,7 @@
 				
 				const desktopAnimation = () => {
 					tl.to(".fade-down", {duration: 0.5, opacity: 1, y: 0})
-					tl.to(".service", {x: 0, y: "30px", bottom: 0, duration: 0.5, opacity: 1});
+					tl.to(".service", {x: 0, y: "30px", bottom: 0, duration: 0.8, opacity: 1});
 					tl.to(".service", {scale: 1, duration: 0.1});
 					tl.to(".yellow", {left: "19.7%", bottom: "-5%", duration: 0.5, opacity: 1});
 					tl.to(".arrow-left", {left: "27.6%", bottom: "38.1%", rotate: "0deg", duration: 0.5, opacity: 1, x: 0, y: 0});

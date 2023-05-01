@@ -112,32 +112,32 @@ get_header();
 		</div>
 		<div class="container flex justify-center mb-20 md:mb-40 mx-auto" ask-how>
 			<div class="lg:max-w-[60%] w-full px-5">
-				<div class="text-3xl md:text-5xl lg:text-7xl mb-10 px-10 lg:px-28 font-semibold text-center">Experience Convenience Like  <span class="text-blue">Never Before</span></div>
+				<div class="text-3xl md:text-5xl lg:text-7xl mb-10 px-10 lg:px-28 font-semibold text-center" data-aos="fade-up">Experience Convenience Like  <span class="text-blue">Never Before</span></div>
 				<div class="flex items-center justify-center flex-col md:flex-row">
-					<div class="bg-[#f4faff] rounded-[1rem] md:mb-0 mb-10 p-10 flex w-4/5 mr-0 md:mr-10 items-center">
+					<div class="bg-[#f4faff] rounded-[1rem] md:mb-0 mb-10 p-10 flex w-4/5 mr-0 md:mr-10 items-center" data-aos="fade-right">
 						<img src="<?php echo get_stylesheet_directory_uri();?>/images/star.png" class="max-w-[60px] mr-5">
 						<p class="text-base font-semibold mb-0">Snippit's essential services deliver unparalleled value, making your everyday essentials <span class="text-blue">extraordinary</span></p>
 					</div>
 					<div class="">
-						<button class="font-semibold text-cyan text-xl">Ask Us How</button>
+						<button class="font-semibold text-cyan text-xl" data-aos="fade-left">Ask Us How</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container mx-auto mb-20 md:mb-40 flex items-center flex-col px-5" id="features">
-			<div class="text-2xl mb-5">Features</div>
-			<div class="mb-20 font-semibold text-3xl text-center">Solutions that fit your <span class="text-lime">specific needs</span></div>
+			<div class="text-2xl mb-5" data-aos="fade-up">Features</div>
+			<div class="mb-20 font-semibold text-3xl text-center" data-aos="fade-up">Solutions that fit your <span class="text-lime">specific needs</span></div>
 			<div class="flex flex-col lg:max-w-[80%] rows">
 				<div class="flex-row flex lg:space-x-28 space-x-0">
 					<div class="flex-1">
-						<div class="bg-lime flex justify-center items-center h-full rounded-bl-curve">
-							<div>
+						<div class="bg-lime flex justify-center items-center h-full rounded-bl-curve" data-aos="fade-right">
+							<div data-aos="zoom-in" data-aos-delay="100">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-1.png" class="max-h-[500px]">
 							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
-						<div class="px-4 md:px-10">
+						<div class="px-4 md:px-10" data-aos="fade-left">
 							<div class="text-xl md:text-3xl font-semibold mb-5">Your <span class="text-gradient">One-Stop</span> Shop</div>
 							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
 						</div>
@@ -145,14 +145,14 @@ get_header();
 				</div>
 				<div class="flex-row-reverse flex lg:space-x-28 space-x-0">
 					<div class="flex-1">
-						<div class="bg-cyan flex justify-center items-center h-full rounded-br-curve">
-							<div>
+						<div class="bg-cyan flex justify-center items-center h-full rounded-br-curve" data-aos="fade-left">
+							<div data-aos="zoom-in" data-aos-delay="100">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-2.png" class="max-h-[500px]">
 							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
-						<div class="px-4 md:px-10">
+						<div class="px-4 md:px-10" data-aos="fade-right">
 							<div class="text-xl md:text-3xl font-semibold mb-5">Get the Right <span class="text-gradient">Pro</span> for the Job</div>
 							<p>Snippit let's you easily connect with qualified and certified professionals for any task at hand.</p>
 						</div>
@@ -160,15 +160,15 @@ get_header();
 				</div>
 				<div class="flex-row flex lg:space-x-28 space-x-0">
 					<div class="flex-1">
-						<div class="bg-blue flex justify-center items-center h-full rounded-bl-curve">
-							<div>
+						<div class="bg-blue flex justify-center items-center h-full rounded-bl-curve" data-aos="fade-right">
+							<div data-aos="zoom-in" data-aos-delay="100">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-3.png" class="max-h-[500px]">
 							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
-						<div class="px-4 md:px-10">
-							<div class="text-xl md:text-3xl font-semibold mb-5">Never Miss A Beat With <span class="text-gradient">Snippit</span></div>
+						<div class="px-4 md:px-10" data-aos="fade-left">
+							<div class="text-xl md:text-3xl font-semibold mb-5">Never Miss A Beat With <span class="text-gradient">Snippit!</span></div>
 							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
@@ -197,35 +197,41 @@ get_header();
 				.ss-container>.w-full:nth-child(4) .upside-down {
 					transform: rotate(180deg);
 				}
-
+				.ss-container>.w-full>img {
+					transition: scale 0.4s ease;
+					scale: 0.9;
+				}
+				.ss-container>.w-full>img:not(.hidden):hover {
+					scale: 1.1;
+				}
 			</style>
 			<div class="flex flex-col sm:items-end justify-center w-full sm:w-4/5 mb-10 items-center">
-				<div class="md:text-3xl font-light">How it Works</div>
+				<div class="md:text-3xl font-light" data-aos="fade-left">How it Works</div>
 				<div class="flex flex-col sm:flex-row items-baseline">
-					<div class="text-5xl">Functional.</div>
-					<div class="text-7xl font-bold text-cyan">Simple</div>
+					<div class="text-5xl" data-aos="fade-right">Functional.</div>
+					<div class="text-7xl font-bold text-cyan" data-aos="fade-up">Simple</div>
 				</div>
 			</div>
 			<div class="flex relative">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/how-it-works.png" class="absolute bg-img">
 				<div class="bg-[#52D49A] rounded-[2rem] bg-color lg:max-h-[380px]"></div>
 				<div class="flex pt-10 ss-container w-full flex-col lg:flex-row">
-					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full" data-aos="zoom-in-up">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f1.png" class="mb-10 max-w-[50%] lg:max-w-full">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/yellow.png" class="max-w-[30px] mb-10 hidden lg:block">
 						<div class="px-8 text-xl max-lg:text-white">Sign up in a snap and access Snippit's power-packed app.</div>
 					</div>
-					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full" data-aos="zoom-in-up" data-aos-delay="100">
 						<div class="px-8 text-xl text-white">Pick from our range of essential services tailored to your needs.</div>
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f2.png" class="mb-10 max-w-[50%] lg:max-w-full">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cyan.png" class="max-w-[30px] mb-10 hidden lg:block upside-down">
 					</div>
-					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full" data-aos="zoom-in-up" data-aos-delay="200">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f3.png" class="mb-10 max-w-[50%] lg:max-w-full">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/green.png" class="max-w-[30px] mb-10 hidden lg:block">
 						<div class="px-8 text-xl max-lg:text-white">Self-assess like a pro with Snippit's user-friendly interface.</div>
 					</div>
-					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full">
+					<div class="flex flex-row lg:flex-col items-center lg:w-1/4 w-full" data-aos="zoom-in-up" data-aos-delay="300">
 						<div class="px-8 text-xl text-white">Stay updated on the go with timely alerts for your selected service.</div>
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/f4.png" class="mb-10 max-w-[50%] lg:max-w-full">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue.png" class="max-w-[30px] mb-10 hidden lg:block upside-down">
@@ -273,7 +279,7 @@ get_header();
 		<div join-now>
 			<div class="container mx-auto">
 				<div class="flex">
-					<div class="flex flex-1 flex-col justify-between py-16 pl-4">
+					<div class="flex flex-1 flex-col justify-between py-16 pl-4" data-aos="fade-right">
 						<div class="flex flex-col pr-0 lg:pr-40">
 							<div class="text-2xl mb-5">
 								Join the Business 
