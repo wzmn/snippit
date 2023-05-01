@@ -85,13 +85,13 @@ get_header();
 					}
 				}
 			</style>
-			<div class="banner relative flex justify-center">
+			<div class="banner relative flex justify-center md:min-h-[620px]">
 				<div class="w-full md:w-4/6 px-5 text-center pt-5">
 					<div class="text-3xl md:text-4xl xl:text-6xl mb-2 md:mb-5 fade-down font-semibold">
 						Search. Compare. Save   
 					</div>
 					<div class="text-2xl md:text-4xl mb-2 md:mb-5 fade-down">On your Essential Services</div>
-					<div id="app" class="text-xl mb-10 font-light fade-down"></div>
+					<div id="app" class="text-3xl mb-10 font-bold fade-down"></div>
 				</div>
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cutout/green-back.png" class="absolute back">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cutout/phone.png" class="absolute phone">
@@ -110,7 +110,7 @@ get_header();
 				<source src="<?php echo get_stylesheet_directory_uri(); ?>/images/home.mp4" type="video/mp4">
 			</video>
 		</div>
-		<div class="container flex justify-center mb-20 md:mb-40 mx-auto py-0 md:py-36" ask-how>
+		<div class="container flex justify-center mb-20 md:mb-40 mx-auto" ask-how>
 			<div class="lg:max-w-[60%] w-full px-5">
 				<div class="text-3xl md:text-5xl lg:text-7xl mb-10 px-10 lg:px-28 font-semibold text-center">Experience Convenience Like  <span class="text-blue">Never Before</span></div>
 				<div class="flex items-center justify-center flex-col md:flex-row">
@@ -138,7 +138,7 @@ get_header();
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
 						<div class="px-4 md:px-10">
-							<div class="text-xl md:text-3xl font-semibold mb-5">Your One-Stop Shop</div>
+							<div class="text-xl md:text-3xl font-semibold mb-5">Your <span class="text-gradient">One-Stop</span> Shop</div>
 							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
@@ -147,13 +147,13 @@ get_header();
 					<div class="flex-1">
 						<div class="bg-cyan flex justify-center items-center h-full rounded-br-curve">
 							<div>
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-3.png" class="max-h-[500px]">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/block-2.png" class="max-h-[500px]">
 							</div>
 						</div>
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
 						<div class="px-4 md:px-10">
-							<div class="text-xl md:text-3xl font-semibold mb-5">Get the Right Pro for the Job</div>
+							<div class="text-xl md:text-3xl font-semibold mb-5">Get the Right <span class="text-gradient">Pro</span> for the Job</div>
 							<p>Snippit let's you easily connect with qualified and certified professionals for any task at hand.</p>
 						</div>
 					</div>
@@ -168,7 +168,7 @@ get_header();
 					</div>
 					<div class="flex flex-1 flex-col justify-center">
 						<div class="px-4 md:px-10">
-							<div class="text-xl md:text-3xl font-semibold mb-5">Never Miss A Beat With Snippit</div>
+							<div class="text-xl md:text-3xl font-semibold mb-5">Never Miss A Beat With <span class="text-gradient">Snippit</span></div>
 							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
@@ -279,7 +279,7 @@ get_header();
 								Join the Business 
 							</div>
 							<div class="text-4xl md:text-6xl mb-5">
-								Revolution with Snippit!
+								Revolution with <span class="text-gradient">Snippit!</span>
 							</div>
 						</div>
 						<div class="flex flex-col">
@@ -291,7 +291,7 @@ get_header();
 					</div>
 					<div class="flex-1 hidden md:flex justify-center items-center">
 						<div>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.jpg">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-now.jpg" class="parallax-block">
 						</div>
 					</div>
 				</div>

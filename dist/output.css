@@ -730,10 +730,6 @@ nav ul, .sidebar ul {
   width: 100%;
 }
 
-.w-3\/5 {
-  width: 60%;
-}
-
 .w-4\/5 {
   width: 80%;
 }
@@ -774,6 +770,10 @@ nav ul, .sidebar ul {
   max-width: 60px;
 }
 
+.max-w-\[50\%\] {
+  max-width: 50%;
+}
+
 .max-w-\[30px\] {
   max-width: 30px;
 }
@@ -804,14 +804,6 @@ nav ul, .sidebar ul {
 
 .max-w-\[25rem\] {
   max-width: 25rem;
-}
-
-.max-w-\[240px\] {
-  max-width: 240px;
-}
-
-.max-w-\[50\%\] {
-  max-width: 50%;
 }
 
 .flex-1 {
@@ -868,10 +860,6 @@ nav ul, .sidebar ul {
 
 .items-start {
   align-items: flex-start;
-}
-
-.items-end {
-  align-items: flex-end;
 }
 
 .items-center {
@@ -1145,16 +1133,6 @@ nav ul, .sidebar ul {
   padding-bottom: 0.25rem;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1183,6 +1161,11 @@ nav ul, .sidebar ul {
 .py-40 {
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .px-6 {
@@ -2391,6 +2374,13 @@ body.menu-open:after {
   scale: 1.1;
 }
 
+.text-gradient {
+  background: rgb(10,132,255);
+  background: linear-gradient(90deg, rgba(10,132,255,1) 0%, rgba(151,220,33,1) 51%, rgba(50,208,209,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .btn-11:hover:before {
   animation: criss-cross-left 0.8s both;
   animation-direction: alternate;
@@ -2450,10 +2440,6 @@ body.menu-open:after {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -2462,21 +2448,12 @@ body.menu-open:after {
     width: 80%;
   }
 
-  .sm\:max-w-\[240px\] {
-    max-width: 240px;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
 
   .sm\:items-end {
     align-items: flex-end;
-  }
-
-  .sm\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
@@ -2493,6 +2470,10 @@ body.menu-open:after {
     margin-bottom: 10rem;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:mr-10 {
     margin-right: 2.5rem;
   }
@@ -2503,10 +2484,6 @@ body.menu-open:after {
 
   .md\:mb-52 {
     margin-bottom: 13rem;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:block {
@@ -2525,8 +2502,16 @@ body.menu-open:after {
     min-height: 250px;
   }
 
+  .md\:min-h-\[620px\] {
+    min-height: 620px;
+  }
+
   .md\:w-2\/4 {
     width: 50%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
   }
 
   .md\:w-4\/6 {
@@ -2535,22 +2520,6 @@ body.menu-open:after {
 
   .md\:w-3\/4 {
     width: 75%;
-  }
-
-  .md\:w-1\/4 {
-    width: 25%;
-  }
-
-  .md\:w-3\/5 {
-    width: 60%;
-  }
-
-  .md\:max-w-\[350px\] {
-    max-width: 350px;
-  }
-
-  .md\:max-w-full {
-    max-width: 100%;
   }
 
   .md\:grid-cols-4 {
@@ -2565,14 +2534,6 @@ body.menu-open:after {
     flex-direction: row;
   }
 
-  .md\:flex-col {
-    flex-direction: column;
-  }
-
-  .md\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
   .md\:items-end {
     align-items: flex-end;
   }
@@ -2584,11 +2545,6 @@ body.menu-open:after {
   .md\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .md\:py-36 {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
   }
 
   .md\:px-10 {
@@ -2627,6 +2583,11 @@ body.menu-open:after {
     line-height: 2.25rem;
   }
 
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -2641,20 +2602,11 @@ body.menu-open:after {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
-  }
-
-  .lg\:max-h-full {
-    max-height: 100%;
   }
 
   .lg\:max-h-\[380px\] {
@@ -2715,16 +2667,6 @@ body.menu-open:after {
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
-  }
-
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .lg\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 

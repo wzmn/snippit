@@ -1013,7 +1013,12 @@ align-items: center;
     color: white;
     scale: 1.1;
   }
-
+  .text-gradient {
+    background: rgb(10,132,255);
+    background: linear-gradient(90deg, rgba(10,132,255,1) 0%, rgba(151,220,33,1) 51%, rgba(50,208,209,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .btn-11:hover:before {
   -webkit-animation: criss-cross-left 0.8s both;
       animation: criss-cross-left 0.8s both;
