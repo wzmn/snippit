@@ -714,6 +714,10 @@ nav ul, .sidebar ul {
   max-height: 300px;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .min-h-\[180px\] {
   min-height: 180px;
 }

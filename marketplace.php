@@ -112,12 +112,13 @@
  </style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner flex items-center justify-center min-h-[400px] relative text-center truncate whitespace-normal">
-				<div class="w-full md:w-4/6 px-5">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/marketplace-banner.jpg" style="max-height: calc(100vh - 10px);">
+				<!-- <div class="w-full md:w-4/6 px-5">
 					<div class="font-light mb-10">SNIPPIT BUSINESSES</div>
 					<div class="text-5xl md:text-7xl">
 						Join the Business Revolution with Snippit!
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="banner relative truncate whitespace-normal mb-20 md:mb-40 mx-auto container [lg:min-h-[864px]]">
