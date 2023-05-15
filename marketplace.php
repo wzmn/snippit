@@ -112,19 +112,21 @@
  </style>
  <style>
 	[hero] {
-		--responsive-width: 20vw;
-		--phone-max-width: 375px;
+		--responsive-width: 40vw;
+		--phone-max-width: 250px;
 		--phone-width: 375px;
 		--notifcation-width: 375px;
 		--assessment-width: 300px;
-		
+		--phone-max-width-negative: calc(var(--phone-max-width) * -1);
 	}
 	.Typewriter__cursor {
+		z-index: 1;
 		font-weight: 100;
 	}
 	[hero] .title {
 		left: 60px;
 		max-width: 450px;
+		z-index: 1;
 		bottom: 620px;
 	}
 	[hero] .subtitle {
@@ -132,6 +134,7 @@
 		max-width: 420px;
 		bottom: 520px;
 		opacity: 0;
+		z-index: 1;
 	}
 	img.phone, .notification-1, .notification-2, .notification-3, .gradient {
 		bottom: -100%;
@@ -141,7 +144,7 @@
 		max-width: var(--phone-max-width);
 		bottom: 0px;
 		z-index: 1;
-		width: var(--responsive-width);
+		width: min(var(--responsive-width), var(--phone-max-width));
 	}
 	.gradient {
 		bottom: -200px;
@@ -151,43 +154,41 @@
 	}
 	.ss-center {
 		z-index: 1;
-		max-width: 140px;
 		bottom: -100%;
+		width: var(--phone-max-width);
+    	max-width: calc(var(--phone-max-width) - 280px);
 	}
 	.left-line {
 		position: absolute;
 		z-index: 1;
-		left: 285px;
-		bottom: 188px;
-		max-width: 450px;
-		transform: rotate(11deg);
-		scale: 0.1;
+		bottom: calc(var(--phone-max-width) - 180px);
+		max-width: calc(var(--phone-max-width) + 150px);
+		transform: translateX(-210px) rotate(20deg);
 		opacity: 0;
+		transform: translate(-210px, 0px) rotate(20deg) scale(1);
 	}
 	.right-line {
 		position: absolute;
 		z-index: 1;
-		right: 0px;
 		rotate: -90deg;
-		bottom: 219px;
-		max-width: 230px;
+		bottom: 90px;
+		max-width: calc(var(--phone-max-width)  - 90px);
 		opacity: 0;
 		scale: 0.1;
-		transform: rotate(10deg);
+		transform: rotate(3deg);
 	}
 	.transaction {
-		/* max-width: 240px; */
-		width: calc(var(--responsive-width) + 135px);
-		max-width: calc(var(--phone-max-width) - 135px);
+		width: var(--responsive-width);
+		max-width: min(calc(var(--phone-max-width) - 120px), 200px);
 		bottom: 400px;
 		z-index: 1;
 		opacity: 0;
-		right: 400px;
+		transform: translateX(calc(var(--phone-max-width) - 100px));
 	}
 	.stars {
 		bottom: 610px;
-		right: 400px;
-		z-index: 1;
+		right: min(400px, 10%);
+		z-index: 0;
 		max-width: 90px;
 		scale: 0.1;
 		rotate: -90deg;
@@ -196,19 +197,17 @@
 	.enjoy {
 		bottom: 180px;
 		opacity: 0;
-		right: 220px;
+		right: 10%;
 		z-index: 1;
-		/* max-width: 200px; */
-		width: var(--responsive-width);
-		max-width: calc(var(--phone-max-width) - 175px);
+		width: calc(var(--responsive-width) - 150px);
+		max-width: calc(var(--phone-max-width) - 150px);
 	}
 	.assessment {
 		left: 80px;
 		bottom: 290px;
 		opacity: 0;
-		/* max-width: 300px; */
-		width: var(--responsive-width);
-		max-width: calc(var(--phone-max-width) - 75px);
+		width: 100%;
+		max-width: calc(var(--phone-max-width) - 50px);
 	}
 	.s {
 		left: -100%;
@@ -223,11 +222,12 @@
 	.grey {
 		bottom: -100%;
 		width: var(--responsive-width);
+		z-index: 0;
 		max-width: calc(var(--phone-max-width) - 75px);
 	}
 	.buyers-sellers {
 		z-index: 1;
-		max-width: 110px;
+		max-height: 50px;
 		opacity: 0;
 		bottom: 170px;
 		position: absolute;
@@ -235,32 +235,33 @@
 	.notification-1 {
 		width: calc(var(--responsive-width)  - 40px);
 		z-index: 1;
-		/* max-width: 310px; */
 		max-width: calc(var(--phone-max-width)  - 40px);
 	}
 	.notification-2 {
 		width: calc(var(--responsive-width)  - 40px);
 		z-index: 1;
 		max-width: calc(var(--phone-max-width)  - 40px);
-		/* max-width: 310px; */
 	}
 	.notification-3 {
 		z-index: 1;
 		width: calc(var(--responsive-width)  - 40px);
 		max-width: calc(var(--phone-max-width)  - 40px);
-		/* max-width: 310px; */
 	}
 	.bns-text {
 		left: 180px;
    		bottom: 520px;
 		opacity: 0;
+		z-index: 1;
 		scale: 0.1;
 	}
 	.bns-btn {
 		left: 193px;
     	bottom: 485px;
 		opacity: 0;
+		z-index: 1;
 		scale: 0.1;
+	}
+	[class|="bns"] {
 	}
  </style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
@@ -289,7 +290,7 @@
 					Sellers
 				</div>
 				<div class="bns-btn absolute">
-					<a href="#getStarted" class="bg-blue px-5 py-3 text-white">Get Started</a>
+					<a href="#pin" class="bg-blue px-5 py-3 text-white">Get Started</a>
 				</div>
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/marketplace/mobile.png" class="absolute phone">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/marketplace/gradient-circle.png" class="absolute gradient">
@@ -458,7 +459,7 @@
 						<div class="text-xl mb-5">Register with Snippit and get a chance to win an iPhone!</div>
 						<div class="font-light mb-1">Create your account as</div>
 						<div>
-							<form autocomplete="on">
+							<form autocomplete="on" id="register">
 								<div class="flex mb-2">
 									<label class="flex items-center mb-2 py-1 mr-5" for="seller">
 										<input type="radio" class="mr-2" id="seller" value="channel_partner" name="company_type" checked>
@@ -805,36 +806,58 @@
 					.pauseFor(300)
 					.typeString('Conquer.')
 					.callFunction(()=>{
-						banner.to("[hero] .subtitle", {duration: 0.4, opacity: 1, scale: 1, bottom: '550px'})
-						banner.to("[hero] .bns-text", {duration: 0.4, opacity: 1, scale: 1})
-						banner.to("[hero] .bns-btn", {duration: 0.4, opacity: 1, scale: 1})
+						
 					})
 					.start();
 
 
 
 				const mobileAnimation = () => {
-					
+					banner.to("[hero] .subtitle", {duration: 0.4, opacity: 1, scale: 1, bottom: '550px'}, 3)
+					banner.to("[hero] .bns-text", {duration: 0.4, opacity: 1, scale: 1}, 3)
+					banner.to("[hero] .bns-btn", {duration: 0.4, opacity: 1, scale: 1}, 3)
+					banner.to(".s", {duration: 0.4, left: '-80px'})
+					banner.to(".square", {duration: 0.4, right: '30px'},  "<")
+					banner.to(".grey", {duration: 0.4, bottom: '0px'},  "<")
+					banner.to(".phone", {duration: 0.7, bottom: 0})
+					banner.to(".ss-center", {duration: 0.7, bottom: '16vw'}, "<0.5")
+					banner.to(".notification-1", {duration: 0.4, bottom: '100px'})
+					banner.to(".notification-2", {duration: 0.4, bottom: '40px'})
+					banner.to(".notification-3", {duration: 0.4, bottom: '-20px'})
+					banner.to(".gradient", {duration: 1, scale: 1})
+					banner.to(".buyers-sellers", {duration: 0.4, bottom: '190px', opacity: 1})
+					// banner.to(".transaction", {duration: 0.4, bottom: '290px', opacity: 1})
+					// banner.to(".enjoy", {duration: 0.4, bottom: '10vw', opacity: 1})
+					banner.to(".stars", {duration: 0.4, scale: 1, rotate: 0})
 				} 
 				
 				const desktopAnimation = () => {
-					banner.to(".s", {duration: 0.4, left: '-80px'})
-					banner.to(".square", {duration: 0.4, right: '30px'})
-					banner.to(".grey", {duration: 0.4, bottom: '-200px'})
-					banner.to(".phone", {duration: 0.7, bottom: 0})
-					banner.to(".gradient", {duration: 1, scale: 1})
-					banner.to(".ss-center", {duration: 0.7, bottom: '300px'})
-					banner.to(".buyers-sellers", {duration: 0.4, bottom: '190px', opacity: 1})
-					banner.to(".notification-1", {duration: 0.4, bottom: '150px'})
-					banner.to(".notification-2", {duration: 0.4, bottom: '50px'})
-					banner.to(".notification-3", {duration: 0.4, bottom: '-50px'})
+					banner.to("[hero] .subtitle", {duration: 0.4, opacity: 1, scale: 1, bottom: '550px'}, 3)
+					banner.to("[hero] .bns-text", {duration: 0.4, opacity: 1, scale: 1}, 3)
+					banner.to("[hero] .bns-btn", {duration: 0.4, opacity: 1, scale: 1}, 3)
 
-					banner.to(".left-line", {duration: 0.4, left: '285px', scale: 1, opacity: 1})
-					banner.to(".right-line", {duration: 0.4, right: '560px', scale: 1, rotate: 10, opacity: 1}, "<")
+					banner.to(".s", {duration: 0.4, left: '-80px'})
+					banner.to(".square", {duration: 0.4, right: '30px'},  "<")
+					banner.to(".grey", {duration: 0.4, bottom: '0px'},  "<")
 
 					banner.to(".assessment", {duration: 0.4, bottom: '230px', opacity: 1})
-					banner.to(".transaction", {duration: 0.4, bottom: '420px', opacity: 1})
-					banner.to(".enjoy", {duration: 0.4, bottom: '200px', opacity: 1})
+					banner.to(".left-line", {duration: 0.4, /*x: '-210px',*/ opacity: 1})
+
+
+					banner.to(".phone", {duration: 0.7, bottom: 0})
+					banner.to(".ss-center", {duration: 0.7, bottom: '16vw'}, "<0.5")
+					banner.to(".notification-1", {duration: 0.4, bottom: '100px'})
+					banner.to(".notification-2", {duration: 0.4, bottom: '40px'})
+					banner.to(".notification-3", {duration: 0.4, bottom: '-20px'})
+					banner.to(".gradient", {duration: 1, scale: 1})
+					
+					banner.to(".buyers-sellers", {duration: 0.4, bottom: '190px', opacity: 1})
+
+
+					banner.to(".right-line", {duration: 0.4, x: 70, scale: 1, rotate: 10, opacity: 1}, "<")
+					banner.to(".transaction", {duration: 0.4, bottom: '290px', opacity: 1})
+
+					banner.to(".enjoy", {duration: 0.4, bottom: '10vw', opacity: 1})
 					banner.to(".stars", {duration: 0.4, scale: 1, rotate: 0})
 					
 				}
