@@ -2622,6 +2622,10 @@ body.menu-open:after {
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:max-h-\[380px\] {
     max-height: 380px;
   }
