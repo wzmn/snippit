@@ -863,7 +863,7 @@
 				const scrollButton = document.querySelector('.bns-btn>a');
 				const pin = document.querySelector('.pin-spacer');
 				scrollButton.addEventListener('click', () => {
-					window.scrollTo(0, 4600)
+					//window.scrollTo(0, 4600)
 					// console.warn(pin);
 					// gsap.to(window, {
 					// 	duration: 3,
