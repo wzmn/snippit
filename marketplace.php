@@ -273,28 +273,61 @@
 	}
 	@media (max-width: 768px) {
 		.bns-text {
-			bottom: 490px;
+			bottom: 440px;
+		}
+		.bns-btn {
+			bottom: 385px;
 		}
 		.assessment {
 			z-index: 1;
 			left: -50%;
 			/* opacity: 1; */
-			bottom: 260px;
+			bottom: 250px;
 			max-height: 70px;
 			width: auto;
 			transform: translateX(-50%);
 		}	
 		.marketplace {
-			max-height: 70px;
+			max-height: 50px;
 		}
 		[hero] .subtitle {
 			top: 160px;
+		}
+		.transaction {
+			transform: translateX(-50%);
+			bottom: 245px;
+			max-width: 105px;
+			box-shadow: 0px 0px 6px -1px lightgrey;
+			left: -100%;
+			border-radius: 10px;
+			opacity: 1;
+		}
+		.gradient {
+			max-width: 360px;
+		}
+		.enjoy {
+			bottom: 235px;
+			max-width: 105px;
+			border-radius: 10px;
+			transform: translateX(-50%);
+			left: -100%;
+		}
+		.buyers-sellers {
+			max-height: calc(var(--phone-max-width) - 190px);
+		}
+		[hero] {
+			--phone-max-width: 240px;
+		}
+	}
+	@media (max-height: 830px) {
+		[hero] .subtitle {
+			display: none;
 		}
 	}
  </style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner relative flex justify-center md:min-h-[750px] bg-[#fafafa]">
-				<div class="absolute font-bold text-5xl title" id="hero-text">Connect. Collaborate. Conquer</div>
+				<div class="absolute font-bold text-4xl md:text-5xl title" id="hero-text">Connect. Collaborate. Conquer</div>
 				<div class="absolute subtitle text-xl">Your market for Snippit - the ultimate platform for businessess</div>
 				<div class="absolute flex items-center text-3xl font-bold bns-text">
 					Buyers 
@@ -318,7 +351,7 @@
 					Sellers
 				</div>
 				<div class="bns-btn absolute">
-					<a href="#pin" class="bg-blue px-5 py-3 text-white">Get Started</a>
+					<a class="bg-blue px-5 py-3 text-white get-started">Get Started</a>
 				</div>
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/marketplace/mobile.png" class="absolute phone">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/marketplace/gradient-circle.png" class="absolute gradient">
@@ -827,7 +860,16 @@
 					});
 				})
 
-
+				const scrollButton = document.querySelector('.bns-btn>a');
+				const pin = document.querySelector('.pin-spacer');
+				scrollButton.addEventListener('click', () => {
+					window.scrollTo(0, 4600)
+					// console.warn(pin);
+					// gsap.to(window, {
+					// 	duration: 3,
+					// 	scrollTo: 4600
+					// });
+				});
 
 				
 				var app = document.getElementById('hero-text');
@@ -851,10 +893,10 @@
 					})
 					.start();
 
-
+				
 
 				const mobileAnimation = () => {
-					banner.to("[hero] .subtitle", {duration: 0.4, opacity: 1, scale: 1, top: '210px'}, 3)
+					banner.to("[hero] .subtitle", {duration: 0.4, opacity: 1, scale: 1, top: '160px'}, 3)
 					banner.to("[hero] .bns-text", {duration: 0.4, opacity: 1, scale: 1}, 3)
 					banner.to("[hero] .bns-btn", {duration: 0.4, left: "50%", x: '-50%', opacity: 1, scale: 1}, 3)
 					banner.to(".s", {duration: 0.4, left: '-80px'})
@@ -871,7 +913,14 @@
 					// banner.to(".transaction", {duration: 0.4, bottom: '290px', opacity: 1})
 					// banner.to(".enjoy", {duration: 0.4, bottom: '10vw', opacity: 1})
 					banner.to(".stars", {duration: 0.4, scale: 1, rotate: 0})
-					banner.to(".assessment", {duration: 0.4, left: '50%', opacity: 1})
+					banner.to(".assessment", {duration: 0.7, left: '50%', opacity: 1})
+					banner.to(".assessment", {duration: 0.7, right: '-100%', left: "initial", opacity: 1}, "+=1")
+
+					banner.to(".transaction", {duration: 0.7, left: '50%', opacity: 1}, ">")
+					banner.to(".transaction", {duration: 0.7, right: '-100%', left: "initial", opacity: 1}, "+=1")
+
+					banner.to(".enjoy", {duration: 0.7, left: '50%', opacity: 1}, ">")
+					// banner.to(".enjoy", {duration: 0.7, right: '-100%', left: "initial", opacity: 1}, "+=1")
 				} 
 				
 				const desktopAnimation = () => {
