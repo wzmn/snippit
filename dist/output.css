@@ -638,6 +638,10 @@ nav ul, .sidebar ul {
   margin-right: 1.25rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -648,10 +652,6 @@ nav ul, .sidebar ul {
 
 .mb-3 {
   margin-bottom: 0.75rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mr-2 {
@@ -750,6 +750,10 @@ nav ul, .sidebar ul {
   width: 25%;
 }
 
+.min-w-\[250px\] {
+  min-width: 250px;
+}
+
 .max-w-\[80px\] {
   max-width: 80px;
 }
@@ -760,6 +764,10 @@ nav ul, .sidebar ul {
 
 .max-w-\[100px\] {
   max-width: 100px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .max-w-\[170px\] {
@@ -888,6 +896,10 @@ nav ul, .sidebar ul {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-x-8 {
@@ -1317,6 +1329,10 @@ nav ul, .sidebar ul {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-loose {
+  line-height: 2;
 }
 
 .text-\[\#33ced0\] {
@@ -2463,16 +2479,16 @@ body.menu-open:after {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
 
   .md\:mb-5 {
     margin-bottom: 1.25rem;
-  }
-
-  .md\:mb-40 {
-    margin-bottom: 10rem;
   }
 
   .md\:mb-0 {
@@ -2509,10 +2525,6 @@ body.menu-open:after {
 
   .md\:min-h-\[620px\] {
     min-height: 620px;
-  }
-
-  .md\:min-h-\[640px\] {
-    min-height: 640px;
   }
 
   .md\:min-h-\[750px\] {
@@ -2563,6 +2575,11 @@ body.menu-open:after {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:pl-28 {
@@ -2648,6 +2665,10 @@ body.menu-open:after {
 
   .lg\:max-w-full {
     max-width: 100%;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
