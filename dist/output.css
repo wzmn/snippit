@@ -722,6 +722,14 @@ nav ul, .sidebar ul {
   min-height: 400px;
 }
 
+.min-h-\[300px\] {
+  min-height: 300px;
+}
+
+.min-h-\[520px\] {
+  min-height: 520px;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -1135,6 +1143,11 @@ nav ul, .sidebar ul {
   padding-bottom: 0.5rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1240,6 +1253,10 @@ nav ul, .sidebar ul {
 
 .pl-28 {
   padding-left: 7rem;
+}
+
+.pl-0 {
+  padding-left: 0px;
 }
 
 .text-center {

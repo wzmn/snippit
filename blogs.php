@@ -5,10 +5,25 @@
 	if ( have_posts() ) :
     	while ( have_posts() ) : the_post();
  ?>
-		<div class="relative truncate whitespace-normal">
-			<div class="grid">
-				<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+ 	<style>
+		.banner-text-container {
+			transform: translateX(-50%);
+			left: 50%;
+		}
+		.banner-text {
+			height: 100%;
+			max-width: 630px;
+			width: 100%;
+		}
+	</style>
+		<div class="truncate whitespace-normal mx-auto min-h-[520px] bg-cover bg-center relative" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+		<?php if (get_the_content()) : ?>
+			<div class="absolute banner-text-container container h-full">
+				<div class="flex flex-col justify-evenly banner-text px-4">
+					<?php the_content();?>
+				</div>
 			</div>
+		<?php endif;?>
 		</div>
 		<div class="grid grid-cols-3 gap-4 bg-gradient p-6 text-center text-white font-bold rounded-br-curve  md:mb-40 mb-20">
 		
