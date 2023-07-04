@@ -718,16 +718,16 @@ nav ul, .sidebar ul {
   min-height: 520px;
 }
 
+.min-h-\[48px\] {
+  min-height: 48px;
+}
+
 .min-h-\[180px\] {
   min-height: 180px;
 }
 
 .min-h-\[400px\] {
   min-height: 400px;
-}
-
-.min-h-\[48px\] {
-  min-height: 48px;
 }
 
 .w-12 {
@@ -794,6 +794,10 @@ nav ul, .sidebar ul {
   max-width: 30px;
 }
 
+.max-w-\[48px\] {
+  max-width: 48px;
+}
+
 .max-w-\[150px\] {
   max-width: 150px;
 }
@@ -820,10 +824,6 @@ nav ul, .sidebar ul {
 
 .max-w-\[25rem\] {
   max-width: 25rem;
-}
-
-.max-w-\[48px\] {
-  max-width: 48px;
 }
 
 .flex-1 {
@@ -2591,6 +2591,16 @@ body.menu-open:after {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:py-20 {

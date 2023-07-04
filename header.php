@@ -57,23 +57,29 @@
 				position: absolute;
 				top: 0px;
 			}
+			& a[onclick] svg {
+				fill: black;
+			}
 		}
 		.sticky-header.active {
 			background-color: #012D5E;
 			color: white;
 			& > .container {
-				padding-top: 0px;
-				padding-bottom: 0px;
+				/* padding-top: 0px;
+				padding-bottom: 0px; */
 			}
 			& .logo {
 				& span:not(.scroll) {
 					opacity: 0;
 				}
 			}
+			& a[onclick] svg {
+				fill: white;
+			}
 		}
 	</style>
 	<nav class="relative sticky-header sticky top-0 z-30 w-full shadow-sm" id="nav">
-		<div class="container mx-auto flex justify-between items-center px-5 py-4">
+		<div class="container mx-auto flex justify-between items-center px-5 py-4 md:px-0 md:py-0">
 			<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 				if ($custom_logo_id) :
 					$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
@@ -97,7 +103,7 @@
 				) );
 			?>
 			<a href="#" onclick="toggleMobileMenu();" class="items-center justify-center md:hidden sm:flex">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: black;width: 20px;"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 20px;"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
 			</a>
 		</div>
 	</nav>
