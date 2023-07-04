@@ -24,7 +24,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script> -->
 	<script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
 
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -45,15 +45,45 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<nav class="relative bg-white sticky top-0 z-30 w-full bg-white shadow-sm">
+	<style>
+		.sticky-header {
+			background-color: white;
+			transition: all 0.3s ease;
+			color: black;
+			& > .container {
+				transition: all 0.4s ease;
+			}
+			.scroll {
+				position: absolute;
+				top: 0px;
+			}
+		}
+		.sticky-header.active {
+			background-color: #012D5E;
+			color: white;
+			& > .container {
+				padding-top: 0px;
+				padding-bottom: 0px;
+			}
+			& .logo {
+				& span:not(.scroll) {
+					opacity: 0;
+				}
+			}
+		}
+	</style>
+	<nav class="relative sticky-header sticky top-0 z-30 w-full shadow-sm" id="nav">
 		<div class="container mx-auto flex justify-between items-center px-5 py-4">
 			<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 				if ($custom_logo_id) :
 					$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 			?>
-			<a href="<?php echo get_home_url(); ?>" name="logo">
+			<a href="<?php echo get_home_url(); ?>" name="logo" class="logo min-h-[48px] relative">
 				<span class="text-2xl font-extrabold text-blue-600">
 					 <img alt="logo" class="max-w-[170px]" src="<?php echo $image[0]; ?>">
+				</span>
+				<span class="scroll">
+					<img alt="logo" class="max-w-[48px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-small.png"; ?>">
 				</span>
 			</a>
 			<?php endif; ?>

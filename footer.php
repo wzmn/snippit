@@ -164,13 +164,13 @@
 					<div class="font-bold">Quick Links</div>
 					<ul class="list-none">
 						<li class="py-1">
-							<a href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a>
+							<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a>
 						</li>
 						<li class="py-1">
-							<a href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a>
+							<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a>
 						</li>
 						<li class="py-1">
-							<a href="<?php echo get_post_permalink(get_page_by_path('/terms-conditions/', OBJECT, 'page')->ID);?>">Terms & Conditions</a>
+							<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/terms-conditions/', OBJECT, 'page')->ID);?>">Terms & Conditions</a>
 						</li>
 					</ul>
 				</div>
@@ -178,7 +178,7 @@
 					<div class="font-bold">Contact</div>
 					<ul class="list-none">
 						<li class="py-1"><i class="fa fa-phone mr-2"></i>
-							<a href="tel:+61 1300 589 704">+61 1300 589 704</a>
+							<a href="tel:+61 1300 580 704">+61 1300 580 704</a>
 						</li>
 						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>
 							<a href="mailto:enquiries@snippit.com.au">enquiries@snippit.com.au</a>
@@ -245,6 +245,15 @@
 		})(window, document, gsap) 
 
 		document.addEventListener("DOMContentLoaded", function(){
+			window.onscroll = function() {myFunction()};
+
+			function myFunction() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				document.getElementById("nav").classList.add("active");
+			} else {
+				document.getElementById("nav").classList.remove("active")
+			}
+			}
 			AOS.init();
 			smoothScrollTo("[href*='#']:not([onclick])");
 			ifExists('[hero] div.absolute>img', (e) => {

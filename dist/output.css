@@ -714,6 +714,10 @@ nav ul, .sidebar ul {
   max-height: 300px;
 }
 
+.min-h-\[520px\] {
+  min-height: 520px;
+}
+
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -722,12 +726,8 @@ nav ul, .sidebar ul {
   min-height: 400px;
 }
 
-.min-h-\[300px\] {
-  min-height: 300px;
-}
-
-.min-h-\[520px\] {
-  min-height: 520px;
+.min-h-\[48px\] {
+  min-height: 48px;
 }
 
 .w-12 {
@@ -820,6 +820,10 @@ nav ul, .sidebar ul {
 
 .max-w-\[25rem\] {
   max-width: 25rem;
+}
+
+.max-w-\[48px\] {
+  max-width: 48px;
 }
 
 .flex-1 {
@@ -1143,11 +1147,6 @@ nav ul, .sidebar ul {
   padding-bottom: 0.5rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1253,10 +1252,6 @@ nav ul, .sidebar ul {
 
 .pl-28 {
   padding-left: 7rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
 }
 
 .text-center {
@@ -2500,16 +2495,16 @@ body.menu-open:after {
     margin-bottom: 10rem;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
 
   .md\:mb-5 {
     margin-bottom: 1.25rem;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:mr-10 {
@@ -2574,6 +2569,10 @@ body.menu-open:after {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .md\:items-end {

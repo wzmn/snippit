@@ -48,9 +48,9 @@
 				if ( $the_query->have_posts() ) { while ( $the_query->have_posts() ) { $the_query->the_post(); 
 			?>
 				<div class="shadow flex">
-					<div class="flex flex-row-reverse items-center justify-between w-full">
+					<div class="flex flex-col md:flex-row-reverse items-center justify-between w-full">
 						<?php if (get_the_post_thumbnail_url()) :?>
-						<div class="image min-w-[250px] max-w-[250px]">
+						<div class="image min-w-[250px] max-w-[250px] mb-5 md:mb-0">
 							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 						</div>
 						<?php endif;?>
