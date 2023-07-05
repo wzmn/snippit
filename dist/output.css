@@ -2450,6 +2450,38 @@ body.menu-open:after {
   max-width: 500px;
 }
 
+.sticky-header {
+  background-color: white;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.sticky-header > .container {
+  transition: all 0.4s ease;
+}
+
+.sticky-header .scroll {
+  position: absolute;
+  top: 0px;
+}
+
+.sticky-header a[onclick] svg {
+  fill: black;
+}
+
+.sticky-header.active {
+  background-color: #012D5E;
+  color: white;
+}
+
+.sticky-header.active .logo span:not(.scroll) {
+  opacity: 0;
+}
+
+.sticky-header.active a[onclick] svg {
+  fill: white;
+}
+
 .hover\:bg-\[\#32d0d1\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(50 208 209 / var(--tw-bg-opacity));
@@ -2740,3 +2772,4 @@ body.menu-open:after {
     line-height: 1;
   }
 }
+  

@@ -45,39 +45,6 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<style>
-		.sticky-header {
-			background-color: white;
-			transition: all 0.3s ease;
-			color: black;
-			& > .container {
-				transition: all 0.4s ease;
-			}
-			.scroll {
-				position: absolute;
-				top: 0px;
-			}
-			& a[onclick] svg {
-				fill: black;
-			}
-		}
-		.sticky-header.active {
-			background-color: #012D5E;
-			color: white;
-			& > .container {
-				/* padding-top: 0px;
-				padding-bottom: 0px; */
-			}
-			& .logo {
-				& span:not(.scroll) {
-					opacity: 0;
-				}
-			}
-			& a[onclick] svg {
-				fill: white;
-			}
-		}
-	</style>
 	<nav class="relative sticky-header sticky top-0 z-30 w-full shadow-sm" id="nav">
 		<div class="container mx-auto flex justify-between items-center px-5 py-4 md:px-0 md:py-0">
 			<?php $custom_logo_id = get_theme_mod( 'custom_logo' );

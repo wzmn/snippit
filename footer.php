@@ -14,7 +14,7 @@
 ?>
 </main>
 	<div class="download-fixed z-30">
-		<button class="download-btn flex items-center px-3 py-2 shadow float mb-6">
+		<a class="download-btn flex items-center px-3 py-2 shadow float mb-6" href="https://apps.apple.com/au/app/snippit/id6446515712">
 			<svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 28.74 35.253" class="">
 			<g id="apple-logo" transform="translate(-2.104)">
 				<g id="Group_1147" data-name="Group 1147" transform="translate(2.104)">
@@ -23,8 +23,8 @@
 				</g>
 			</g>
 			</svg>
-		</button>
-		<button class="download-btn flex items-center px-3 py-2 shadow float-2">
+		</a>
+		<a class="download-btn flex items-center px-3 py-2 shadow float-2" href="https://play.google.com/store/apps/details?id=com.snippit.snippit_app">
 			<svg id="google-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="29" height="36" viewBox="0 0 31.585 35.184">
 				<defs>
 					<linearGradient id="linear-gradient" x1="0.915" y1="17.626" x2="-0.383" y2="16.957" gradientUnits="objectBoundingBox">
@@ -58,7 +58,7 @@
 				<path id="Path_39054" data-name="Path 39054" d="M58.221,261.779,52.443,256,35.4,273.049c.63.667,1.67.75,2.843.084l19.983-11.354" transform="translate(-34.762 -238.409)" fill="url(#linear-gradient-3)"/>
 				<path id="Path_39055" data-name="Path 39055" d="M58.221,11.814,38.238.46C37.065-.206,36.025-.123,35.4.544L52.443,17.592Z" transform="translate(-34.762 0)" fill="url(#linear-gradient-4)"/>
 			</svg>
-		</button>
+		</a>
 	</div>
 	<style>
 		@media (min-width: 1024px) {
