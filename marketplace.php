@@ -5,326 +5,326 @@
 	if ( have_posts() ) :
     	while ( have_posts() ) : the_post();
  ?>
- <style>
-	@media only screen and (max-width: 768px) {
-		div.smiley {
-			width: 120px;
-			height: 125px;
-			padding: 40px 30px;
+	<style>
+		@media only screen and (max-width: 768px) {
+			div.smiley {
+				width: 120px;
+				height: 125px;
+				padding: 40px 30px;
+			}
 		}
-	}
-	.border-shadow {
-		box-shadow: 0px 3px 6px #0000000D;
-	}
-	.image-container {
-		width: 100%;
-		max-width: 350px;
-		right: 1rem;
-		overflow: hidden;
-	}
-	.panel-text {
-		width: 100%;
-		transform: translateY(100%);
-		opacity: 0;
-		position: absolute;
-		height: 100%;
-	}
-	.panel-text:before {
-		content: " ";
-		background: url('<?php echo get_stylesheet_directory_uri();?>/images/square-overlay.png');
-		position: absolute;
-		height: 100px;
-		width: 100px;
-	}
-	.text-container {
-		position: relative;
-		width: 100%;
-	}
-	.panel-text-1 {
-		opacity: 1;
-		transform: translateY(0%);
-	}
-	.image-container > img {
-		transition: all 0.3s ease;
-		filter: none;
-		background: white;
-	}
-	.image-container > img.wavy {
-		/* filter: url(#wavy);
-		transform: scale(1.2); */
-	}
-	.image-container > img:hover {
-		/* transform:scale(1.1) skewY(-4deg) rotate(1deg); */
-	}
-	#pin {
-		height: 650px;
-	}
-	.smiley {
-		width: 180px;
-		height: 185px;
-		padding: 60px 50px;
-		background-color: #FED000;
-		border-radius: 20px;
-		position: absolute;
-		left: 1rem;
-		top: -3rem;
-	}
-	.loader svg {
-		width: 20px;
-		height: 20px;
-		fill: white;
-		opacity: 0;
-	}
-	.loader {
-		position: absolute;
-		width: 60px;
-		background: #0a84ff;
-		height: 100%;
-		top: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		left: calc(50% + 30px);
-	}
-	.loader.active svg {
-		animation: loader 8s infinite;
-		opacity: 1;
-	}
-	@keyframes loader {
-		0% {
-			transform: rotate(0deg);
+		.border-shadow {
+			box-shadow: 0px 3px 6px #0000000D;
 		}
-		100% {
-			transform: rotate(1440deg);
+		.image-container {
+			width: 100%;
+			max-width: 350px;
+			right: 1rem;
+			overflow: hidden;
 		}
-	}
-	.error-message div {
-		/* opacity: 0;
-		transition: opacity 0.5s ease; */
-	}
-	.has-error .error-message div {
-		color: red;
-		margin-bottom: 0.5rem;
-	}
-	.error-message div {
-		
-	}
- </style>
- <style>
-	[hero] {
-		--responsive-width: 40vw;
-		--phone-max-width: 300px;
-		--phone-width: 375px;
-		--notifcation-width: 375px;
-		--assessment-width: 300px;
-	}
-	.Typewriter__cursor {
-		z-index: 1;
-		font-weight: 100;
-	}
-	[hero] .title {
-		z-index: 1;
-		top: 30px;
-		text-align: center;
-	}
-	[hero] .subtitle {
-		bottom: 650px;
-		opacity: 0;
-		z-index: 1;
-		text-align: center;
-	}
-	img.phone, .notification-1, .notification-2, .notification-3, .gradient {
-		bottom: -100%;
-	}
-
-	.phone {
-		max-width: var(--phone-max-width);
-		bottom: 0px;
-		z-index: 1;
-		width: 100%;
-	}
-	.gradient {
-		max-width: 520px;
-		z-index: 0;
-		scale: 0.1;
-	}
-	.ss-center {
-		z-index: 1;
-		bottom: -100%;
-    	max-width: calc(var(--phone-max-width) - 200px);
-	}
-	.left-line {
-		position: absolute;
-		z-index: 1;
-		bottom: calc(var(--phone-max-width) - 200px);
-		max-width: calc(var(--phone-max-width) + 100px);
-		transform: translateX(-210px) rotate(20deg);
-		opacity: 0;
-		transform: translate(-200px, -30px) rotate(20deg) scale(1);
-	}
-	.right-line {
-		position: absolute;
-		z-index: 1;
-		rotate: -90deg;
-		bottom: 90px;
-		/* max-width: calc(var(--phone-max-width)  - 90px); */
-		opacity: 0;
-		scale: 0.1;
-		transform: rotate(3deg);
-	}
-	.transaction {
-		max-width: calc(var(--phone-max-width) - 100px);
-		bottom: 400px;
-		z-index: 1;
-		opacity: 0;
-		transform: translateX(calc(var(--phone-max-width) - 40px));
-	}
-	.stars {
-		bottom: 610px;
-		right: min(400px, 10%);
-		z-index: 0;
-		max-width: 90px;
-		scale: 0.1;
-		rotate: -90deg;
-		background: #fafafa;
-	}
-	.enjoy {
-		bottom: 180px;
-		opacity: 0;
-		right: 10%;
-		z-index: 1;
-		max-width: calc(var(--phone-max-width) - 100px);
-	}
-	.assessment {
-		left: 80px;
-		bottom: 290px;
-		opacity: 0;
-		width: 100%;
-		max-width: calc(var(--phone-max-width) - 50px);
-	}
-	.s {
-		left: -100%;
-		max-width: 300px;
-		bottom: 110px;
-	}
-	.square {
-		max-width: 400px;
-		right: -100%;
-		bottom: 170px;
-	}
-	.grey {
-		bottom: -100%;
-		width: var(--responsive-width);
-		z-index: 0;
-		max-width: calc(var(--phone-max-width) - 75px);
-	}
-	.buyers-sellers {
-		z-index: 1;
-		max-height: calc(var(--phone-max-width)  - 230px);
-		opacity: 0;
-		bottom: 170px;
-		position: absolute;
-	}
-	.marketplace {
-		z-index: 1;
-		max-height: calc(var(--phone-max-width)  - 220px);
-		opacity: 0;
-		bottom: 220px;
-		position: absolute;
-	}
-	.notification-1 {
-		/* width: calc(var(--responsive-width)  - 40px); */
-		z-index: 1;
-		max-width: calc(var(--phone-max-width)  - 40px);
-	}
-	.notification-2 {
-		/* width: calc(var(--responsive-width)  - 40px); */
-		z-index: 1;
-		max-width: calc(var(--phone-max-width)  - 40px);
-	}
-	.notification-3 {
-		z-index: 1;
-		/* width: calc(var(--responsive-width)  - 40px); */
-		max-width: calc(var(--phone-max-width)  - 40px);
-	}
-	.bns-text {
-		/* transform: translate(-230px, 320px); */
-		opacity: 0;
-		z-index: 1;
-		bottom: 510px;
-		scale: 0.1;
-	}
-	.bns-btn {
-		opacity: 0;
-		z-index: 2;
-		scale: 0.1;
-		bottom: 455px;
-		transform: translateX(-321px);
-	}
-	.crosshair {
-		right: 20px;
-		bottom: -50px;
-		position: absolute;
-		width: 30vw;
-		scale: 0.1;
-	}
-	.crosshair img {
-		max-width: 40px;
-	}
-	@media (max-width: 768px) {
-		.bns-text {
-			bottom: 440px;
+		.panel-text {
+			width: 100%;
+			transform: translateY(100%);
+			opacity: 0;
+			position: absolute;
+			height: 100%;
 		}
-		.bns-btn {
-			bottom: 385px;
+		/* .panel-text:before {
+			content: " ";
+			background: url('<?php echo get_stylesheet_directory_uri();?>/images/square-overlay.png');
+			position: absolute;
+			height: 100px;
+			width: 100px;
+		} */
+		.text-container {
+			position: relative;
+			width: 100%;
 		}
-		.assessment {
-			z-index: 1;
-			left: -50%;
-			/* opacity: 1; */
-			bottom: 250px;
-			max-height: 70px;
-			width: auto;
-			transform: translateX(-50%);
-		}	
-		.marketplace {
-			max-height: 50px;
+		.panel-text-1 {
+			opacity: 1;
+			transform: translateY(0%);
 		}
-		[hero] .subtitle {
-			top: 160px;
+		.image-container > img {
+			transition: all 0.3s ease;
+			filter: none;
+			background: white;
 		}
-		.transaction {
-			transform: translateX(-50%);
-			bottom: 245px;
-			max-width: 105px;
-			box-shadow: 0px 0px 6px -1px lightgrey;
-			left: -100%;
-			border-radius: 10px;
+		.image-container > img.wavy {
+			/* filter: url(#wavy);
+			transform: scale(1.2); */
+		}
+		.image-container > img:hover {
+			/* transform:scale(1.1) skewY(-4deg) rotate(1deg); */
+		}
+		#pin {
+			height: 650px;
+		}
+		.smiley {
+			width: 180px;
+			height: 185px;
+			padding: 60px 50px;
+			background-color: #FED000;
+			border-radius: 20px;
+			position: absolute;
+			left: 1rem;
+			top: -3rem;
+		}
+		.loader svg {
+			width: 20px;
+			height: 20px;
+			fill: white;
+			opacity: 0;
+		}
+		.loader {
+			position: absolute;
+			width: 60px;
+			background: #0a84ff;
+			height: 100%;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			left: calc(50% + 30px);
+		}
+		.loader.active svg {
+			animation: loader 8s infinite;
 			opacity: 1;
 		}
+		@keyframes loader {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(1440deg);
+			}
+		}
+		.error-message div {
+			/* opacity: 0;
+			transition: opacity 0.5s ease; */
+		}
+		.has-error .error-message div {
+			color: red;
+			margin-bottom: 0.5rem;
+		}
+		.error-message div {
+			
+		}
+	</style>
+	<style>
+		[hero] {
+			--responsive-width: 40vw;
+			--phone-max-width: 300px;
+			--phone-width: 375px;
+			--notifcation-width: 375px;
+			--assessment-width: 300px;
+		}
+		.Typewriter__cursor {
+			z-index: 1;
+			font-weight: 100;
+		}
+		[hero] .title {
+			z-index: 1;
+			top: 30px;
+			text-align: center;
+		}
+		[hero] .subtitle {
+			bottom: 650px;
+			opacity: 0;
+			z-index: 1;
+			text-align: center;
+		}
+		img.phone, .notification-1, .notification-2, .notification-3, .gradient {
+			bottom: -100%;
+		}
+
+		.phone {
+			max-width: var(--phone-max-width);
+			bottom: 0px;
+			z-index: 1;
+			width: 100%;
+		}
 		.gradient {
-			max-width: 360px;
+			max-width: 520px;
+			z-index: 0;
+			scale: 0.1;
+		}
+		.ss-center {
+			z-index: 1;
+			bottom: -100%;
+			max-width: calc(var(--phone-max-width) - 200px);
+		}
+		.left-line {
+			position: absolute;
+			z-index: 1;
+			bottom: calc(var(--phone-max-width) - 200px);
+			max-width: calc(var(--phone-max-width) + 100px);
+			transform: translateX(-210px) rotate(20deg);
+			opacity: 0;
+			transform: translate(-200px, -30px) rotate(20deg) scale(1);
+		}
+		.right-line {
+			position: absolute;
+			z-index: 1;
+			rotate: -90deg;
+			bottom: 90px;
+			/* max-width: calc(var(--phone-max-width)  - 90px); */
+			opacity: 0;
+			scale: 0.1;
+			transform: rotate(3deg);
+		}
+		.transaction {
+			max-width: calc(var(--phone-max-width) - 100px);
+			bottom: 400px;
+			z-index: 1;
+			opacity: 0;
+			transform: translateX(calc(var(--phone-max-width) - 40px));
+		}
+		.stars {
+			bottom: 610px;
+			right: min(400px, 10%);
+			z-index: 0;
+			max-width: 90px;
+			scale: 0.1;
+			rotate: -90deg;
+			background: #fafafa;
 		}
 		.enjoy {
-			bottom: 235px;
-			max-width: 105px;
-			border-radius: 10px;
-			transform: translateX(-50%);
+			bottom: 180px;
+			opacity: 0;
+			right: 10%;
+			z-index: 1;
+			max-width: calc(var(--phone-max-width) - 100px);
+		}
+		.assessment {
+			left: 80px;
+			bottom: 290px;
+			opacity: 0;
+			width: 100%;
+			max-width: calc(var(--phone-max-width) - 50px);
+		}
+		.s {
 			left: -100%;
+			max-width: 300px;
+			bottom: 110px;
+		}
+		.square {
+			max-width: 400px;
+			right: -100%;
+			bottom: 170px;
+		}
+		.grey {
+			bottom: -100%;
+			width: var(--responsive-width);
+			z-index: 0;
+			max-width: calc(var(--phone-max-width) - 75px);
 		}
 		.buyers-sellers {
-			max-height: calc(var(--phone-max-width) - 190px);
+			z-index: 1;
+			max-height: calc(var(--phone-max-width)  - 230px);
+			opacity: 0;
+			bottom: 170px;
+			position: absolute;
 		}
-		[hero] {
-			--phone-max-width: 240px;
+		.marketplace {
+			z-index: 1;
+			max-height: calc(var(--phone-max-width)  - 220px);
+			opacity: 0;
+			bottom: 220px;
+			position: absolute;
 		}
-	}
-	@media (max-height: 830px) {
-		[hero] .subtitle {
-			display: none;
+		.notification-1 {
+			/* width: calc(var(--responsive-width)  - 40px); */
+			z-index: 1;
+			max-width: calc(var(--phone-max-width)  - 40px);
 		}
-	}
- </style>
+		.notification-2 {
+			/* width: calc(var(--responsive-width)  - 40px); */
+			z-index: 1;
+			max-width: calc(var(--phone-max-width)  - 40px);
+		}
+		.notification-3 {
+			z-index: 1;
+			/* width: calc(var(--responsive-width)  - 40px); */
+			max-width: calc(var(--phone-max-width)  - 40px);
+		}
+		.bns-text {
+			/* transform: translate(-230px, 320px); */
+			opacity: 0;
+			z-index: 1;
+			bottom: 510px;
+			scale: 0.1;
+		}
+		.bns-btn {
+			opacity: 0;
+			z-index: 2;
+			scale: 0.1;
+			bottom: 455px;
+			transform: translateX(-321px);
+		}
+		.crosshair {
+			right: 20px;
+			bottom: -50px;
+			position: absolute;
+			width: 30vw;
+			scale: 0.1;
+		}
+		.crosshair img {
+			max-width: 40px;
+		}
+		@media (max-width: 768px) {
+			.bns-text {
+				bottom: 440px;
+			}
+			.bns-btn {
+				bottom: 385px;
+			}
+			.assessment {
+				z-index: 1;
+				left: -50%;
+				/* opacity: 1; */
+				bottom: 250px;
+				max-height: 70px;
+				width: auto;
+				transform: translateX(-50%);
+			}	
+			.marketplace {
+				max-height: 50px;
+			}
+			[hero] .subtitle {
+				top: 160px;
+			}
+			.transaction {
+				transform: translateX(-50%);
+				bottom: 245px;
+				max-width: 105px;
+				box-shadow: 0px 0px 6px -1px lightgrey;
+				left: -100%;
+				border-radius: 10px;
+				opacity: 1;
+			}
+			.gradient {
+				max-width: 360px;
+			}
+			.enjoy {
+				bottom: 235px;
+				max-width: 105px;
+				border-radius: 10px;
+				transform: translateX(-50%);
+				left: -100%;
+			}
+			.buyers-sellers {
+				max-height: calc(var(--phone-max-width) - 190px);
+			}
+			[hero] {
+				--phone-max-width: 240px;
+			}
+		}
+		@media (max-height: 830px) {
+			[hero] .subtitle {
+				display: none;
+			}
+		}
+	</style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner relative flex justify-center md:min-h-[750px] bg-[#fafafa]">
 				<div class="absolute font-bold text-4xl md:text-5xl title" id="hero-text">Connect. Collaborate. Conquer</div>
@@ -528,7 +528,7 @@
 						</div>
 						<p class="text-base md:text-xl font-light">Get the full picture with Snippit - Our assessment feature simplifies the process, making it easy for you to make informed decisions with confidence.</p>
 					</div>
-					<div class="flex flex-col justify-center pr-10 pl-4 panel-text max-w-[40rem]">
+					<div class="flex flex-col justify-end pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-72">Let's get Started</div>
 						<div class="text-xl mb-5">Register with Snippit and get a chance to win an iPhone!</div>
 						<div class="font-light mb-1">Create your account as</div>
@@ -549,12 +549,31 @@
 									<input class="border-shadow mb-2 p-2 w-full" type="text" name="name" required />
 								</label>
 								<div class="grid md:grid-cols-2 md:gap-x-4 gap-x-0 grid-cols-1">
+									<!-- new fields -->
+									<label class="mb-2" for="company.email">
+										<div class="mb-3">Company Email</div>
+										<input class="border-shadow mb-2 p-2 w-full" type="email" name="company.email" required />
+									</label>
+									<label class="mb-2" for="company.mobile_number">
+										<div class="mb-3">Company Mobile</div>
+										<input class="border-shadow mb-2 p-2 w-full" type="number" name="company.mobile_number" required />
+									</label>
+									<label class="mb-2" for="owner.first_name">
+										<div class="mb-3">Owner First Name</div>
+										<input class="border-shadow mb-2 p-2 w-full" type="text" name="owner.first_name" required />
+									</label>
+									<label class="mb-2"  for="owner.last_name">
+										<div class="mb-3">Owner Last Name</div>
+										<input class="border-shadow p-2 w-full" type="text" name="owner.last_name" value="" required />
+									</label>
+									<!-- new fields -->
+
 									<label class="mb-2" for="abn">
 										<div class="mb-3">Company ABN</div>
 										<input class="border-shadow mb-2 p-2 w-full" type="text" name="abn" required />
 									</label>
 									<label class="mb-2" for="owner.email">
-										<div class="mb-3">Email</div>
+										<div class="mb-3">Owner Email</div>
 										<input class="border-shadow mb-2 p-2 w-full" type="email" name="owner.email" required />
 									</label>
 									<label class="mb-2" for="address.pincode">
@@ -562,7 +581,7 @@
 										<input class="border-shadow mb-2 p-2 w-full" type="number" name="address.pincode" required />
 									</label>
 									<label class="mb-2"  for="owner.mobile_number">
-										<div class="mb-3">Mobile Number</div>
+										<div class="mb-3">Owner Mobile Number</div>
 										<input class="mb-10 border-shadow p-2 w-full" type="text" name="owner.mobile_number" value="" required />
 									</label>
 								</div>
@@ -732,6 +751,11 @@
 						}
 					})
 					if ( i == 3 ) {
+						tl.to(smiley, {
+							duration: 0.33,
+							opacity: 0,
+							// y: "0%"
+						});
 						tl.to(text, {
 							duration: 0.33,
 							opacity: 1,
@@ -796,19 +820,21 @@
 
 					let output = new FormData(form)
 					output.append("status", "2");
-					output.append("owner.first_name", "fn");
-					output.append("owner.last_name", "ln");
+					// output.append("owner.first_name", "fn");
+					// output.append("owner.last_name", "ln");
 
 					//output.append("company_type", "channel_partner");
 
 					let payload = {
 						owner: {},
-						address: {}
+						address: {},
+						company: {}
 					};
 
 					for (const [key, value] of output) {
 						let ownerObj = key.match(/(?:owner.)(.+)/);
 						let addressObj = key.match(/(?:address.)(.+)/);
+						let companyObj = key.match(/(?:company\.)(.+)/);
 						console.log(key, value)
 						if (!!ownerObj){
 							payload["owner"][`${ownerObj[1]}`] = value
@@ -818,12 +844,16 @@
 							payload["address"][addressObj[1]] = value;
 							continue;
 						}
+						if (!!companyObj){
+							payload["company"][companyObj[1]] = value;
+							continue;
+						}
 						payload[key] = value;
 					}
 
 					loader.classList.toggle("active")
 					const api = `https://uat-services.snippit.com.au/api/v1/companies/`;
-					// const mock = `https://7ac49849-ee4e-4143-a782-e77dc4fbbbe0.mock.pstmn.io/api/v1/companies/`;
+
 					fetch(api, {
 						method: "POST",
 						headers: {
