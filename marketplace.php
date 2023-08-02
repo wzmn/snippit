@@ -325,6 +325,24 @@
 			}
 		}
 	</style>
+	<style>
+		[for$='.mobile_number']>input {
+			background: red;
+			position: relative;
+		}
+		[for$='.mobile_number']>input::before {
+			content: "+61";
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.mobile-number-holder {
+
+		}
+		.mobile-number-holder span {
+
+		}
+	</style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
 			<div class="banner relative flex justify-center md:min-h-[750px] bg-[#fafafa]">
 				<div class="absolute font-bold text-4xl md:text-5xl title" id="hero-text">Connect. Collaborate. Conquer</div>
@@ -556,7 +574,10 @@
 									</label>
 									<label class="mb-2" for="company.mobile_number">
 										<div class="mb-3">Company Mobile</div>
-										<input class="border-shadow mb-2 p-2 w-full" type="number" name="company.mobile_number" required />
+										<div class="mobile-number-holder flex items-center">
+											<span class="border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb]">+61</span>
+											<input class="border-shadow mb-2 p-2 w-full" type="number" maxLength="10" name="company.mobile_number" required oninput="this.value=this.value.slice(0,this.maxLength)"/>
+										</div>
 									</label>
 									<label class="mb-2" for="owner.first_name">
 										<div class="mb-3">Owner First Name</div>
@@ -581,8 +602,11 @@
 										<input class="border-shadow mb-2 p-2 w-full" type="number" name="address.pincode" required />
 									</label>
 									<label class="mb-2"  for="owner.mobile_number">
-										<div class="mb-3">Owner Mobile Number</div>
-										<input class="mb-10 border-shadow p-2 w-full" type="text" name="owner.mobile_number" value="" required />
+									<div class="mb-3">Owner Mobile Number</div>
+										<div class="mobile-number-holder flex items-center">
+											<span class="border-shadow p-2 bg-white border-r-2 border-[#d6e9fb]">+61</span>
+											<input class="border-shadow p-2 w-full" type="text" name="owner.mobile_number" value="" required maxLength="10" oninput="this.value=this.value.slice(0,this.maxLength)" />
+										</div>
 									</label>
 								</div>
 								<div class="relative">
@@ -852,7 +876,7 @@
 					}
 
 					loader.classList.toggle("active")
-					const api = `https://uat-services.snippit.com.au/api/v1/companies/`;
+					const api = `https://services.snippit.com.au/api/v1/companies/`;
 
 					fetch(api, {
 						method: "POST",
