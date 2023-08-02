@@ -326,21 +326,8 @@
 		}
 	</style>
 	<style>
-		[for$='.mobile_number']>input {
-			background: red;
-			position: relative;
-		}
-		[for$='.mobile_number']>input::before {
-			content: "+61";
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		.mobile-number-holder {
-
-		}
-		.mobile-number-holder span {
-
+		[type="submit"] {
+			cursor: pointer;
 		}
 	</style>
 		<div class="container mx-auto mb-20 md:mb-40" hero>
@@ -828,7 +815,7 @@
 				});
 
 
-				document.forms[0].addEventListener("submit", (event) => {
+				document.forms.register.addEventListener("submit", (event) => {
 					event.preventDefault();
 					let form = event.target;
 					let loader = form.querySelector(".loader");
@@ -859,7 +846,6 @@
 						let ownerObj = key.match(/(?:owner.)(.+)/);
 						let addressObj = key.match(/(?:address.)(.+)/);
 						let companyObj = key.match(/(?:company\.)(.+)/);
-						console.log(key, value)
 						if (!!ownerObj){
 							payload["owner"][`${ownerObj[1]}`] = value
 							continue;
@@ -874,6 +860,7 @@
 						}
 						payload[key] = value;
 					}
+					console.log(payload)
 
 					loader.classList.toggle("active")
 					const api = `https://services.snippit.com.au/api/v1/companies/`;

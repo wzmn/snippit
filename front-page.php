@@ -291,7 +291,7 @@ get_header();
 						<div class="flex flex-col">
 							<div class="text-xl font-semibold mb-10">Providing quality services you can count on.</div>
 							<div>
-								<a href="<?php echo get_post_permalink(get_page_by_path('/marketplace-snippit-business/', OBJECT, 'page')->ID);?>" class="bg-blue text-white px-10 py-5 rounded-[0.375rem]">Join Now</a>
+								<a href="<?php echo get_page_by_path('/marketplace-snippit-business/', OBJECT, 'page') ? get_post_permalink(get_page_by_path('/marketplace-snippit-business/', OBJECT, 'page')->ID) : "#";?>" class="bg-blue text-white px-10 py-5 rounded-[0.375rem]">Join Now</a>
 							</div>
 						</div>
 					</div>
