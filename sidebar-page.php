@@ -49,7 +49,7 @@
 						list.append(li)
 					}
 					
-					Array.from(document.querySelectorAll(".main div[href^='block']")).map((f) => {
+					Array.from(document.querySelectorAll(".main div[id^='block']")).map((f) => {
 						addToList(f.querySelector("h2").innerHTML, "#" + f.id)
 					})
 
