@@ -139,7 +139,7 @@ get_header();
 					<div class="flex flex-1 flex-col justify-center">
 						<div class="px-4 md:px-10" data-aos="fade-left">
 							<div class="text-xl md:text-3xl font-semibold mb-5">Your <span class="text-gradient">One-Stop</span> Shop</div>
-							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
+							<p>Snippit has everything you need for a simplified life, from energy efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
 				</div>
@@ -169,7 +169,7 @@ get_header();
 					<div class="flex flex-1 flex-col justify-center">
 						<div class="px-4 md:px-10" data-aos="fade-left">
 							<div class="text-xl md:text-3xl font-semibold mb-5">Never Miss A Beat With <span class="text-gradient">Snippit!</span></div>
-							<p>Snippit has everything you need for a simplified life, from every efficiency to home repairs and even health services.</p>
+							<p>Snippit has everything you need for a simplified life, from energy efficiency to home repairs and even health services.</p>
 						</div>
 					</div>
 				</div>
