@@ -57,6 +57,10 @@
 				</span>
 				<span class="scroll">
 					<img alt="logo" class="max-w-[48px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-small.png"; ?>">
+					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-cyan.png"; ?>">
+					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-yellow.png"; ?>">
+					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-blue.png"; ?>">
+					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-green.png"; ?>">
 				</span>
 			</a>
 			<?php endif; ?>
