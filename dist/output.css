@@ -798,6 +798,10 @@ nav ul, .sidebar ul {
   max-width: 48px;
 }
 
+.max-w-\[40px\] {
+  max-width: 40px;
+}
+
 .max-w-\[150px\] {
   max-width: 150px;
 }
@@ -2469,9 +2473,45 @@ body.menu-open:after {
   transition: all 0.4s ease;
 }
 
-.sticky-header .scroll {
+.sticky-header .scroll img {
   position: absolute;
   top: 0px;
+  transition: all 0.5s ease;
+  z-index: 0;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0.4) rotate(90deg);
+}
+
+.sticky-header .scroll img:nth-child(1) {
+  transform: none;
+  top: 0;
+  opacity: 1;
+}
+
+.sticky-header.active .scroll img:nth-child(1) {
+  transform: rotate(180deg) scale(0);
+  z-index: 1;
+}
+
+.sticky-header.active .scroll img:nth-child(2) {
+  opacity: 1;
+  transform: translateX(180px) translateY(-50%) scale(1);
+}
+
+.sticky-header.active .scroll img:nth-child(3) {
+  opacity: 1;
+  transform: translateX(120px) translateY(-50%) scale(1);
+}
+
+.sticky-header.active .scroll img:nth-child(4) {
+  opacity: 1;
+  transform: translateX(60px) translateY(-50%) scale(1);
+}
+
+.sticky-header.active .scroll img:nth-child(5) {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
 
 .sticky-header a[onclick] svg {
