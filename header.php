@@ -51,16 +51,16 @@
 				if ($custom_logo_id) :
 					$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 			?>
-			<a href="<?php echo get_home_url(); ?>" name="logo" class="logo min-h-[48px] relative">
+			<a href="<?php echo get_home_url(); ?>" name="logo" class="logo relative">
 				<span class="text-2xl font-extrabold text-blue-600">
-					 <img alt="logo" class="max-w-[170px]" src="<?php echo $image[0]; ?>">
+					 <img alt="logo" class="max-w-[124px]" src="<?php echo $image[0]; ?>">
 				</span>
 				<span class="scroll">
-					<img alt="logo" class="max-w-[48px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-small.png"; ?>">
-					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-cyan.png"; ?>">
-					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-yellow.png"; ?>">
-					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-blue.png"; ?>">
-					<img alt="logo" class="max-w-[40px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-green.png"; ?>">
+					<img alt="logo" class="max-w-[35px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-small.png"; ?>">
+					<img alt="logo" class="max-w-[35px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-cyan.png"; ?>">
+					<img alt="logo" class="max-w-[35px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-yellow.png"; ?>">
+					<img alt="logo" class="max-w-[35px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-blue.png"; ?>">
+					<img alt="logo" class="max-w-[35px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-green.png"; ?>">
 				</span>
 			</a>
 			<?php endif; ?>

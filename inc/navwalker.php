@@ -75,12 +75,12 @@ class Tailwind_Menu_Walker extends Walker_Nav_Menu {
 
 			if ($item->url && $item->url != '#') {
 
-					$output .= '<a href="' . $item->url . '" class="relative block py-6 px-2 lg:p-6 text-sm p-2 hover:text-blue font-regular text-gray-600">';
+				$output .= '<a href="' . $item->url . '" class="relative block py-5 px-3 lg:p-5 text-sm p-2 hover:text-blue font-regular text-gray-600">';
 
 			} else if (!!$mega_title) {
 				$output .= '<div class="text-xl font-bold">';
 			} else {
-				$output .= '<span class="relative cursor-pointer block py-6 px-2 lg:p-6 text-sm p-2 font-regular text-gray-600">';
+				$output .= '<span class="relative cursor-pointer block py-5 px-3 lg:p-5 text-sm p-2 font-regular text-gray-600">';
 			}
 
  

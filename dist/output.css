@@ -718,10 +718,6 @@ nav ul, .sidebar ul {
   min-height: 520px;
 }
 
-.min-h-\[48px\] {
-  min-height: 48px;
-}
-
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -794,12 +790,16 @@ nav ul, .sidebar ul {
   max-width: 30px;
 }
 
-.max-w-\[48px\] {
-  max-width: 48px;
+.max-w-\[140px\] {
+  max-width: 140px;
 }
 
 .max-w-\[40px\] {
   max-width: 40px;
+}
+
+.max-w-\[35px\] {
+  max-width: 35px;
 }
 
 .max-w-\[150px\] {
@@ -828,6 +828,10 @@ nav ul, .sidebar ul {
 
 .max-w-\[25rem\] {
   max-width: 25rem;
+}
+
+.max-w-\[124px\] {
+  max-width: 124px;
 }
 
 .flex-1 {
@@ -1426,6 +1430,10 @@ nav ul, .sidebar ul {
 
 .\[lg\:min-h-\[864px\]\] {
   lg: min-h-[864px];
+}
+
+#menu-main li {
+  margin-bottom: 0rem;
 }
 
 h2, p {
@@ -2496,17 +2504,17 @@ body.menu-open:after {
 
 .sticky-header.active .scroll img:nth-child(2) {
   opacity: 1;
-  transform: translateX(180px) translateY(-50%) scale(1);
+  transform: translateX(150px) translateY(-50%) scale(1);
 }
 
 .sticky-header.active .scroll img:nth-child(3) {
   opacity: 1;
-  transform: translateX(120px) translateY(-50%) scale(1);
+  transform: translateX(100px) translateY(-50%) scale(1);
 }
 
 .sticky-header.active .scroll img:nth-child(4) {
   opacity: 1;
-  transform: translateX(60px) translateY(-50%) scale(1);
+  transform: translateX(50px) translateY(-50%) scale(1);
 }
 
 .sticky-header.active .scroll img:nth-child(5) {
