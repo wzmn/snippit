@@ -198,6 +198,27 @@
 		
 	</footer>
 	<script type="text/javascript">
+		class debounce {
+			constructor (selector, callback) {
+				this.typingTimer;                //timer identifier
+				this.doneTypingInterval = 1500;  //time in ms (1.5 seconds)
+				this.myInput = document.querySelector(selector);
+				this.callback = callback;
+				this.init();
+			}
+			
+			init () {
+				let vm = this;
+				vm.myInput.addEventListener('input', () => {
+					clearTimeout(vm.typingTimer);
+					if (vm.myInput.value) {
+						vm.typingTimer = setTimeout(()=>{
+							vm.callback(vm.myInput.value)
+						}, vm.doneTypingInterval);
+					}
+				});
+			}
+		}
 		((w, d, g)=>{
 			Object.assign(w.__proto__, {
 				// ********************************************
@@ -213,6 +234,9 @@
 							})
 						})
 					}) : "xxx";
+				},
+				debounce(){
+					return new debounce(...args);
 				},
 				fillForm(){
 					d.querySelector(`[name="name"]`).value = "XYZ69 LLC"
