@@ -645,7 +645,7 @@ add_action( 'customize_preview_init', 'cogncise_customize_preview_init' );
  *
  * @return void
  */
-add_action( 'customize_controls_enqueue_scripts', 'cogncise_customize_controls_enqueue_scripts' );
+// add_action( 'customize_controls_enqueue_scripts', 'cogncise_customize_controls_enqueue_scripts' );
 
 /**
  * Calculate classes for the main <html> element.

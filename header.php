@@ -53,7 +53,7 @@
 			?>
 			<a href="<?php echo get_home_url(); ?>" name="logo" class="logo relative">
 				<span class="text-2xl font-extrabold text-blue-600">
-					 <img alt="logo" class="max-w-[124px]" src="<?php echo $image[0]; ?>">
+					 <img alt="logo" class="max-w-[119px]" src="<?php echo $image[0]; ?>">
 				</span>
 				<span class="scroll">
 					<img alt="logo" class="max-w-[35px]" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-small.png"; ?>">
