@@ -1360,8 +1360,7 @@ if (have_posts()):
                             }
                             payload[key] = value;
                         }
-                        console.log(payload)
-
+                        payload.company_owner.phone = formState.selectedCountry + payload.company_owner.phone
                         loader.classList.toggle("active")
 
                         fetch(formState.registerApi, {
