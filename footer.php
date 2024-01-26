@@ -97,102 +97,127 @@
 			font-weight: 700;
 			color: #27ae60;
 		}
+		.parent1{
+			display: flex;
+			flex-direction: row;
+			width: 150px;			
+		}
+		.child1{
+			width: 70px;
+		}
+		.child2{
+			margin-left: 1.5rem;
+			width: calc(100% - 70px);
+			margin-top: -0.4rem;
+		}
+		@media (min-width: 768px) {
+			.footer-block1{
+				width: 15%;
+			}
+			.footer-block2{
+				width: 25%;
+				align-self: flex-start;
+			}
+			.footer-block3{
+				width: 35%;
+			}
+		}
+		.footer-margin1{
+			margin-bottom: 1.0rem;
+		}
+		.footer-margin2{
+			margin-bottom: 0.25rem;
+		}
+		.footer-font{
+			font-size: 14px;
+		}
 	</style>
 	<footer class="bg-white">
-		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t border-b px-5">
-			<div class="text-3xl md:text-5xl w-full md:w-3/5 font-light my-20">
-			Solutions That Fits Your Specific Needs & Budget.
-			</div>
+		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 border-b px-5 mt-10 mb-6">
 			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
-				<div class="flex-1 mb-5">
-					<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-						if ($custom_logo_id) { ?>
-							<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[170px] mb-3">
-						<?php }
+				<div class="w-2/6">
+					<div class="flex-1 mb-5 mx-2">
+						<!-- <div class="flex flex-row">
+							<div>
+								<?php $custom_logo_id = get_theme_mod( 'custom_logo' );//echo "<br>".wp_get_attachment_image_src( $custom_logo_id, 'full' )[0];
+									/*if ($custom_logo_id) { ?>
+										<img src="<?php echo wp_get_attachment_image_src( $custom_logo_id, 'full' )[0]; ?>" class="max-w-[170px] mb-3">
+									<?php }*/
+										
+								?>
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="mb-10 max-w-[25%] lg:max-w-[35%]">
+							</div>
 							
-					?>
-					
-					<div class="mb-3">Search. Compare. Save.</div>
-					<div class="mb-3">ABN - 30 664 818 848</div>
-					<div class="flex social-icons">
-						<a href="https://www.facebook.com/Snippit-105872775751433" target="_blank" class="mb-2 mr-2 facebook">
-							<i class="fa fa-facebook"></i>
-						</a>
-						<a href="https://www.linkedin.com/company/snippit-pty-ltd/" target="_blank" class="mb-2 mr-2 linkedin">
-							<i class="fa fa-linkedin"></i>
-						</a>
-						<a href="https://www.instagram.com/snippit_pty/" target="_blank" class="mb-2 mr-2 instagram">
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-								<g>
-									<g>
-										<path d="M404.831,94.739c-6.853,0-12.43,5.577-12.43,12.43s5.577,12.43,12.43,12.43c6.854,0,12.43-5.576,12.43-12.43
-											S411.685,94.739,404.831,94.739z"/>
-									</g>
-								</g>
-								<g>
-									<g>
-										<path d="M256,145.804c-60.762,0-110.196,49.434-110.196,110.196c0,60.762,49.434,110.197,110.196,110.197
-											c60.763,0,110.197-49.434,110.197-110.196C366.197,195.239,316.763,145.804,256,145.804z"/>
-									</g>
-								</g>
-								<g>
-									<g>
-										<path d="M371.643,0H140.357C62.964,0,0,62.964,0,140.358v231.285C0,449.037,62.964,512,140.357,512h231.286
-											C449.037,512,512,449.036,512,371.643V140.358C512,62.964,449.037,0,371.643,0z M256,396.432
-											c-77.435,0-140.431-62.997-140.431-140.432S178.566,115.57,256,115.57S396.432,178.566,396.432,256S333.434,396.432,256,396.432z
-											M404.831,149.836c-23.526,0-42.666-19.14-42.666-42.666c0-23.526,19.14-42.667,42.666-42.667
-											c23.526,0,42.666,19.14,42.666,42.666S428.357,149.836,404.831,149.836z"/>
-									</g>
+							<div>
+								<div class="text-2xl font-semibold mb-3 md:-ml-[4rem]">Search. <br> Compare. <br> Save.</div>
+							</div>
+						</div> -->
 
-							</svg>
-						</a>
-					</div>
+						<div class="parent1">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="mb-10 child1">
+						<div class="text-2xl font-semibold mb-3 child2">Search. <br> Compare. <br> Save.</div>
+						</div>
 
-				</div>
-				<div class="flex-1 mb-5">
-					<div class="font-bold">Address</div>
-					<p class="text-base py-1 mb-0">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
-					<div class="newsletter">
-					<?php 
-						if(get_field('shortcode', 'option')){
-							echo do_shortcode(get_field('shortcode', 'option'));
-						}
-					?>
 					</div>
 				</div>
-				<div class="flex-1 mb-5">
-					<div class="font-bold">Quick Links</div>
-					<ul class="list-none">
-						<li class="py-1">
-							<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a>
-						</li>
-						<li class="py-1">
-							<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a>
-						</li>
-						<li class="py-1">
-							<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/terms-conditions/', OBJECT, 'page')->ID);?>">Terms & Conditions</a>
-						</li>
-					</ul>
-				</div>
-				<div class="flex-1 mb-5">
-					<div class="font-bold">Contact</div>
-					<ul class="list-none">
-						<li class="py-1"><i class="fa fa-phone mr-2"></i>
-							<a href="tel:+61 1300 580 704">+61 1300 580 704</a>
-						</li>
-						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>
-							<a href="mailto:enquiries@snippit.com.au">enquiries@snippit.com.au</a>
-						</li>
-						<li class="py-1"><i class="fa fa-envelope-o mr-2"></i>
-							<a href="mailto:support@snippit.com.au">support@snippit.com.au</a>
-						</li>
-					</ul>
+				<div class="w-4/6 flex flex-col md:flex-row">
+					<div class=" mb-5 mx-2 footer-block1">
+						<div class="font-medium mb-1">ABN</div>
+						<p class="py-1 mb-0 text-sm font-normal">30 664 818 848</p>
+					</div>
+					<div class=" mb-5 mx-2 footer-block2">
+						<div class="font-medium mb-1">Address</div>
+						<p class="py-1 mb-0 text-sm font-normal">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
+						<div class="newsletter">
+						<?php 
+							if(get_field('shortcode', 'option')){
+								echo do_shortcode(get_field('shortcode', 'option'));
+							}
+						?>
+						</div>
+					</div>
+					<div class=" mb-5 mx-2 footer-block2">
+						<div class="font-medium mb-1">Quick Links</div>
+						<ul class="list-none text-sm font-normal">
+							<li class="-my-0.5">
+								<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a>
+							</li>
+							<li class="-my-0.5">
+								<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a>
+							</li>
+							<li class="-my-0.5">
+								<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/terms-conditions/', OBJECT, 'page')->ID);?>">Terms & Conditions</a>
+							</li>
+						</ul>
+					</div>
+					<div class=" mb-5 mx-2 footer-block3">
+						<div class="font-medium mb-1">Contact</div>
+						<ul class="list-none text-sm font-normal">
+							<li class="-my-0.5"><i class="fa fa-phone mr-2"></i>
+								<a href="tel:+61 1300 580 704">+61 1300 580 704</a>
+							</li>
+							<li class="-my-0.5"><i class="fa fa-info mr-2" aria-hidden="true"></i>
+								<a href="mailto:enquiries@snippit.com.au">enquiries@snippit.com.au</a>
+							</li>
+							<li class="-my-0.5"><i class="fa fa-envelope-o mr-2"></i>
+								<a href="mailto:support@snippit.com.au">support@snippit.com.au</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto">
-			<div class="flex justify-center p-5">
-				<div class="text-sm">Copyright © 2022 - 2023 Snippit all rights reserved </div>
+		<div class="container mx-auto flex flex-col md:flex-row mb-6 px-5 footer-font">
+			<div class="md:w-4/5 text-left justify-start md:justify-end md:text-right footer-margin1">Copyright © 2022 - 2023 Snippit all rights reserved </div>
+			<div class="md:w-1/5 flex text-center md:text-right justify-center md:justify-end flex-col md:flex-row">
+				<!-- <div class="flex justify-center md:justify-end md:pr-6 flex-col md:flex-row"> -->
+					<div class="footer-margin2">Connect us on:</div>
+					<div class="flex justify-center md:justify-start">
+						<a href="https://www.facebook.com/Snippit-105872775751433" target="_blank" class=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook_icon.png" class="w-[1.6rem] mx-[0.5rem]"></a>
+						<a href="https://www.instagram.com/snippit_pty/" target="_blank" class=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Instagram_icon.png" class="w-[1.6rem] mx-[0.5rem]"></a>
+						<a href="https://www.linkedin.com/company/snippit-pty-ltd/" target="_blank" class=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/linkedin_icon.png" class="w-[1.6rem] mx-[0.5rem]"></a>
+					</div>
+				<!-- </div> -->
 			</div>
 		</div>
 		
@@ -333,16 +358,16 @@
 					delay: 50
 				});
 
-				typewriter.typeString('Energy Efficiency')
+				typewriter.typeString('HVAC Upgrades')
 					.pauseFor(2500)
 					.deleteAll()
-					.typeString('Supermarket')
+					.typeString('Hot Water Systems')
 					.pauseFor(2500)
 					.deleteAll()
-					.typeString('Construction')
+					.typeString('Solar Panels')
 					.pauseFor(2500)
 					.deleteAll()
-					.typeString('Medical')
+					.typeString('PV Batteries')
 					.pauseFor(2500)
 					.deleteAll()
 					.start();

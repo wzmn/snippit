@@ -11,6 +11,12 @@
 				width: 120px;
 				height: 125px;
 				padding: 40px 30px;
+				top: -3rem;
+			}
+		}
+		@media only screen and (min-width: 992px) {
+			.para-width{
+				width: 80%;
 			}
 		}
 		.border-shadow {
@@ -60,15 +66,25 @@
 			height: 650px;
 		}
 		.smiley {
-			width: 180px;
-			height: 185px;
-			padding: 60px 50px;
+			width: 120px;
+			height: 125px;
+			padding: 40px 30px;
 			background-color: #FED000;
 			border-radius: 20px;
 			position: absolute;
 			left: 1rem;
-			top: -3rem;
+			top: 3rem;
 		}
+		/* smiley {
+			width: 120px;
+			height: 125px;
+			padding: 40px 30px;
+			background-color: #FED000;
+			border-radius: 20px;
+			position: absolute;
+			left: 1rem;
+			top: 3rem;
+		} */
 		.loader svg {
 			width: 20px;
 			height: 20px;
@@ -324,6 +340,9 @@
 				display: none;
 			}
 		}
+		.img-round{
+			border-radius: 1.5rem;
+		}
 	</style>
 	<style>
 		[type="submit"] {
@@ -513,25 +532,25 @@
 				</div>
 				<div class="flex justify-between flex-col text-container relative">
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text panel-text-1">
-						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Experience Elevated Everywhere</div>
-						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
+						<div class="font-light md:mb-1 md:text-xl mb-2 text-xl">Experience Elevated Everywhere</div>
+						<div class="mb-2 md:mb-4 text-3xl md:text-3xl">
 							Dynamic Deals
 						</div>
-						<p class="text-base md:text-xl font-light">Whether you're looking for lighting products, heat pumps or any other energy efficiency upgrade, Snippit has got you covered. So why wait? Start making a difference for the planet and your business now!</p>
+						<p class="text-base font-light para-width">Whether you're looking for lighting products, heat pumps or any other energy efficiency upgrade, Snippit has got you covered. So why wait? Start making a difference for the planet and your business now!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
-						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Revolutionizing the Ordinary</div>
-						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
+						<div class="font-light md:mb-1 md:text-xl mb-2 text-xl">Revolutionizing the Ordinary</div>
+						<div class="mb-2 md:mb-4 text-3xl md:text-3xl">
 							Stress-Free Appointments
 						</div>
-						<p class="text-base md:text-xl font-light">With Snippit app, finding quality opportunities has never been easier. Our certified and validated leads mean less stress for you and more opportunities to grow your business!</p>
+						<p class="text-base font-light para-width">With Snippit app, finding quality opportunities has never been easier. Our certified and validated leads mean less stress for you and more opportunities to grow your business!</p>
 					</div>
 					<div class="flex flex-col justify-center pr-10 pl-4 panel-text">
-						<div class="font-light md:mb-5 md:text-2xl mb-2 text-xl">Innovate, Delight, Experience</div>
-						<div class="mb-2 md:mb-8 text-3xl md:text-7xl">
+						<div class="font-light md:mb-1 md:text-xl mb-2 text-xl">Innovate, Delight, Experience</div>
+						<div class="mb-2 md:mb-4 text-3xl md:text-3xl">
 							Assess with ease
 						</div>
-						<p class="text-base md:text-xl font-light">Get the full picture with Snippit - Our assessment feature simplifies the process, making it easy for you to make informed decisions with confidence.</p>
+						<p class="text-base font-light para-width">Get the full picture with Snippit - Our assessment feature simplifies the process, making it easy for you to make informed decisions with confidence.</p>
 					</div>
 					<div class="flex flex-col justify-end pr-10 pl-4 panel-text max-w-[40rem]">
 						<div class="font-semibold text-2xl mb-2 mt-72">Let's get Started</div>
@@ -596,14 +615,14 @@
 										</div>
 									</label>
 								</div>
-								<div class="relative">
+								<!-- <div class="relative">
 									<input class="bg-blue p-2 text-white w-full rounded-[0.375rem]" type="submit" value="Sign Up">
 									<div class="loader">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 											<path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/>
 										</svg>
 									</div>
-								</div>
+								</div> -->
 								<div class="error-message text-center py-4">
 									<div class="messages"></div>
 								</div>
@@ -620,10 +639,10 @@
 						</filter>
 						<rect class="myfill" filter="url(#turbulence)" fill="url(#img1)" width="480" height="650"></rect>
 					</svg>
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-yellow.png" class="absolute im-1"> 
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-cyan.png" class="absolute">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-green.png" class="absolute">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-iphone.png" class="absolute">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-yellow.png" class="absolute im-1 img-round"> 
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-cyan.png" class="absolute img-round">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-green.png" class="absolute img-round">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-iphone2.png" class="absolute img-round">
 				</div>
 			</div>
 		</div>
