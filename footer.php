@@ -131,9 +131,16 @@
 		.footer-font{
 			font-size: 14px;
 		}
+		hr.pattern{
+			width: 392.8px;
+			/* size: 1px; */
+			border-top: 1px solid #e9e9e9;
+			margin-bottom: 1rem;
+		}
 	</style>
 	<footer class="bg-white">
-		<div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 border-b px-5 mt-10 mb-6">
+		<!-- <div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 border-b px-5 mt-10 mb-6"> -->
+		<div class="container mx-auto flex flex-col border-b-0 border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 px-5 mt-10 mb-1">
 			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
 				<div class="w-2/6">
 					<div class="flex-1 mb-5 mx-2">
@@ -165,6 +172,7 @@
 						<div class="font-medium mb-1">ABN</div>
 						<p class="py-1 mb-0 text-sm font-normal">30 664 818 848</p>
 					</div>
+					<hr class="pattern">
 					<div class=" mb-5 mx-2 footer-block2">
 						<div class="font-medium mb-1">Address</div>
 						<p class="py-1 mb-0 text-sm font-normal">22-30 Wallace Avenue, <br>Point Cook, VIC – 3030</p>
@@ -176,6 +184,7 @@
 						?>
 						</div>
 					</div>
+					<hr class="pattern">
 					<div class=" mb-5 mx-2 footer-block2">
 						<div class="font-medium mb-1">Quick Links</div>
 						<ul class="list-none text-sm font-normal">
@@ -190,6 +199,7 @@
 							</li>
 						</ul>
 					</div>
+					<hr class="pattern">
 					<div class=" mb-5 mx-2 footer-block3">
 						<div class="font-medium mb-1">Contact</div>
 						<ul class="list-none text-sm font-normal">
@@ -204,6 +214,7 @@
 							</li>
 						</ul>
 					</div>
+					<hr class="pattern">
 				</div>
 			</div>
 		</div>

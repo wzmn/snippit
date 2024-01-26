@@ -1146,6 +1146,10 @@ nav ul, .sidebar ul {
   border-top-width: 1px;
 }
 
+.border-b-0 {
+  border-bottom-width: 0px;
+}
+
 .border-\[\#eaeaea\] {
   --tw-border-opacity: 1;
   border-color: rgb(234 234 234 / var(--tw-border-opacity));
