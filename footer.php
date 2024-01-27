@@ -132,15 +132,21 @@
 			font-size: 14px;
 		}
 		hr.pattern{
-			width: 392.8px;
-			/* size: 1px; */
-			border-top: 1px solid #e9e9e9;
-			margin-bottom: 1rem;
+			display:none;
+		}
+		@media (max-width: 768px){
+			hr.pattern{
+				display:block;
+				width: 392.8px;
+				/* size: 1px; */
+				border-top: 1px solid #e9e9e9;
+				margin-bottom: 1rem;
+			}
 		}
 	</style>
 	<footer class="bg-white">
 		<!-- <div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 border-b px-5 mt-10 mb-6"> -->
-		<div class="container mx-auto flex flex-col border-b-0 border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 px-5 mt-10 mb-1">
+		<div class="container mx-auto flex flex-col border-b-0 md:border-b md:border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 px-5 mt-10 mb-1">
 			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
 				<div class="w-2/6">
 					<div class="flex-1 mb-5 mx-2">
@@ -186,7 +192,7 @@
 					</div>
 					<hr class="pattern">
 					<div class=" mb-5 mx-2 footer-block2">
-						<div class="font-medium mb-1">Quick Links</div>
+						<div class="font-medium mb-2">Quick Links</div>
 						<ul class="list-none text-sm font-normal">
 							<li class="-my-0.5">
 								<a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a>
@@ -201,7 +207,7 @@
 					</div>
 					<hr class="pattern">
 					<div class=" mb-5 mx-2 footer-block3">
-						<div class="font-medium mb-1">Contact</div>
+						<div class="font-medium mb-2">Contact</div>
 						<ul class="list-none text-sm font-normal">
 							<li class="-my-0.5"><i class="fa fa-phone mr-2"></i>
 								<a href="tel:+61 1300 580 704">+61 1300 580 704</a>
