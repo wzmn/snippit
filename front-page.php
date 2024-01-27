@@ -111,13 +111,13 @@ get_header();
 
 			</div>
 		</div>
-		<div class="flex justify-center mb-20 md:mb-40 container mx-auto px-5" video>
+		<div class="flex justify-center mb-20 md:mb-24 container mx-auto px-5" video>
 			<video autoplay muted loop playsinline poster="<?php echo get_stylesheet_directory_uri(); ?>/images/home-poster.png">
 				<source src="<?php echo get_stylesheet_directory_uri(); ?>/images/home.mp4" type="video/mp4">
 			</video>
 		</div>
 
-		<div class="container flex justify-center mb-[21rem] md:mb-[10.5rem] mx-auto back-cover" ask-how>
+		<div class="container flex justify-center mb-[7rem] md:mb-[6rem] mx-auto back-cover" ask-how>
 			<style>
 				.headfont{
 					font-size: 20px;
@@ -233,9 +233,9 @@ get_header();
 			<div class="lg:max-w-[60%] w-full px-5 ">
 				<div><img alt="logo" class="w-24 my-[2.25rem] mx-auto" src="<?php echo get_stylesheet_directory_uri() . "/images/snippit-blue.png"; ?>"></div>
 				<div class="text-[20px] mb-2 text-center text-[#656565] italic" data-aos="fade-up">Know About Snippit Services</div>
-				<div class="text-3xl mb-3 px-10 lg:px-28 font-semibold text-center" data-aos="fade-up">Solutions to make life <span class="text-blue">easier</span></div>
+				<div class="text-3xl mb-3 px-10 lg:px-0 font-semibold text-center" data-aos="fade-up">Solutions to make life <span class="text-blue">easier</span></div>
 				<div class="flex items-center justify-center flex-col md:flex-row px-6 text-center" data-aos="fade-up">
-					<p class="md:w-[27rem] w-full mx-auto">Snippit's essential services deliver unparalleled value, making your everyday essentials extraordinary. <!-- span><a class="py-3 px-8 bg-gradient-to-r from-[#8FD520] to-[#FED000] text-white rounded-br-[24px] absolute mt-2 ml-3">Ask Us How</a></span --></p>
+					<p class="w-full mx-auto">Snippit's essential services deliver unparalleled value, making your everyday essentials extraordinary. <!-- span><a class="py-3 px-8 bg-gradient-to-r from-[#8FD520] to-[#FED000] text-white rounded-br-[24px] absolute mt-2 ml-3">Ask Us How</a></span --></p>
 				</div>
 				<div class="flex justify-center flex-col items-center sm:flex-row sm:items-start text-xs font-light pb-4" data-aos="fade-up">
 					<div class="flex">
@@ -259,12 +259,12 @@ get_header();
 			</div>
 			</div>
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 flex items-center flex-col px-5" id="features">
+		<div class="container mx-auto mb-24 md:mb-24 flex items-center flex-col px-5" id="features">
 			<div class="text-[20px] mb-2 text-[#656565] text-left italic" data-aos="fade-up">Features</div>
-			<div class="mb-20 font-semibold text-3xl text-center" data-aos="fade-up">Solutions that fit your <span class="text-lime">specific needs</span></div>
+			<div class="mb-8 font-semibold text-3xl text-center" data-aos="fade-up">Solutions that fit your <span class="text-lime">specific needs</span></div>
 			<div class="flex flex-col lg:max-w-[80%] rows">
 
-				<div class="flex flex-col md:flex-row mb-3 items-center h-[615px] md:h-[380px]">
+				<div class="flex flex-col md:flex-row mb-3 items-center h-[615px] md:h-[380px] md:w-[660px]">
 					<div class="flex-col flex md:w-[50%] flex-1 grow h-full back-cover2 md:mr-2">
 						<div class="flex flex-col grow items-center">
 								<div class="flex flex-row lg:max-w-[100%] mt-8 -mb-6">
@@ -304,7 +304,7 @@ get_header();
 				
 			</div>
 		</div>
-		<div class="container mx-auto mb-20 md:mb-40 py-10 px-5" id="how-it-works">
+		<div class="container mx-auto mb-20 md:mb-20 pb-10 px-5" id="how-it-works">
 			<style>
 				#how-it-works .bg-img {
 					top: 0;
@@ -368,7 +368,8 @@ get_header();
 						/* border: 1px solid green; */
 					}
 					.slides{
-						width: 250px;
+						/* width: 250px; */
+						width: 290px;
 						overflow-x: auto;
 						scroll-snap-type: x mandatory;
             			scroll-behavior: smooth;
@@ -380,14 +381,13 @@ get_header();
 						/* object-fit: cover; */
 					}
 					.slides-nav{
-						display: flex;
+						display:none;
+						/* display: flex;
 						column-gap: 1rem;
 						position: absolute;
-						/* bottom: 1.25rem; */
-						/* left: 36%; */
 						left: 50%;
 						transform: translateX(-50%);
-						z-index: 1;
+						z-index: 1; */
 					}
 					.slides-nav a{
 						width: 0.5rem;
@@ -401,14 +401,18 @@ get_header();
 						opacity: 1;
 						background-color: blue;
 					}
+					/* ::-webkit-scrollbar {
+						width: 0px;
+						background: transparent; //make scrollbar transparent
+					} */
 				}
 
 			</style>
-			<div class="flex flex-col justify-center w-full mb-10 items-center">
+			<div class="flex flex-col justify-center w-full items-center">
 			<!-- <div class="flex flex-col justify-center w-full mb-10"> -->
 				<!-- <div class="text-[20px] mb-2 text-center text-[#656565] italic" data-aos="fade-left">How it Works</div> -->
 				<div class="text-[20px] mb-2 text-[#656565] italic px-10" data-aos="fade-left">How it Works</div>
-				<div class="flex flex-col sm:flex-row items-baseline text-3xl mb-5 px-10 text-center">
+				<div class="flex flex-col sm:flex-row items-baseline text-3xl mb-4 px-10 text-center">
 					<div class="font-semibold mr-2" data-aos="fade-right">Functional.</div>
 					<div class="font-bold text-cyan" data-aos="fade-up">Simple</div>
 				</div>
@@ -496,7 +500,7 @@ get_header();
 			}
 		</style>
 		<div join-now>
-			<div class="container mx-auto mb-20 md:mb-[6.5rem]">
+			<div class="container mx-auto mb-20 md:mb-[5.5rem]">
 				<div class="flex">
 					<div class="flex flex-1 flex-col justify-between pt-8 pb-12 pl-4" data-aos="fade-right">
 						<div class="flex flex-col pr-0 lg:pr-40">

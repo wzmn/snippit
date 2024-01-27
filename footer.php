@@ -123,7 +123,7 @@
 			}
 		}
 		.footer-margin1{
-			margin-bottom: 1.0rem;
+			margin-bottom: 2.0rem;
 		}
 		.footer-margin2{
 			margin-bottom: 0.25rem;
@@ -137,7 +137,8 @@
 		@media (max-width: 768px){
 			hr.pattern{
 				display:block;
-				width: 392.8px;
+				/* width: 392.8px; */
+				width: 770px;
 				/* size: 1px; */
 				border-top: 1px solid #e9e9e9;
 				margin-bottom: 1rem;
@@ -224,7 +225,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto flex flex-col md:flex-row mb-6 px-5 footer-font">
+		<div class="container mx-auto flex flex-col md:flex-row mb-6 px-5 md:pt-2 footer-font">
 			<div class="md:w-4/5 text-left justify-start md:justify-end md:text-right footer-margin1">Copyright © 2022 - 2023 Snippit all rights reserved </div>
 			<div class="md:w-1/5 flex text-center md:text-right justify-center md:justify-end flex-col md:flex-row">
 				<!-- <div class="flex justify-center md:justify-end md:pr-6 flex-col md:flex-row"> -->
