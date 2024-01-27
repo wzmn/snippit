@@ -148,7 +148,7 @@
 	<footer class="bg-white">
 		<!-- <div class="container mx-auto flex flex-col border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 border-b px-5 mt-10 mb-6"> -->
 		<div class="container mx-auto flex flex-col border-b-0 md:border-b md:border-b-[#e9e9e9] border-t-[#e9e9e9] border-r-0 border-l-0 border-t-0 px-5 mt-10 mb-1">
-			<div class="flex mb-0 md:mb-10 flex-col md:flex-row">
+			<div class="flex mb-0 md:mb-10 flex-col md:flex-row mt-12">
 				<div class="w-2/6">
 					<div class="flex-1 mb-5 mx-2">
 						<!-- <div class="flex flex-row">

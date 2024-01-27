@@ -500,7 +500,7 @@ get_header();
 			}
 		</style>
 		<div join-now>
-			<div class="container mx-auto mb-20 md:mb-[5.5rem]">
+			<div class="container mx-auto mb-8 md:mb-8">
 				<div class="flex">
 					<div class="flex flex-1 flex-col justify-between pt-8 pb-12 pl-4" data-aos="fade-right">
 						<div class="flex flex-col pr-0 lg:pr-40">

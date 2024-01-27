@@ -766,6 +766,10 @@ nav ul, .sidebar ul {
   margin-bottom: 6rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .block {
   display: block;
 }
