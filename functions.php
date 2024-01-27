@@ -569,6 +569,19 @@ function cogncise_non_latin_languages() {
 }
 add_action( 'wp_enqueue_scripts', 'cogncise_non_latin_languages' );
 
+function country_codes_array(){
+	wp_enqueue_script(
+		'country_codes',
+		get_stylesheet_directory_uri() . '/country-codes.js',
+		array(),
+		null,
+		true
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'country_codes_array' );
+
+
 // SVG Icons class.
 require get_template_directory() . '/classes/class-cogncise-svg-icons.php';
 
@@ -632,17 +645,7 @@ add_action( 'customize_preview_init', 'cogncise_customize_preview_init' );
  *
  * @return void
  */
-function cogncise_customize_controls_enqueue_scripts() {
-
-	wp_enqueue_script(
-		'cogncise-customize-helpers',
-		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
-		array(),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-}
-add_action( 'customize_controls_enqueue_scripts', 'cogncise_customize_controls_enqueue_scripts' );
+// add_action( 'customize_controls_enqueue_scripts', 'cogncise_customize_controls_enqueue_scripts' );
 
 /**
  * Calculate classes for the main <html> element.
