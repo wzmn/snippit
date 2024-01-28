@@ -585,6 +585,10 @@ nav ul, .sidebar ul {
   top: 0px;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -2991,6 +2995,14 @@ body.menu-open:after {
 
   .md\:mb-52 {
     margin-bottom: 13rem;
+  }
+
+  .md\:mb-1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .md\:mb-4 {
+    margin-bottom: 1rem;
   }
 
   .md\:block {
