@@ -228,6 +228,11 @@ get_header();
 						height: 314px;
 					}
 				}
+				@media only screen and (max-width: 1023px) and (min-width: 768px)  {
+					.abs-left{
+						left: 10rem;
+					}
+				}
 			</style>
 			<div class="flex relative justify-center">
 			<div class="lg:max-w-[60%] w-full px-5 relative pb-16">
@@ -237,7 +242,7 @@ get_header();
 				<div class="flex items-center justify-center flex-col md:flex-row px-6 text-center" data-aos="fade-up">
 					<p class="w-full mx-auto">Snippit's essential services deliver unparalleled value, making your everyday essentials extraordinary. <!-- span><a class="py-3 px-8 bg-gradient-to-r from-[#8FD520] to-[#FED000] text-white rounded-br-[24px] absolute mt-2 ml-3">Ask Us How</a></span --></p>
 				</div>
-				<div class="flex justify-center flex-col items-center sm:flex-row sm:items-start text-xs font-light pb-4 md:absolute md:bottom-[-80px]" data-aos="fade-up">
+				<div class="flex justify-center flex-col items-center sm:flex-row sm:items-start text-xs font-light pb-4 md:absolute md:bottom-[-80px] abs-left" data-aos="fade-up">
 					<div class="flex">
 						<div class="flex flex-col items-center">
 							<img alt="logo" class="max-w-[90px] mx-3.5 img-rounded mt-2" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-yellow2.png"; ?>">
