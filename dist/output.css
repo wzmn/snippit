@@ -2957,6 +2957,14 @@ body.menu-open:after {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:bottom-\[-80px\] {
+    bottom: -80px;
+  }
+
   .md\:mb-40 {
     margin-bottom: 10rem;
   }
