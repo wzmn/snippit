@@ -767,10 +767,10 @@ if (have_posts()):
                                                     checked>
                                                 <span>Seller</span>
                                             </label>
-                                            <label class="flex items-center mb-2 py-1" for="buyer">
-                                                <input type="radio" class="mr-2" id="buyer" value="buyer"
+                                            <label class="flex items-center mb-2 py-1" for="installer">
+                                                <input type="radio" class="mr-2" id="installer" value="installer"
                                                     name="company_type">
-                                                <span>Buyer</span>
+                                                <span>Installer</span>
                                             </label>
                                         </div>
                                         <div class="flex gap-x-4">
@@ -906,9 +906,9 @@ if (have_posts()):
                     
                 document.addEventListener("DOMContentLoaded", function() {
                     const formState = {
-                        otpApi: 'https://dev-eks.snippit.com.au/api/core/otp',
-                        otpVerifyApi: 'https://dev-eks.snippit.com.au/api/core/otp/verify-otp',
-                        registerApi: 'https://dev-eks.snippit.com.au/api/company/basic/',
+                        otpApi: 'https://prod-eks.snippit.com.au/api/core/otp',
+                        otpVerifyApi: 'https://prod-eks.snippit.com.au/api/core/otp/verify-otp',
+                        registerApi: 'https://prod-eks.snippit.com.au/api/company/basic/',
                         emailOtpSent: !1,
                         mobileOtpSent: !1,
                         resendCount: 3,

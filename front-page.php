@@ -117,7 +117,7 @@ get_header();
 			</video>
 		</div>
 
-		<div class="container flex justify-center mb-[7rem] md:mb-[6rem] mx-auto back-cover" ask-how>
+		<div class="container flex justify-center mb-24 md:mb-48 mx-auto back-cover" ask-how>
 			<style>
 				.headfont{
 					font-size: 20px;
@@ -230,14 +230,14 @@ get_header();
 				}
 			</style>
 			<div class="flex relative justify-center">
-			<div class="lg:max-w-[60%] w-full px-5 ">
+			<div class="lg:max-w-[60%] w-full px-5 relative pb-16">
 				<div><img alt="logo" class="w-24 my-[2.25rem] mx-auto" src="<?php echo get_stylesheet_directory_uri() . "/images/snippit-blue.png"; ?>"></div>
 				<div class="text-[20px] mb-2 text-center text-[#656565] italic" data-aos="fade-up">Know About Snippit Services</div>
 				<div class="text-3xl mb-3 px-10 lg:px-0 font-semibold text-center" data-aos="fade-up">Solutions to make life <span class="text-blue">easier</span></div>
 				<div class="flex items-center justify-center flex-col md:flex-row px-6 text-center" data-aos="fade-up">
 					<p class="w-full mx-auto">Snippit's essential services deliver unparalleled value, making your everyday essentials extraordinary. <!-- span><a class="py-3 px-8 bg-gradient-to-r from-[#8FD520] to-[#FED000] text-white rounded-br-[24px] absolute mt-2 ml-3">Ask Us How</a></span --></p>
 				</div>
-				<div class="flex justify-center flex-col items-center sm:flex-row sm:items-start text-xs font-light pb-4" data-aos="fade-up">
+				<div class="flex justify-center flex-col items-center sm:flex-row sm:items-start text-xs font-light pb-4 absolute bottom-[-80px]" data-aos="fade-up">
 					<div class="flex">
 						<div class="flex flex-col items-center">
 							<img alt="logo" class="max-w-[90px] mx-3.5 img-rounded mt-2" src="<?php echo get_stylesheet_directory_uri() . "/images/logo-yellow2.png"; ?>">
@@ -408,17 +408,20 @@ get_header();
 				}
 
 			</style>
-			<div class="flex flex-col justify-center w-full items-center">
-			<!-- <div class="flex flex-col justify-center w-full mb-10"> -->
-				<!-- <div class="text-[20px] mb-2 text-center text-[#656565] italic" data-aos="fade-left">How it Works</div> -->
-				<div class="text-[20px] mb-2 text-[#656565] italic px-10" data-aos="fade-left">How it Works</div>
-				<div class="flex flex-col sm:flex-row items-baseline text-3xl mb-4 px-10 text-center">
+			<div class="w-[660px] mx-auto">
+				<div class="text-[20px] mb-2 text-[#656565] italic" data-aos="fade-left">How it Works</div>
+				<div class="flex flex-col sm:flex-row items-baseline text-3xl mb-4 text-center">
 					<div class="font-semibold mr-2" data-aos="fade-right">Functional.</div>
 					<div class="font-bold text-cyan" data-aos="fade-up">Simple</div>
 				</div>
+
+			</div>
+			<div class="flex flex-col justify-center w-full items-center">
+			<!-- <div class="flex flex-col justify-center w-full mb-10"> -->
+				<!-- <div class="text-[20px] mb-2 text-center text-[#656565] italic" data-aos="fade-left">How it Works</div> -->
 				<!-- <div class="flex border border-black p-4 justify-center"> -->
 				<div class="slides-wrapper">
-					<div class="flex slides">
+					<div class="flex flex-wrap gap-4">
 						<div id="slide-1" class="flex flex-col round-cards shadow">
 							<img src="<?php echo get_stylesheet_directory_uri() . "/images/card-icon-1.png"; ?>" alt="icon" class="w-[3rem]">
 							<div class="font-semibold mb-4">Sign in to app</div>

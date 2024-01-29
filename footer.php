@@ -13,7 +13,7 @@
 
 ?>
 </main>
-	<div class="download-fixed z-30">
+	<div class="hidden md:block download-fixed z-30">
 		<a class="download-btn flex items-center px-3 py-2 shadow float mb-6" href="https://apps.apple.com/au/app/snippit/id6446515712">
 			<svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 28.74 35.253" class="">
 			<g id="apple-logo" transform="translate(-2.104)">
@@ -226,7 +226,7 @@
 			</div>
 		</div>
 		<div class="container mx-auto flex flex-col md:flex-row mb-6 px-5 md:pt-2 footer-font">
-			<div class="md:w-4/5 text-left justify-start md:justify-end md:text-right footer-margin1">Copyright © 2022 - 2023 Snippit all rights reserved </div>
+			<div class="md:w-4/5 text-left justify-start md:justify-end md:text-right footer-margin1">Copyright © 2022 - <?php echo date("Y"); ?> Snippit all rights reserved </div>
 			<div class="md:w-1/5 flex text-center md:text-right justify-center md:justify-end flex-col md:flex-row">
 				<!-- <div class="flex justify-center md:justify-end md:pr-6 flex-col md:flex-row"> -->
 					<div class="footer-margin2">Connect us on:</div>

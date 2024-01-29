@@ -39,7 +39,8 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
   /* 3 */
-  tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
@@ -589,6 +590,14 @@ nav ul, .sidebar ul {
   top: 5rem;
 }
 
+.bottom-\[80px\] {
+  bottom: 80px;
+}
+
+.bottom-\[-80px\] {
+  bottom: -80px;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -911,6 +920,10 @@ nav ul, .sidebar ul {
 
 .w-1\/4 {
   width: 25%;
+}
+
+.w-\[660px\] {
+  width: 660px;
 }
 
 .min-w-\[250px\] {
@@ -1496,6 +1509,14 @@ nav ul, .sidebar ul {
 
 .pl-28 {
   padding-left: 7rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .text-left {
@@ -2993,16 +3014,20 @@ body.menu-open:after {
     margin-bottom: 2rem;
   }
 
-  .md\:mb-52 {
-    margin-bottom: 13rem;
-  }
-
   .md\:mb-1 {
     margin-bottom: 0.25rem;
   }
 
   .md\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .md\:mb-52 {
+    margin-bottom: 13rem;
+  }
+
+  .md\:mb-48 {
+    margin-bottom: 12rem;
   }
 
   .md\:block {
@@ -3165,19 +3190,14 @@ body.menu-open:after {
     line-height: 1;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
 
