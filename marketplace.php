@@ -58,7 +58,7 @@ if (have_posts()):
                 .image-container>img {
                     transition: all 0.3s ease;
                     filter: none;
-                    background: white;
+                    /* background: white; */
                 }
 
                 .image-container>img.wavy {
@@ -895,10 +895,10 @@ if (have_posts()):
                                 </filter>
                                 <rect class="myfill" filter="url(#turbulence)" fill="url(#img1)" width="480" height="650"></rect>
                             </svg>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-yellow.png" class="absolute im-1 img-round">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-cyan.png" class="absolute img-round">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-green.png" class="absolute img-round">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-iphone2.png" class="absolute top-20 img-round">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-yellow.png" class="absolute im-1 top-20 bg-[#fbf7e3] img-round">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-cyan.png" class="absolute top-20 bg-[#e7efef] img-round">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-green.png" class="absolute top-20 bg-[#ecf6da] img-round">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ss-iphone2.png" class="absolute top-20 bg-[#d6e9fb] img-round">
                         </div>
                     </div>
                 </div>

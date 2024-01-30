@@ -1272,6 +1272,46 @@ nav ul, .sidebar ul {
   background-color: rgb(1 45 94 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#fddd46\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 221 70 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#6bdada\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 218 218 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#b1e45b\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(177 228 91 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0a84ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 132 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#fbf7e3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 247 227 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#e7efef\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 239 239 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ecf6da\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 246 218 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d6e9fb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 233 251 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
