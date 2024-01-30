@@ -334,8 +334,8 @@
 						end: () => "+=800 center",
 						//markers: true,
 						onUpdate: self => {
-							e[0].style.transform = `rotate(${Math.round(self.progress.toFixed(4) * 180)}deg)`
-							e[1].style.transform = `rotate(-${Math.round(self.progress.toFixed(4) * 180)}deg)`
+							// e[0].style.transform = `rotate(${Math.round(self.progress.toFixed(4) * 180)}deg)`
+							// e[1].style.transform = `rotate(-${Math.round(self.progress.toFixed(4) * 180)}deg)`
 						},
 						onEnterBack : ()=> {
 
