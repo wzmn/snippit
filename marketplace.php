@@ -664,7 +664,7 @@ if (have_posts()):
                         <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="container mx-auto">
+                <div class="container mx-auto mb-20 md:mb-40">
 
                     <div class="relative flex justify-between" id="pin">
                         <div class="smiley">
