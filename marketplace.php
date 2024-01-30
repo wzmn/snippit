@@ -470,7 +470,7 @@ if (have_posts()):
                         <div class="absolute font-bold text-4xl md:text-5xl title" id="hero-text">Connect. Collaborate. Conquer</div>
                         <div class="absolute subtitle text-xl">Your market for Snippit - the ultimate platform for businessess</div>
                         <div class="absolute flex items-center text-3xl font-bold bns-text">
-                            Buyers
+                            Sellers
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="50"
                                 viewBox="0 0 237 218">
                                 <defs>
@@ -497,7 +497,7 @@ if (have_posts()):
                                     </g>
                                 </g>
                             </svg>
-                            Sellers
+                            Installers
                         </div>
                         <div class="bns-btn absolute">
                             <a class="bg-blue px-5 py-3 text-white get-started">Get Started</a>
@@ -647,7 +647,7 @@ if (have_posts()):
                         <source src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="container mx-auto mb-20 md:mb-40">
+                <div class="container mx-auto">
 
                     <div class="relative flex justify-between" id="pin">
                         <div class="smiley">
