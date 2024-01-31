@@ -213,7 +213,7 @@
 							<li class="-my-0.5"><i class="fa fa-phone mr-2"></i>
 								<a href="tel:+61 1300 580 704">+61 1300 580 704</a>
 							</li>
-							<li class="-my-0.5"><i class="fa fa-info mr-2" aria-hidden="true"></i>
+							<li class="-my-0.5"><i class="fa fa-info mr-4" aria-hidden="true"></i>
 								<a href="mailto:enquiries@snippit.com.au">enquiries@snippit.com.au</a>
 							</li>
 							<li class="-my-0.5"><i class="fa fa-envelope-o mr-2"></i>
