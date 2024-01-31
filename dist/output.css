@@ -589,10 +589,6 @@ nav ul, .sidebar ul {
   top: 5rem;
 }
 
-.bottom-\[-80px\] {
-  bottom: -80px;
-}
-
 .z-30 {
   z-index: 30;
 }
@@ -717,8 +713,8 @@ nav ul, .sidebar ul {
   margin-right: 0.5rem;
 }
 
-.mb-\[7rem\] {
-  margin-bottom: 7rem;
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mt-2 {
@@ -727,10 +723,6 @@ nav ul, .sidebar ul {
 
 .ml-3 {
   margin-left: 0.75rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
 }
 
 .mb-8 {
@@ -877,6 +869,10 @@ nav ul, .sidebar ul {
   width: 100%;
 }
 
+.w-\[660px\] {
+  width: 660px;
+}
+
 .w-\[3rem\] {
   width: 3rem;
 }
@@ -915,10 +911,6 @@ nav ul, .sidebar ul {
 
 .w-1\/4 {
   width: 25%;
-}
-
-.w-\[660px\] {
-  width: 660px;
 }
 
 .min-w-\[250px\] {
@@ -1267,31 +1259,6 @@ nav ul, .sidebar ul {
   background-color: rgb(205 221 237 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#012D5E\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(1 45 94 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#fddd46\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 221 70 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#6bdada\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 218 218 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b1e45b\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(177 228 91 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0a84ff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 132 255 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#fbf7e3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(251 247 227 / var(--tw-bg-opacity));
@@ -1310,6 +1277,11 @@ nav ul, .sidebar ul {
 .bg-\[\#d6e9fb\] {
   --tw-bg-opacity: 1;
   background-color: rgb(214 233 251 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#012D5E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 45 94 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-75 {
@@ -1498,6 +1470,10 @@ nav ul, .sidebar ul {
   padding-top: 1.25rem;
 }
 
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1544,10 +1520,6 @@ nav ul, .sidebar ul {
 
 .pl-28 {
   padding-left: 7rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
 }
 
 .text-left {
@@ -3029,8 +3001,8 @@ body.menu-open:after {
     margin-bottom: 6rem;
   }
 
-  .md\:mb-\[6rem\] {
-    margin-bottom: 6rem;
+  .md\:mb-48 {
+    margin-bottom: 12rem;
   }
 
   .md\:mr-2 {
@@ -3063,10 +3035,6 @@ body.menu-open:after {
 
   .md\:mb-52 {
     margin-bottom: 13rem;
-  }
-
-  .md\:mb-48 {
-    margin-bottom: 12rem;
   }
 
   .md\:block {
