@@ -213,7 +213,7 @@
 							<li class="-my-0.5"><i class="fa fa-phone mr-2"></i>
 								<a href="tel:+61 1300 580 704">+61 1300 580 704</a>
 							</li>
-							<li class="-my-0.5"><i class="fa fa-info mr-2" aria-hidden="true"></i>
+							<li class="-my-0.5"><i class="fa fa-info mr-4" aria-hidden="true"></i>
 								<a href="mailto:enquiries@snippit.com.au">enquiries@snippit.com.au</a>
 							</li>
 							<li class="-my-0.5"><i class="fa fa-envelope-o mr-2"></i>
@@ -225,7 +225,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto flex flex-col md:flex-row mb-6 px-5 md:pt-2 footer-font">
+		<div class="container mx-auto flex flex-col md:flex-row px-5 md:pt-2 footer-font">
 			<div class="md:w-4/5 text-left justify-start md:justify-end md:text-right footer-margin1">Copyright © 2022 - <?php echo date("Y"); ?> Snippit all rights reserved </div>
 			<div class="md:w-1/5 flex text-center md:text-right justify-center md:justify-end flex-col md:flex-row">
 				<!-- <div class="flex justify-center md:justify-end md:pr-6 flex-col md:flex-row"> -->
