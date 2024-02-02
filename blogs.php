@@ -7,19 +7,28 @@
  ?>
  	<style>
 		.banner-text-container {
-			transform: translateX(-50%);
-			left: 50%;
+			/* transform: translateX(-50%);
+			left: 50%; */
 		}
 		.banner-text {
 			height: 100%;
 			max-width: 630px;
 			width: 100%;
 		}
+		.top-div-bg {
+			background-image: none;
+		}
+		@media (min-width: 1100px) {
+			.top-div-bg {
+				background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);
+			}
+		}
 	</style>
-		<div class="truncate whitespace-normal mx-auto min-h-[520px] bg-cover bg-center relative" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+		<div class="truncate whitespace-normal mx-auto h-[800px] bg-contain bg-no-repeat bg-top bg-[#f1f8fe] relative top-div-bg" style="">
 		<?php if (get_the_content()) : ?>
 			<div class="absolute banner-text-container container h-full">
-				<div class="flex flex-col justify-evenly banner-text px-4">
+				<div class="flex flex-wrap flex-col justify-evenly pl-20 pr-4 banner-text mt-4 md:-mt-8">
+					
 					<?php the_content();?>
 				</div>
 			</div>

@@ -681,6 +681,22 @@ nav ul, .sidebar ul {
   margin-right: 1.25rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -713,6 +729,10 @@ nav ul, .sidebar ul {
   margin-right: 0.5rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mb-24 {
   margin-bottom: 6rem;
 }
@@ -729,10 +749,6 @@ nav ul, .sidebar ul {
   margin-bottom: 2rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .-mb-6 {
   margin-bottom: -1.5rem;
 }
@@ -741,16 +757,8 @@ nav ul, .sidebar ul {
   margin-bottom: 2.25rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .-mb-8 {
   margin-bottom: -2rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .mt-\[1rem\] {
@@ -767,10 +775,6 @@ nav ul, .sidebar ul {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mr-4 {
-  margin-right: 1rem;
 }
 
 .block {
@@ -795,6 +799,10 @@ nav ul, .sidebar ul {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-\[800px\] {
+  height: 800px;
 }
 
 .h-full {
@@ -825,8 +833,8 @@ nav ul, .sidebar ul {
   max-height: 300px;
 }
 
-.min-h-\[520px\] {
-  min-height: 520px;
+.min-h-\[800px\] {
+  min-height: 800px;
 }
 
 .min-h-\[180px\] {
@@ -1233,6 +1241,11 @@ nav ul, .sidebar ul {
   background-color: rgb(10 132 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f1f8fe\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 248 254 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1310,12 +1323,20 @@ nav ul, .sidebar ul {
   background-size: cover;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-bottom {
   background-position: bottom;
 }
 
 .bg-center {
   background-position: center;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .bg-no-repeat {
@@ -1470,6 +1491,10 @@ nav ul, .sidebar ul {
   padding-right: 0.75rem;
 }
 
+.pl-20 {
+  padding-left: 5rem;
+}
+
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -1560,6 +1585,11 @@ nav ul, .sidebar ul {
   line-height: 2.5rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1586,11 +1616,6 @@ nav ul, .sidebar ul {
 
 .text-\[1\.25rem\] {
   font-size: 1.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-base {
@@ -2979,6 +3004,10 @@ body.menu-open:after {
 
   .md\:bottom-\[-80px\] {
     bottom: -80px;
+  }
+
+  .md\:-mt-8 {
+    margin-top: -2rem;
   }
 
   .md\:mb-40 {
