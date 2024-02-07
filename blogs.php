@@ -517,8 +517,8 @@
 						let form = event.target;
                         let loader = form.querySelector(".loader");
 						var params = {
-							gdhcs: document.querySelector('input[name="hcs"]').value,
-							ghws: document.querySelector('input[name="hws"]').value,
+							gdhcs: document.querySelector('input[name="hcs"]:checked').value,
+							ghws: document.querySelector('input[name="hws"]:checked').value,
 							no_of_bedrooms: document.querySelector('input[name="no_of_bedrooms"]').value,
 							no_of_family_members: document.querySelector('input[name="no_of_members"]').value,
 							fullname: document.querySelector('input[name="full_name"]').value,
