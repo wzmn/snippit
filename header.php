@@ -42,6 +42,16 @@
 	<!-- Google tag (gtag.js) --> 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4L8Y3Z4GTW"></script>
 	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-4L8Y3Z4GTW'); </script>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "zcv3EAnRgv1RgxYjv",
+			});
+		})();
+	</script>
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
