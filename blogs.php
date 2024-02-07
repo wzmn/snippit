@@ -184,18 +184,21 @@
 						</label>
 					</div>
 					<div class="flex flex-col gap-x-4 mb-4 email-block">
-						<div>
+						<div class="emailOTPSpace">
 							<label class="mb-2 w-3/5" for="email">
 								<div class="mb-2 font-semibold text-sm">Email ID</div>
 								<div class="flex">
 									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required />
+									<a
+										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-email">Edit
+										Email</a>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 otp-email">Get
 										OTP</a>
 								</div>
 							</label>
 						</div>
-						<div>
+						<div class="emailValidateOTPSpace">
 							<label class="mb-2 w-2/5" for="OTP-Email">
 								<div class="mb-2 font-semibold text-sm">Enter Email OTP</div>
 								<div class="flex justify-between mb-2 otp-container">
@@ -226,7 +229,7 @@
 						</div>
 					</div>					
 					<div class="flex flex-col gap-x-4 mb-4 phone-block">
-						<div>
+						<div class="mobileOTPSpace">
 							<label class="mb-2 w-3/5" for="phone">
 								<div class="mb-2 font-semibold text-sm">Mobile Number</div>
 								<div class="flex">
@@ -235,12 +238,15 @@
 									<input class="border-shadow mb-2 p-2 w-full" type="number" id="phone"
 										name="phone" required />
 									<a
+										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-number">Edit
+										Mobile</a>
+									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 otp-number">Get
 										OTP</a>
 								</div>
 							</label>
 						</div>
-						<div>
+						<div class="mobileValidateOTPSpace">
 							<label class="mb-2 w-2/5" for="OTP-Mobile">
 								<div class="mb-2 font-semibold text-sm">Enter Mobile OTP</div>
 								<div class="flex justify-between mb-2 otp-container">
@@ -598,10 +604,22 @@
                         }, 1000);
                     }
 
+					//Enable Email Edit
+					document.querySelector(".edit-otp-email").addEventListener("click", (s) => {
+						console.log("here");
+						document.querySelector('input[name="email"]').removeAttribute("readonly");
+					});
+					//Enable Phone Edit
+					document.querySelector(".edit-otp-number").addEventListener("click", (s) => {
+						document.querySelector('input[name="phone"]').removeAttribute("readonly");
+					});
+
                     document.querySelector(".otp-email").addEventListener("click", (s) => {
                         // if (formState?.emailOtpSent) {
                         //     return;
                         // }
+						document.querySelector('input[name="email"]').readOnly = true;
+						error_message.querySelectorAll("div").forEach(s => s.remove());
                         if (document.querySelector('input[name="email"]').reportValidity()) {
                             // send otp
                             s.target.setAttribute("disabled", true);
@@ -610,10 +628,12 @@
                             }).then(s => {
                                 formState.emailOtpSent = true;
                                 resendTimerMail();
-                                addFormError(1,
-                                `OTP has been sent to ${document.querySelector('input[name="email"]').value}`);
+                                // addFormError(1, `OTP has been sent to ${document.querySelector('input[name="email"]').value}`);
+                                addEmailMessage(1, `OTP has been sent to ${document.querySelector('input[name="email"]').value}`, document.forms.offers.querySelector(".emailOTPSpace"));
+								
                             }).catch(err => {
-                                addFormError(1,`There was an error sending email OTP, please contact support`);
+                                // addFormError(1,`There was an error sending email OTP, please contact support`);
+								addEmailMessage(1, `There was an error sending email OTP, please contact support`, document.forms.offers.querySelector(".emailOTPSpace"));
                                 console.log(err)
                             })
                         }
@@ -634,10 +654,12 @@
 							   otp: formState.emailOtp
 						   }).then(s => {
 							   formState.emailOtpValidated = true;
-							   addFormError(1,
-							   `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`);
+							//    addFormError(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`);
+							   addEmailMessage(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`, document.forms.offers.querySelector(".emailValidateOTPSpace"));
+								
 						   }).catch(err => {console.log("failure");
-							   addFormError(1,`There was an error validating email OTP, please contact support`);
+							//    addFormError(1,`There was an error validating email OTP, please contact support`);
+							   addEmailMessage(1, `There was an error validating email OTP, please contact support`, document.forms.offers.querySelector(".emailValidateOTPSpace"));
 							   console.log(err)
 						   })
 					   } else {
@@ -655,6 +677,7 @@
 
                     document.querySelector(".otp-number").addEventListener("click", (s) => {
                         let element = document.querySelector('input[name="phone"]');
+						element.readOnly = true;
                         if (!formState.selectedCountry) {
                             element.setCustomValidity("Please Select a country code");
                             element.reportValidity()
@@ -673,11 +696,13 @@
                             }).then(s => {
                                 formState.mobileOtpSent = true;
                                 resendTimerMobile();
-                                addFormError(1,
-                                    `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`
-                                );
+                                // addFormError(1,
+                                //     `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`
+                                // );
+								addEmailMessage(1, `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`, document.forms.offers.querySelector(".mobileOTPSpace"));
                             }).catch(err => {
-                                addFormError(1,`There was an error sending mobile OTP, please contact support`);
+                                // addFormError(1,`There was an error sending mobile OTP, please contact support`);
+								addEmailMessage(1, `There was an error sending mobile OTP, please contact support`, document.forms.offers.querySelector(".mobileOTPSpace"));
                                 console.log(err)
                             })
             
@@ -699,10 +724,12 @@
 								otp: formState.mobileOtp
 							}).then(s => {
 								formState.mobileOtpValidated = true;
-								addFormError(1,
-								`OTP for ${document.querySelector('input[name="phone"]').value} has been validated successfully`);
+								// addFormError(1,
+								// `OTP for ${document.querySelector('input[name="phone"]').value} has been validated successfully`);
+								addEmailMessage(1, `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`, document.forms.offers.querySelector(".mobileValidateOTPSpace"));
 							}).catch(err => {
-								addFormError(1,`There was an error validating phone OTP, please contact support`);
+								// addFormError(1,`There was an error validating phone OTP, please contact support`);
+								addEmailMessage(1, `There was an error validating phone OTP, please contact support`, document.forms.offers.querySelector(".mobileValidateOTPSpace"));
 								console.log(err)
 							})            
                         } else {
@@ -719,6 +746,17 @@
 				   })
 
                     // let error_message = document.forms.offers.querySelector(".error-message>.messages");
+				   
+					function addEmailMessage(id, msg, parentEle, fontcolor="text-black") {						
+                        let html = document.createElement("div");
+                        html.classList.add("font-light")
+                        html.classList.add(fontcolor)
+                        html.classList.add("mb-2")
+                        html.classList.add("otpMsgBlock")
+                        html.id = id;
+                        html.innerHTML = msg;
+                        parentEle.appendChild(html)
+                    }
 
                     function addFormError(id, msg, fontcolor="text-black") {
                         let html = document.createElement("div");
@@ -735,6 +773,8 @@
                     document.forms.offers.addEventListener("submit", (event) => {
                         console.log(formState)
                         event.preventDefault();
+						//
+						document.querySelectorAll(".otpMsgBlock").forEach(s => s.remove());
                         if (!formState.emailOtpSent || !formState.mobileOtpSent) {
                             addFormError(999, 'You need to enter the OTP sent to your mobile and email', "font-red");
                             return;
