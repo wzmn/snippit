@@ -48,7 +48,7 @@
 	<script type="text/javascript">
 		(function(){
 			emailjs.init({
-				publicKey: "zcv3EAnRgv1RgxYjv",
+				publicKey: "xyXn2nyvEm35adJz7",
 			});
 		})();
 	</script>

@@ -530,8 +530,8 @@
 							postcode: document.querySelector('input[name="postcode"]').value,
 						};
 
-						const serviceID = "service_xmofyup";
-						const templateID = "template_480om4h";
+						const serviceID = "service_sd5zxx4";
+						const templateID = "template_0b9e467";
 						emailjs.send(serviceID,templateID,params)
 						.then(
 							res =>{
