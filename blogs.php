@@ -171,19 +171,19 @@
 					<div class="mb-4">
 						<label class="mb-2" for="no_of_bedrooms">
 							<div class="mb-2 font-semibold text-sm">No. of Bedrooms<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_bedrooms" required>
+							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_bedrooms" required oninvalid="this.setCustomValidity('no_of_bedrooms ?')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="no_of_members">
 							<div class="mb-2 font-semibold text-sm">No. of Family Members<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_members" required>
+							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_members" required oninvalid="this.setCustomValidity('no_of_family_members ?')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="full_name">
 							<div class="mb-2 font-semibold text-sm">Full Name<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required>
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required oninvalid="this.setCustomValidity('Full Name ?')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="flex flex-col gap-x-4 mb-4 email-block">
@@ -191,7 +191,7 @@
 							<label class="mb-2 w-3/5" for="email">
 								<div class="mb-2 font-semibold text-sm">Email ID<span class="required-field">*</span></div>
 								<div class="flex">
-									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required />
+									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required oninvalid="this.setCustomValidity('Email ?')" oninput="this.setCustomValidity('')"/>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-email disabled-link">Edit
 										Email</a>
@@ -239,7 +239,7 @@
 									<span title="Click to change"
 										class="cursor-pointer border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb] country-code">+</span>
 									<input class="border-shadow mb-2 p-2 w-full" type="number" id="phone"
-										name="phone" required />
+										name="phone" required/>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-number disabled-link">Edit
 										Mobile</a>
@@ -282,19 +282,19 @@
 					<div class="mb-4">
 						<label class="mb-2" for="street">
 							<div class="mb-2 font-semibold text-sm">Street<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="street" required>
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="street" required oninvalid="this.setCustomValidity('Street ?')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="city">
 							<div class="mb-2 font-semibold text-sm">City<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="city" required>
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="city" required oninvalid="this.setCustomValidity('City ?')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="state">
 							<div class="mb-2 font-semibold text-sm">State<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="state" required>
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="state" required oninvalid="this.setCustomValidity('State ?')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
