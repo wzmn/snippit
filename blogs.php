@@ -171,19 +171,19 @@
 					<div class="mb-4">
 						<label class="mb-2" for="no_of_bedrooms">
 							<div class="mb-2 font-semibold text-sm">No. of Bedrooms<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_bedrooms" required oninvalid="this.setCustomValidity('no_of_bedrooms ?')" oninput="this.setCustomValidity('')">
+							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_bedrooms" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="no_of_members">
 							<div class="mb-2 font-semibold text-sm">No. of Family Members<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_members" required oninvalid="this.setCustomValidity('no_of_family_members ?')" oninput="this.setCustomValidity('')">
+							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_members" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="full_name">
 							<div class="mb-2 font-semibold text-sm">Full Name<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required oninvalid="this.setCustomValidity('Full Name ?')" oninput="this.setCustomValidity('')">
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="flex flex-col gap-x-4 mb-4 email-block">
@@ -191,7 +191,7 @@
 							<label class="mb-2 w-3/5" for="email">
 								<div class="mb-2 font-semibold text-sm">Email ID<span class="required-field">*</span></div>
 								<div class="flex">
-									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required oninvalid="this.setCustomValidity('Email ?')" oninput="this.setCustomValidity('')"/>
+									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required oninvalid="this.setCustomValidity('Please enter a valid Email')" oninput="this.setCustomValidity('')"/>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-email disabled-link">Edit
 										Email</a>
@@ -236,10 +236,10 @@
 							<label class="mb-2 w-3/5" for="phone">
 								<div class="mb-2 font-semibold text-sm">Mobile Number<span class="required-field">*</span></div>
 								<div class="flex">
-									<span title="Click to change"
-										class="cursor-pointer border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb] country-code">+</span>
+									<span title=""
+										class="cursor-pointer border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb] country-code">+61</span>
 									<input class="border-shadow mb-2 p-2 w-full" type="number" id="phone"
-										name="phone" required/>
+										name="phone" maxlength="9" required/>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-number disabled-link">Edit
 										Mobile</a>
@@ -282,19 +282,19 @@
 					<div class="mb-4">
 						<label class="mb-2" for="street">
 							<div class="mb-2 font-semibold text-sm">Street<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="street" required oninvalid="this.setCustomValidity('Street ?')" oninput="this.setCustomValidity('')">
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="street" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="city">
 							<div class="mb-2 font-semibold text-sm">City<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="city" required oninvalid="this.setCustomValidity('City ?')" oninput="this.setCustomValidity('')">
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="city" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="state">
 							<div class="mb-2 font-semibold text-sm">State<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="state" required oninvalid="this.setCustomValidity('State ?')" oninput="this.setCustomValidity('')">
+							<input class="border-shadow mb-2 p-2 w-full" type="text" name="state" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
 						</label>
 					</div>
 					<div class="mb-4">
@@ -383,8 +383,8 @@
                         emailOtpSent: !1,
                         mobileOtpSent: !1,
                         resendCount: 3,
-                        selectedCountry: "",
-                        selectedCountryName: "",
+                        selectedCountry: "+61",
+                        selectedCountryName: "Australia",
                         emailOtp: !1,
                         mobileOtp: !1,
 						emailOtpValidated: !1,
@@ -429,14 +429,15 @@
                             }
                         })
                     })
-                    document.querySelector('.country-code').addEventListener("click", x => document.querySelector('.modal')
+					//Country Code Modal Commented
+                    /*document.querySelector('.country-code').addEventListener("click", x => document.querySelector('.modal')
                         .classList.remove('hidden'))
                     document.querySelector('.clear-country-search').addEventListener("click", s => {
                         document.querySelector('#country-search').value = ""
                         document.querySelectorAll("ul.country-list>li").forEach(f => {
                             f.classList.remove('hidden')
                         })
-                    })	
+                    })*/	
                     document.querySelectorAll(".modal button").forEach(d => {
                         d.addEventListener("click", c => {
                             if (c.target.dataset.action !== 'close') {
@@ -715,6 +716,7 @@
 				   })
 
                     document.querySelector(".otp-number").addEventListener("click", (s) => {console.log("Generate Phone OTP");
+						// console.log(formState.selectedCountry, formState.selectedCountryName);
                         let element = document.querySelector('input[name="phone"]');						
                         if (!formState.selectedCountry) {
                             element.setCustomValidity("Please Select a country code");
@@ -726,6 +728,14 @@
                         // if (formState?.mobileOtpSent) {
                         // 	return;
                         // }
+						let phonePattern = new RegExp("^[0-9]{9}$");
+						let testPattern = phonePattern.test(element.value);
+						if(testPattern == false) {
+							document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
+							addEmailMessage(1, `Mobile Number should have exact 9 digits.`, document.forms.offers.querySelector(".mobileOTPSpace"), "phoneotpMsgBlock");
+							return false;
+						}
+
                         if (element.reportValidity()) {
                             // send otp
                             s.target.setAttribute("disabled", true);
@@ -743,6 +753,7 @@
                                 // addFormError(1,
                                 //     `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`
                                 // );
+								document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
 								addEmailMessage(1, `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`, document.forms.offers.querySelector(".mobileOTPSpace"), "phoneotpMsgBlock");
                             }).catch(err => {
                                 // addFormError(1,`There was an error sending mobile OTP, please contact support`);
