@@ -728,11 +728,12 @@
                         // if (formState?.mobileOtpSent) {
                         // 	return;
                         // }
+						console.log("length: "+ element.value.toString().length);
 						let phonePattern = new RegExp("^[0-9]{9}$");
 						let testPattern = phonePattern.test(element.value);
-						if(testPattern == false) {
+						if(element.value.toString().length < 7) {
 							document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
-							addEmailMessage(1, `Mobile Number should have exact 9 digits.`, document.forms.offers.querySelector(".mobileOTPSpace"), "phoneotpMsgBlock");
+							addEmailMessage(1, `Mobile Number should have minimum 7 digits.`, document.forms.offers.querySelector(".mobileOTPSpace"), "phoneotpMsgBlock");
 							return false;
 						}
 
