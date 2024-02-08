@@ -90,6 +90,9 @@
 			color: #012D5E;
 			padding: calc(1rem - 1px);
 		}
+		.required-field{
+			color: red;
+		}
 	</style>
 
 	<div class="relative z-10 modal hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -167,26 +170,26 @@
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="no_of_bedrooms">
-							<div class="mb-2 font-semibold text-sm">No. of Bedrooms</div>
+							<div class="mb-2 font-semibold text-sm">No. of Bedrooms<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_bedrooms" required>
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="no_of_members">
-							<div class="mb-2 font-semibold text-sm">No. of Family Members</div>
+							<div class="mb-2 font-semibold text-sm">No. of Family Members<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_members" required>
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="full_name">
-							<div class="mb-2 font-semibold text-sm">Full Name</div>
+							<div class="mb-2 font-semibold text-sm">Full Name<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required>
 						</label>
 					</div>
 					<div class="flex flex-col gap-x-4 mb-4 email-block">
 						<div class="emailOTPSpace">
 							<label class="mb-2 w-3/5" for="email">
-								<div class="mb-2 font-semibold text-sm">Email ID</div>
+								<div class="mb-2 font-semibold text-sm">Email ID<span class="required-field">*</span></div>
 								<div class="flex">
 									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required />
 									<a
@@ -231,7 +234,7 @@
 					<div class="flex flex-col gap-x-4 mb-4 phone-block">
 						<div class="mobileOTPSpace">
 							<label class="mb-2 w-3/5" for="phone">
-								<div class="mb-2 font-semibold text-sm">Mobile Number</div>
+								<div class="mb-2 font-semibold text-sm">Mobile Number<span class="required-field">*</span></div>
 								<div class="flex">
 									<span title="Click to change"
 										class="cursor-pointer border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb] country-code">+</span>
@@ -278,25 +281,25 @@
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="street">
-							<div class="mb-2 font-semibold text-sm">Street</div>
+							<div class="mb-2 font-semibold text-sm">Street<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="text" name="street" required>
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="city">
-							<div class="mb-2 font-semibold text-sm">City</div>
+							<div class="mb-2 font-semibold text-sm">City<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="text" name="city" required>
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="state">
-							<div class="mb-2 font-semibold text-sm">State</div>
+							<div class="mb-2 font-semibold text-sm">State<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="text" name="state" required>
 						</label>
 					</div>
 					<div class="mb-4">
 						<label class="mb-2" for="postcode">
-							<div class="mb-2 font-semibold text-sm">Postcode</div>
+							<div class="mb-2 font-semibold text-sm">Postcode<span class="required-field">*</span></div>
 							<input class="border-shadow mb-2 p-2 w-full" type="number" name="postcode" required>
 						</label>
 					</div>
@@ -552,7 +555,7 @@
 								error_message.querySelectorAll("div").forEach(s => s.remove())
 								if(res.status == 200){									
 									form.classList.remove("has-error");
-                                    addFormError(1, "Email sent sucessfully.");
+                                    addFormError(1, "Form submitted sucessfully.");
                                     form.reset();
 									document.querySelector('input[name="email"]').removeAttribute("readonly");
 									document.querySelector('input[name="phone"]').removeAttribute("readonly");
