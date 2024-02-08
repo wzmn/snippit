@@ -190,7 +190,7 @@
 								<div class="flex">
 									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required />
 									<a
-										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-email">Edit
+										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-email disabled-link">Edit
 										Email</a>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 otp-email">Get
@@ -238,7 +238,7 @@
 									<input class="border-shadow mb-2 p-2 w-full" type="number" id="phone"
 										name="phone" required />
 									<a
-										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-number">Edit
+										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-number disabled-link">Edit
 										Mobile</a>
 									<a
 										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 otp-number">Get
@@ -330,6 +330,10 @@
 			}
 			.font-red {
 				color: red;
+			}
+			a.disabled-link {
+				pointer-events: none;
+				cursor: default;
 			}
 		</style>
 		<div class="container mx-auto px-5 mb-20">
@@ -482,6 +486,8 @@
                                 `OTP has been sent to ${document.querySelector('input[name="company_owner.email"]').value}`);
                             })
                         }
+						console.log("email interval cnt: "+window.emailIntervalCount);
+						clearInterval(window.emailInterval);
                         window.emailInterval = setInterval(() => {
                             if (window.emailIntervalCount == 0) {
                                 clearInterval(window.emailInterval)
@@ -519,7 +525,7 @@
                     }
 
 					let error_message = document.forms.offers.querySelector(".error-message>.messages");
-					function sendMail() {
+					function sendMail() {console.log("Send Email");
 						let form = event.target;
                         let loader = form.querySelector(".loader");
 						var params = {
@@ -541,17 +547,6 @@
 						emailjs.send(serviceID,templateID,params)
 						.then(
 							res =>{
-								// document.querySelector('input[name="hcs"]').value = "";
-								// document.querySelector('input[name="hws"]').value = "";
-								// document.querySelector('input[name="no_of_bedrooms"]').value = "";
-								// document.querySelector('input[name="no_of_members"]').value = "";
-								// document.querySelector('input[name="full_name"]').value = "";
-								// document.querySelector('input[name="email"]').value = "";
-								// document.querySelector('input[name="phone"]').value = "";
-								// document.querySelector('input[name="street"]').value = "";
-								// document.querySelector('input[name="city"]').value = "";
-								// document.querySelector('input[name="state"]').value = "";
-								// document.querySelector('input[name="postcode"]').value = "";
 								console.log(res);
 								loader.classList.toggle("active")
 								error_message.querySelectorAll("div").forEach(s => s.remove())
@@ -559,6 +554,16 @@
 									form.classList.remove("has-error");
                                     addFormError(1, "Email sent sucessfully.");
                                     form.reset();
+									document.querySelector('input[name="email"]').removeAttribute("readonly");
+									document.querySelector('input[name="phone"]').removeAttribute("readonly");
+									document.querySelectorAll(".emailotpMsgBlock").forEach(s => s.remove());
+									document.querySelectorAll(".validateemailotpMsgBlock").forEach(s => s.remove());
+									document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
+									document.querySelectorAll(".validatephoneotpMsgBlock").forEach(s => s.remove());
+									document.querySelector('.otp-email').classList.remove("disabled-link");
+									document.querySelector(".edit-otp-email").classList.add("disabled-link");
+									document.querySelector('.otp-number').classList.remove("disabled-link");
+									document.querySelector(".edit-otp-number").classList.add("disabled-link");
 								} else {
 									form.classList.add("has-error")
                                     addFormError(999, 'An error has occured, please check the fields and try again'
@@ -589,6 +594,7 @@
                                 );
                             })
                         }
+						clearInterval(window.mobileInterval);
                         window.mobileInterval = setInterval(() => {
                             if (window.mobileIntervalCount == 0) {
                                 clearInterval(window.mobileInterval)
@@ -605,41 +611,70 @@
                     }
 
 					//Enable Email Edit
-					document.querySelector(".edit-otp-email").addEventListener("click", (s) => {
-						console.log("here");
+					document.querySelector(".edit-otp-email").addEventListener("click", (s) => {console.log("Edit Email OTP");
+						// console.log("here");
+						
 						document.querySelector('input[name="email"]').removeAttribute("readonly");
+						document.querySelector(".otp-email").classList.remove("disabled-link");
+						document.querySelector(".validate-email-otp").classList.remove("disabled-link");
+						document.querySelectorAll(".emailotpMsgBlock").forEach(s => s.remove());
+						document.querySelectorAll(".validateemailotpMsgBlock").forEach(s => s.remove());
+						s.target.classList.add("disabled-link");
+						formState.emailOtpSent = false;
+						formState.emailOtp = false;
+						formState.emailOtpValidated = false;
+						document.querySelectorAll('[for="OTP-Email"] input').forEach(k => {
+							k.value = "";
+						})
+					// 	document.querySelectorAll('[for="OTP-Email"] input').forEach(k => {
+					// 	   formState.emailOtp += k.value;
+					//    })
 					});
 					//Enable Phone Edit
-					document.querySelector(".edit-otp-number").addEventListener("click", (s) => {
+					document.querySelector(".edit-otp-number").addEventListener("click", (s) => {console.log("Edit Phone OTP");
 						document.querySelector('input[name="phone"]').removeAttribute("readonly");
+						document.querySelector(".otp-number").classList.remove("disabled-link");
+						document.querySelector(".validate-phone-otp").classList.remove("disabled-link");
+						document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
+						document.querySelectorAll(".validatephoneotpMsgBlock").forEach(s => s.remove());
+						s.target.classList.add("disabled-link");
+						formState.mobileOtpSent = false;
+						formState.mobileOtp = false;
+						formState.mobileOtpValidated = false;
+						document.querySelectorAll('[for="OTP-Mobile"] input').forEach(k => {
+							k.value = "";
+						})
 					});
 
-                    document.querySelector(".otp-email").addEventListener("click", (s) => {
+                    document.querySelector(".otp-email").addEventListener("click", (s) => {console.log("Generate Email OTP");
                         // if (formState?.emailOtpSent) {
                         //     return;
                         // }
-						document.querySelector('input[name="email"]').readOnly = true;
-						error_message.querySelectorAll("div").forEach(s => s.remove());
+						console.log("generate email otp");
                         if (document.querySelector('input[name="email"]').reportValidity()) {
                             // send otp
                             s.target.setAttribute("disabled", true);
+							s.target.classList.add("disabled-link");
+							document.querySelector(".edit-otp-email").classList.remove("disabled-link");
+							document.querySelector('input[name="email"]').readOnly = true;
+							error_message.querySelectorAll("div").forEach(s => s.remove());
                             sendOTP({
                                 username: document.querySelector('input[name="email"]').value
                             }).then(s => {
                                 formState.emailOtpSent = true;
                                 resendTimerMail();
                                 // addFormError(1, `OTP has been sent to ${document.querySelector('input[name="email"]').value}`);
-                                addEmailMessage(1, `OTP has been sent to ${document.querySelector('input[name="email"]').value}`, document.forms.offers.querySelector(".emailOTPSpace"));
+                                addEmailMessage(1, `OTP has been sent to ${document.querySelector('input[name="email"]').value}`, document.forms.offers.querySelector(".emailOTPSpace"), "emailotpMsgBlock");
 								
                             }).catch(err => {
                                 // addFormError(1,`There was an error sending email OTP, please contact support`);
-								addEmailMessage(1, `There was an error sending email OTP, please contact support`, document.forms.offers.querySelector(".emailOTPSpace"));
+								addEmailMessage(1, `There was an error sending email OTP, please contact support`, document.forms.offers.querySelector(".emailOTPSpace"), "emailotpMsgBlock");
                                 console.log(err)
                             })
                         }
                     })
 
-					document.querySelector(".validate-email-otp").addEventListener("click", (s) => {
+					document.querySelector(".validate-email-otp").addEventListener("click", (s) => {console.log("Validate Email OTP");
                        
 					   formState.emailOtp = "";
 					   document.querySelectorAll('[for="OTP-Email"] input').forEach(k => {
@@ -649,17 +684,18 @@
 					   if (document.querySelector('input[name="email"]').reportValidity() && (!isNaN(formState.emailOtp) && formState.emailOtp.toString().length == 6)) {
 						   // validate otp
 						   // s.target.setAttribute("disabled", true);
+						   s.target.classList.add("disabled-link");
 						   validateOTP({
 							   username: document.querySelector('input[name="email"]').value,
 							   otp: formState.emailOtp
 						   }).then(s => {
 							   formState.emailOtpValidated = true;
 							//    addFormError(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`);
-							   addEmailMessage(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`, document.forms.offers.querySelector(".emailValidateOTPSpace"));
+							   addEmailMessage(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`, document.forms.offers.querySelector(".emailValidateOTPSpace"), "validateemailotpMsgBlock");
 								
 						   }).catch(err => {console.log("failure");
 							//    addFormError(1,`There was an error validating email OTP, please contact support`);
-							   addEmailMessage(1, `There was an error validating email OTP, please contact support`, document.forms.offers.querySelector(".emailValidateOTPSpace"));
+							   addEmailMessage(1, `There was an error validating email OTP, please contact support`, document.forms.offers.querySelector(".emailValidateOTPSpace"), "validateemailotpMsgBlock");
 							   console.log(err)
 						   })
 					   } else {
@@ -675,9 +711,8 @@
 					   }
 				   })
 
-                    document.querySelector(".otp-number").addEventListener("click", (s) => {
-                        let element = document.querySelector('input[name="phone"]');
-						element.readOnly = true;
+                    document.querySelector(".otp-number").addEventListener("click", (s) => {console.log("Generate Phone OTP");
+                        let element = document.querySelector('input[name="phone"]');						
                         if (!formState.selectedCountry) {
                             element.setCustomValidity("Please Select a country code");
                             element.reportValidity()
@@ -691,6 +726,12 @@
                         if (element.reportValidity()) {
                             // send otp
                             s.target.setAttribute("disabled", true);
+							element.readOnly = true;
+							s.target.classList.add("disabled-link");
+							document.querySelector(".edit-otp-number").classList.remove("disabled-link");
+							document.querySelector('input[name="phone"]').readOnly = true;
+							// error_message.querySelectorAll("div").forEach(s => s.remove());
+
                             sendOTP({
                                 username: formState.selectedCountry + document.querySelector('input[name="phone"]').value
                             }).then(s => {
@@ -699,17 +740,17 @@
                                 // addFormError(1,
                                 //     `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`
                                 // );
-								addEmailMessage(1, `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`, document.forms.offers.querySelector(".mobileOTPSpace"));
+								addEmailMessage(1, `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`, document.forms.offers.querySelector(".mobileOTPSpace"), "phoneotpMsgBlock");
                             }).catch(err => {
                                 // addFormError(1,`There was an error sending mobile OTP, please contact support`);
-								addEmailMessage(1, `There was an error sending mobile OTP, please contact support`, document.forms.offers.querySelector(".mobileOTPSpace"));
+								addEmailMessage(1, `There was an error sending mobile OTP, please contact support`, document.forms.offers.querySelector(".mobileOTPSpace"), "phoneotpMsgBlock");
                                 console.log(err)
                             })
             
                         }
                     })
 
-				   document.querySelector(".validate-phone-otp").addEventListener("click", (s) => {                       
+				   document.querySelector(".validate-phone-otp").addEventListener("click", (s) => {console.log("validate Phone OTP");                       
 					   	formState.mobileOtp = "";
 					   	document.querySelectorAll('[for="OTP-Mobile"] input').forEach(k => {
 							formState.mobileOtp += k.value;
@@ -719,6 +760,7 @@
                         if (element.reportValidity() && (!isNaN(formState.mobileOtp) && formState.mobileOtp.toString().length == 6)) {
                             // validate otp
                             // s.target.setAttribute("disabled", true);
+								s.target.classList.add("disabled-link");
 								validateOTP({
 								username: document.querySelector('input[name="phone"]').value,
 								otp: formState.mobileOtp
@@ -726,16 +768,17 @@
 								formState.mobileOtpValidated = true;
 								// addFormError(1,
 								// `OTP for ${document.querySelector('input[name="phone"]').value} has been validated successfully`);
-								addEmailMessage(1, `OTP has been sent to ${formState.selectedCountry} ${document.querySelector('input[name="phone"]').value}`, document.forms.offers.querySelector(".mobileValidateOTPSpace"));
+								addEmailMessage(1, `OTP for ${document.querySelector('input[name="phone"]').value} has been validated successfully`, document.forms.offers.querySelector(".mobileValidateOTPSpace"), "validatephoneotpMsgBlock");
 							}).catch(err => {
 								// addFormError(1,`There was an error validating phone OTP, please contact support`);
-								addEmailMessage(1, `There was an error validating phone OTP, please contact support`, document.forms.offers.querySelector(".mobileValidateOTPSpace"));
+								addEmailMessage(1, `There was an error validating phone OTP, please contact support`, document.forms.offers.querySelector(".mobileValidateOTPSpace"), "validatephoneotpMsgBlock");
 								console.log(err)
 							})            
                         } else {
 							let element = document.querySelector('input[id="OTP-Mobile"]');
 							console.log('formState.mobileOtp', formState.mobileOtp);
 							if (!formState.mobileOtp) {
+								console.log('formState.mobileOtpp', formState.mobileOtp);
 								element.setCustomValidity("Please Validate/Enter Mobile OTP");
 								element.reportValidity()
 								return;
@@ -747,12 +790,12 @@
 
                     // let error_message = document.forms.offers.querySelector(".error-message>.messages");
 				   
-					function addEmailMessage(id, msg, parentEle, fontcolor="text-black") {						
+					function addEmailMessage(id, msg, parentEle, otpMsgBlock, fontcolor="text-black") {						
                         let html = document.createElement("div");
                         html.classList.add("font-light")
                         html.classList.add(fontcolor)
                         html.classList.add("mb-2")
-                        html.classList.add("otpMsgBlock")
+                        html.classList.add(otpMsgBlock)
                         html.id = id;
                         html.innerHTML = msg;
                         parentEle.appendChild(html)
@@ -770,11 +813,14 @@
                    
                     gsap.registerPlugin(ScrollTrigger);
 
-                    document.forms.offers.addEventListener("submit", (event) => {
+                    document.forms.offers.addEventListener("submit", (event) => {console.log("final submit");
                         console.log(formState)
                         event.preventDefault();
 						//
-						document.querySelectorAll(".otpMsgBlock").forEach(s => s.remove());
+						// document.querySelectorAll(".emailotpMsgBlock").forEach(s => s.remove());
+						// document.querySelectorAll(".validateemailotpMsgBlock").forEach(s => s.remove());
+						// document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
+						// document.querySelectorAll(".validatephoneotpMsgBlock").forEach(s => s.remove());
                         if (!formState.emailOtpSent || !formState.mobileOtpSent) {
                             addFormError(999, 'You need to enter the OTP sent to your mobile and email', "font-red");
                             return;
@@ -788,19 +834,19 @@
                         let loader = form.querySelector(".loader");
                         // formState.emailOtp = "";
                         // formState.mobileOtp = "";
-                        document.querySelectorAll('[for="OTP-Email"] input').forEach(s => {
-                            formState.emailOtp += s.value;
-                        })
-                        document.querySelectorAll('[for="OTP-Mobile"] input').forEach(s => {
-                            formState.mobileOtp += s.value;
-                        })
+                        // document.querySelectorAll('[for="OTP-Email"] input').forEach(s => {
+                        //     formState.emailOtp += s.value;
+                        // })
+                        // document.querySelectorAll('[for="OTP-Mobile"] input').forEach(s => {
+                        //     formState.mobileOtp += s.value;
+                        // })
 
                         let output = new FormData(form)
                         let payload = {
                             company_owner: {},
                             company_country: formState.selectedCountryName,
-                            email_otp: formState.emailOtp,
-                            mobile_otp: formState.mobileOtp,
+                            // email_otp: formState.emailOtp,
+                            // mobile_otp: formState.mobileOtp,
                             company_mobile_phone: "",
                             company_landline: "",
                             company_name: "",
@@ -825,7 +871,7 @@
                         //     payload[key] = value;
                         // }
                         // payload.company_owner.phone = formState.selectedCountry + payload.company_owner.phone
-                        payload.phone = formState.selectedCountry + payload.phone
+                        payload.phone = formState.selectedCountry + document.querySelector('input[name="phone"]').value
                         loader.classList.toggle("active")
 						console.log(payload);
 						sendMail();
