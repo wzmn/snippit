@@ -223,7 +223,7 @@
 									<input required
 										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 										type="text" inputmode="numeric" maxlength="1" />
-									<a class="bg-blue flex items-center cursor-pointer text-white px-4 shrink-0 validate-email-otp">Validate Email OTP</a>
+									<a class="bg-blue flex items-center cursor-pointer text-white px-4 shrink-0 validate-email-otp">Validate OTP</a>
 								</div>
 								<div class="resend-email text-center">
 									<span class="remaining-time text-blue font-semibold cursor-pointer"></span>
@@ -271,7 +271,7 @@
 									<input required
 										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 										type="text" inputmode="numeric" maxlength="1" />
-									<a class="bg-blue flex items-center cursor-pointer text-white px-4 shrink-0 validate-phone-otp">Validate Mobile OTP</a>
+									<a class="bg-blue flex items-center cursor-pointer text-white px-4 shrink-0 validate-phone-otp">Validate OTP</a>
 								</div>
 								<div class="resend-mobile text-center">
 									<span class="remaining-time text-blue font-semibold cursor-pointer"></span>
