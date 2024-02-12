@@ -16,7 +16,8 @@
 			width: 100%;
 		}
 		.top-div-bg {
-			background-image: none;
+			/* background-image: none; */
+			background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);
 		}
 		@media (min-width: 1200px) {
 			.top-div-bg {
@@ -39,7 +40,20 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			left: calc(50% + 30px);
+			left: calc(50% + 40px);
+		}
+
+		.sub-mit{
+			position: absolute;
+			background: #0a84ff;
+		}
+
+		@media screen and (min-width: 768px) {
+			.sub-mit{				
+				position: absolute;
+				background: #0a84ff;
+				left: calc(50% - 180px);
+			}
 		}
 
 		.loader.active svg {
@@ -93,6 +107,7 @@
 		.required-field{
 			color: red;
 		}
+		
 	</style>
 
 	<div class="relative z-10 modal hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -135,194 +150,267 @@
 		<?php endif;?>
 		</div-->
 
-		<div class="truncate whitespace-normal mx-auto min-h-[300px] bg-contain bg-no-repeat bg-right-top bg-[#f1f8fe] top-div-bg" style="">
+		<style>
+			.parent-form-container{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 50px 10px 10px 10px;
+
+				/* padding: 25px 30px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px; */
+				background: linear-gradient(to right, #009bff , #32d0d1);
+				/* background: #f1f8fe; */
+			}
+			.form-container{
+				max-width: 800px;
+				width: 100%;
+				background: #fff;
+				padding: 25px 30px;
+				border-radius: 5px;
+			}
+			.form-container form .form-body{
+				display: flex;
+				flex-wrap: wrap;
+				margin: 15px 0 15px 0;
+				justify-content: space-between;
+			}
+			form .form-body .input-box,
+			form .form-body .input-box-md{
+				margin-bottom: 15px;
+				width: calc(100% / 2 - 20px);
+			}
+			form .form-body .input-box-full{
+				margin-bottom: 15px;
+				width: 100%;
+			}
+			form .form-body input{
+				height: 45px;
+				width: 100%;
+				outline: none;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				padding-left: 15px;
+				border-bottom-width: 2px;
+			}
+			.form-body .input-box input:focus,
+			.form-body .input-box input:valid{
+				border-color: #32d0d1;
+			}
+			@media (max-width: 584px) {
+				.form-container{
+					max-width: 100%;
+				}
+				form .form-body .input-box{
+					margin-bottom: 15px;
+					width: 100%;
+				}
+			}
+			@media (max-width: 768px) {
+				form .form-body .input-box-md{
+					margin-bottom: 15px;
+					width: 100%;
+				}
+			}
+		</style>
+
+		<div class="container mx-auto px-5 mb-20">
+		<div class="truncate whitespace-normal mx-auto min-h-[200px] lg:min-h-[300px] bg-cover bg-no-repeat bg-center bg-[#f1f8fe] top-div-bg" style="">
+		</div>
 		<!--Offer Form Start-->
-		<div class="flex flex-col justify-end pr-10 pl-20 panel-text max-w-[40rem]">
-			<div class="font-semibold text-2xl mb-2 mt-8">Let's get Started</div>
-			<div class="text-lg mb-5">Enter Your Details for Our <br> Expert Team to Contact You!</div>
-			<div>
+		<div class="parent-form-container">
+			<div class="form-container">
+				<div class="font-semibold text-2xl mb-2 text-center">Let's get Started</div>
+				<div class="text-lg mb-10 text-center">Enter Your Details for Our Expert Team to Contact You!</div>
 				<form autocomplete="on" id="offers">
-					<div class="font-semibold text-sm mb-1">Do You have Gas Ducted Heating & Cooling System</div>
-					<div class="flex mb-4">
-						<label class="flex items-center mb-2 py-1 mr-5 text-sm" for="yes_hcs">
-							<input type="radio" class="mr-2" id="yes_hcs" value="yes_hcs" name="hcs"
-								checked>
-							<span>Yes</span>
-						</label>
-						<label class="flex items-center mb-2 py-1 text-sm" for="no_hcs">
-							<input type="radio" class="mr-2" id="no_hcs" value="no_hcs"
-								name="hcs">
-							<span>No</span>
-						</label>
-					</div>
-					<div class="font-semibold text-sm mb-1">Do You have Gas Hot Water Systems</div>
-					<div class="flex mb-4">
-						<label class="flex items-center mb-2 py-1 mr-5 text-sm" for="yes_hws">
-							<input type="radio" class="mr-2" id="yes_hws" value="yes_hws" name="hws"
-								checked>
-							<span>Yes</span>
-						</label>
-						<label class="flex items-center mb-2 py-1 text-sm" for="no_hws">
-							<input type="radio" class="mr-2" id="no_hws" value="no_hws"
-								name="hws">
-							<span>No</span>
-						</label>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="no_of_bedrooms">
-							<div class="mb-2 font-semibold text-sm">No. of Bedrooms<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_bedrooms" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
-						</label>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="no_of_members">
-							<div class="mb-2 font-semibold text-sm">No. of Family Members<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="no_of_members" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
-						</label>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="full_name">
-							<div class="mb-2 font-semibold text-sm">Full Name<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
-						</label>
-					</div>
-					<div class="flex flex-col gap-x-4 mb-4 email-block">
-						<div class="emailOTPSpace">
-							<label class="mb-2 w-3/5" for="email">
-								<div class="mb-2 font-semibold text-sm">Email ID<span class="required-field">*</span></div>
-								<div class="flex">
-									<input class="border-shadow mb-2 p-2 w-full" type="email" name="email" required oninvalid="this.setCustomValidity('Please enter a valid Email')" oninput="this.setCustomValidity('')"/>
-									<a
-										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-email disabled-link">Edit
-										Email</a>
-									<a
-										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 otp-email">Get
-										OTP</a>
+						<div class="form-body">
+								<div class="input-box">
+									<div class="font-semibold text-sm">Do You have Gas Ducted Heating & Cooling System<span class="required-field">*</span></div>
+									<div class="flex">
+										<label class="flex items-center py-1 mr-5 text-sm" for="yes_hcs">
+											<input type="radio" class="mr-2" id="yes_hcs" value="yes" name="hcs"
+												checked>
+											<span>Yes</span>
+										</label>
+										<label class="flex items-center py-1 text-sm" for="no_hcs">
+											<input type="radio" class="mr-2" id="no_hcs" value="no"
+												name="hcs">
+											<span>No</span>
+										</label>
+									</div>
 								</div>
-							</label>
+								<div class="input-box">
+									<div class="font-semibold text-sm">Do You have Gas Hot Water Systems<span class="required-field">*</span></div>
+									<div class="flex">
+										<label class="flex items-center py-1 mr-5 text-sm" for="yes_hws">
+											<input type="radio" class="mr-2" id="yes_hws" value="yes" name="hws"
+												checked>
+											<span>Yes</span>
+										</label>
+										<label class="flex items-center py-1 text-sm" for="no_hws">
+											<input type="radio" class="mr-2" id="no_hws" value="no"
+												name="hws">
+											<span>No</span>
+										</label>
+									</div>
+								</div>
+								<div class="input-box">
+									<label class="mb-2" for="no_of_bedrooms">
+										<div class="mb-2 font-semibold text-sm">No. of Bedrooms<span class="required-field">*</span></div>
+										<input class="" type="number" name="no_of_bedrooms" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+									</label>
+								</div>
+								<div class="input-box">
+									<label class="mb-2" for="no_of_members">
+										<div class="mb-2 font-semibold text-sm">No. of Family Members<span class="required-field">*</span></div>
+										<input class="" type="number" name="no_of_members" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+									</label>
+								</div>
+								<div class="input-box-full">
+									<label class="mb-2 flex-1" for="full_name">
+										<div class="mb-2 font-semibold text-sm">Full Name<span class="required-field">*</span></div>
+										<input class="border-shadow mb-2 p-2 w-full" type="text" name="full_name" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+									</label>
+								</div>
+								<div class="input-box-md email-block">
+									<div class="flex flex-col emailOTPSpace">
+										<label class="mb-2 flex-1" for="email">
+											<div class="mb-2 font-semibold text-sm">Email ID<span class="required-field">*</span></div>
+											<div class="flex">
+												<input class="mb-2" type="email" name="email" required oninvalid="this.setCustomValidity('Please enter a valid Email')" oninput="this.setCustomValidity('')"/>
+												<a
+													class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 mr-1 edit-otp-email disabled-link">Edit
+													Email</a>
+												<a
+													class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 otp-email">Get
+													OTP</a>
+											</div>
+										</label>
+									</div>
+									<div class="flex flex-col emailValidateOTPSpace">
+										<label class="mb-2 flex-1" for="OTP-Email">
+											<div class="mb-2 font-semibold text-sm">Enter Email OTP</div>
+											<div class="flex justify-between mb-2 otp-container">
+												<input required id="OTP-Email"
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<a class="bg-blue flex items-center cursor-pointer text-white px-4 validate-email-otp">Validate OTP</a>
+											</div>
+											<div class="resend-email text-center">
+												<span class="remaining-time text-blue font-semibold cursor-pointer"></span>
+											</div>
+										</label>
+									</div>
+								</div>					
+								<div class="input-box-md phone-block">
+									<div class="flex flex-col mobileOTPSpace">
+										<label class="mb-2 flex-1" for="phone">
+											<div class="mb-2 font-semibold text-sm">Mobile Number<span class="required-field">*</span></div>
+											<div class="flex">
+												<span title=""
+													class="cursor-pointer border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb] country-code">+61</span>
+												<input class="border-shadow mb-2 p-2 w-full" type="number" id="phone"
+													name="phone" maxlength="9" required/>
+												<a
+													class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 mr-1 edit-otp-number disabled-link">Edit
+													Mobile</a>
+												<a
+													class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 otp-number">Get
+													OTP</a>
+											</div>
+										</label>
+									</div>
+									<div class="flex flex-col mobileValidateOTPSpace">
+										<label class="mb-2 flex-1" for="OTP-Mobile">
+											<div class="mb-2 font-semibold text-sm">Enter Mobile OTP</div>
+											<div class="flex justify-between mb-2 otp-container">
+												<input required id="OTP-Mobile"
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<input required
+													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													type="text" inputmode="numeric" maxlength="1" />
+												<a class="bg-blue flex items-center cursor-pointer text-white px-4 validate-phone-otp">Validate OTP</a>
+											</div>
+											<div class="resend-mobile text-center">
+												<span class="remaining-time text-blue font-semibold cursor-pointer"></span>
+											</div>
+										</label>
+									</div>
+								</div>							
+								<div class="input-box">
+									<label class="mb-2 flex-1" for="street">
+										<div class="mb-2 font-semibold text-sm">Street<span class="required-field">*</span></div>
+										<input class="" type="text" name="street" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+									</label>
+								</div>
+								<div class="input-box">
+									<label class="mb-2 flex-1" for="city">
+										<div class="mb-2 font-semibold text-sm">City<span class="required-field">*</span></div>
+										<input class="" type="text" name="city" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+									</label>
+								</div>
+								<div class="input-box">
+									<label class="mb-2 flex-1" for="state">
+										<div class="mb-2 font-semibold text-sm">State<span class="required-field">*</span></div>
+										<input class="" type="text" name="state" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+									</label>
+								</div>
+								<div class="input-box">
+									<label class="mb-2 flex-1" for="postcode">
+										<div class="mb-2 font-semibold text-sm">Postcode<span class="required-field">*</span></div>
+										<input class="" type="number" name="postcode" required>
+									</label>
+								</div>
 						</div>
-						<div class="emailValidateOTPSpace">
-							<label class="mb-2 w-2/5" for="OTP-Email">
-								<div class="mb-2 font-semibold text-sm">Enter Email OTP</div>
-								<div class="flex justify-between mb-2 otp-container">
-									<input required id="OTP-Email"
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<a class="bg-blue flex items-center cursor-pointer text-white px-4 shrink-0 validate-email-otp">Validate OTP</a>
-								</div>
-								<div class="resend-email text-center">
-									<span class="remaining-time text-blue font-semibold cursor-pointer"></span>
-								</div>
-							</label>
+						<div class="relative pb-8">
+							<input class="bg-blue p-2 text-white w-[100%] md:w-[50%] rounded-[0.375rem] sub-mit" type="submit"
+								value="Submit">
+							<div class="loader">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+									<path
+										d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z" />
+								</svg>
+							</div>
 						</div>
-					</div>					
-					<div class="flex flex-col gap-x-4 mb-4 phone-block">
-						<div class="mobileOTPSpace">
-							<label class="mb-2 w-3/5" for="phone">
-								<div class="mb-2 font-semibold text-sm">Mobile Number<span class="required-field">*</span></div>
-								<div class="flex">
-									<span title=""
-										class="cursor-pointer border-shadow mb-2 p-2 bg-white border-r-2 border-[#d6e9fb] country-code">+61</span>
-									<input class="border-shadow mb-2 p-2 w-full" type="number" id="phone"
-										name="phone" maxlength="9" required/>
-									<a
-										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 mr-1 edit-otp-number disabled-link">Edit
-										Mobile</a>
-									<a
-										class="bg-blue flex items-center cursor-pointer text-white mb-2 px-4 shrink-0 otp-number">Get
-										OTP</a>
-								</div>
-							</label>
+						<div class="error-message text-center py-4">
+							<div class="messages"></div>
 						</div>
-						<div class="mobileValidateOTPSpace">
-							<label class="mb-2 w-2/5" for="OTP-Mobile">
-								<div class="mb-2 font-semibold text-sm">Enter Mobile OTP</div>
-								<div class="flex justify-between mb-2 otp-container">
-									<input required id="OTP-Mobile"
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<input required
-										class="w-[30px] p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
-										type="text" inputmode="numeric" maxlength="1" />
-									<a class="bg-blue flex items-center cursor-pointer text-white px-4 shrink-0 validate-phone-otp">Validate OTP</a>
-								</div>
-								<div class="resend-mobile text-center">
-									<span class="remaining-time text-blue font-semibold cursor-pointer"></span>
-								</div>
-							</label>
-						</div>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="street">
-							<div class="mb-2 font-semibold text-sm">Street<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="street" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
-						</label>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="city">
-							<div class="mb-2 font-semibold text-sm">City<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="city" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
-						</label>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="state">
-							<div class="mb-2 font-semibold text-sm">State<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="text" name="state" required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
-						</label>
-					</div>
-					<div class="mb-4">
-						<label class="mb-2" for="postcode">
-							<div class="mb-2 font-semibold text-sm">Postcode<span class="required-field">*</span></div>
-							<input class="border-shadow mb-2 p-2 w-full" type="number" name="postcode" required>
-						</label>
-					</div>
-					<div class="relative">
-						<input class="bg-blue p-2 text-white w-full rounded-[0.375rem]" type="submit"
-							value="Submit">
-						<div class="loader">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-								<path
-									d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z" />
-							</svg>
-						</div>
-					</div>
-					<div class="error-message text-center py-4">
-						<div class="messages"></div>
-					</div>
 				</form>
 			</div>
 		</div>
 		<!--Offer Form End-->
-		</div>
 		<div class="grid grid-cols-3 gap-4 bg-gradient p-6 text-center text-white font-bold rounded-br-curve  md:mb-40 mb-20">
 		
+		</div>
 		</div>
 		<style>
 			a.more-link {
@@ -490,7 +578,6 @@
                                 `OTP has been sent to ${document.querySelector('input[name="company_owner.email"]').value}`);
                             })
                         }
-						console.log("email interval cnt: "+window.emailIntervalCount);
 						clearInterval(window.emailInterval);
                         window.emailInterval = setInterval(() => {
                             if (window.emailIntervalCount == 0) {
@@ -529,7 +616,7 @@
                     }
 
 					let error_message = document.forms.offers.querySelector(".error-message>.messages");
-					function sendMail() {console.log("Send Email");
+					function sendMail() {
 						let form = event.target;
                         let loader = form.querySelector(".loader");
 						var params = {
@@ -615,9 +702,7 @@
                     }
 
 					//Enable Email Edit
-					document.querySelector(".edit-otp-email").addEventListener("click", (s) => {console.log("Edit Email OTP");
-						// console.log("here");
-						
+					document.querySelector(".edit-otp-email").addEventListener("click", (s) => {						
 						document.querySelector('input[name="email"]').removeAttribute("readonly");
 						document.querySelector(".otp-email").classList.remove("disabled-link");
 						document.querySelector(".validate-email-otp").classList.remove("disabled-link");
@@ -629,13 +714,10 @@
 						formState.emailOtpValidated = false;
 						document.querySelectorAll('[for="OTP-Email"] input').forEach(k => {
 							k.value = "";
-						})
-					// 	document.querySelectorAll('[for="OTP-Email"] input').forEach(k => {
-					// 	   formState.emailOtp += k.value;
-					//    })
+						})					
 					});
 					//Enable Phone Edit
-					document.querySelector(".edit-otp-number").addEventListener("click", (s) => {console.log("Edit Phone OTP");
+					document.querySelector(".edit-otp-number").addEventListener("click", (s) => {
 						document.querySelector('input[name="phone"]').removeAttribute("readonly");
 						document.querySelector(".otp-number").classList.remove("disabled-link");
 						document.querySelector(".validate-phone-otp").classList.remove("disabled-link");
@@ -650,11 +732,10 @@
 						})
 					});
 
-                    document.querySelector(".otp-email").addEventListener("click", (s) => {console.log("Generate Email OTP");
+                    document.querySelector(".otp-email").addEventListener("click", (s) => {
                         // if (formState?.emailOtpSent) {
                         //     return;
                         // }
-						console.log("generate email otp");
                         if (document.querySelector('input[name="email"]').reportValidity()) {
                             // send otp
                             s.target.setAttribute("disabled", true);
@@ -678,13 +759,12 @@
                         }
                     })
 
-					document.querySelector(".validate-email-otp").addEventListener("click", (s) => {console.log("Validate Email OTP");
+					document.querySelector(".validate-email-otp").addEventListener("click", (s) => {
                        
 					   formState.emailOtp = "";
 					   document.querySelectorAll('[for="OTP-Email"] input').forEach(k => {
 						   formState.emailOtp += k.value;
 					   })
-					   console.log(formState.emailOtp);
 					   if (document.querySelector('input[name="email"]').reportValidity() && (!isNaN(formState.emailOtp) && formState.emailOtp.toString().length == 6)) {
 						   // validate otp
 						   // s.target.setAttribute("disabled", true);
@@ -697,14 +777,13 @@
 							//    addFormError(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`);
 							   addEmailMessage(1, `OTP for ${document.querySelector('input[name="email"]').value} has been validated successfully`, document.forms.offers.querySelector(".emailValidateOTPSpace"), "validateemailotpMsgBlock");
 								
-						   }).catch(err => {console.log("failure");
+						   }).catch(err => {
 							//    addFormError(1,`There was an error validating email OTP, please contact support`);
 							   addEmailMessage(1, `There was an error validating email OTP, please contact support`, document.forms.offers.querySelector(".emailValidateOTPSpace"), "validateemailotpMsgBlock");
 							   console.log(err)
 						   })
 					   } else {
 							let element = document.querySelector('input[id="OTP-Email"]');
-							console.log('formState.emailOtp', formState.emailOtp);
 							if (!formState.emailOtp) {
 								element.setCustomValidity("Please Validate/Enter Email OTP");
 								element.reportValidity()
@@ -715,8 +794,7 @@
 					   }
 				   })
 
-                    document.querySelector(".otp-number").addEventListener("click", (s) => {console.log("Generate Phone OTP");
-						// console.log(formState.selectedCountry, formState.selectedCountryName);
+                    document.querySelector(".otp-number").addEventListener("click", (s) => {
                         let element = document.querySelector('input[name="phone"]');						
                         if (!formState.selectedCountry) {
                             element.setCustomValidity("Please Select a country code");
@@ -728,7 +806,6 @@
                         // if (formState?.mobileOtpSent) {
                         // 	return;
                         // }
-						console.log("length: "+ element.value.toString().length);
 						let phonePattern = new RegExp("^[0-9]{9}$");
 						let testPattern = phonePattern.test(element.value);
 						if(element.value.toString().length < 7) {
@@ -765,7 +842,7 @@
                         }
                     })
 
-				   document.querySelector(".validate-phone-otp").addEventListener("click", (s) => {console.log("validate Phone OTP");                       
+				   document.querySelector(".validate-phone-otp").addEventListener("click", (s) => {
 					   	formState.mobileOtp = "";
 					   	document.querySelectorAll('[for="OTP-Mobile"] input').forEach(k => {
 							formState.mobileOtp += k.value;
@@ -791,9 +868,7 @@
 							})            
                         } else {
 							let element = document.querySelector('input[id="OTP-Mobile"]');
-							console.log('formState.mobileOtp', formState.mobileOtp);
 							if (!formState.mobileOtp) {
-								console.log('formState.mobileOtpp', formState.mobileOtp);
 								element.setCustomValidity("Please Validate/Enter Mobile OTP");
 								element.reportValidity()
 								return;
@@ -808,6 +883,7 @@
 					function addEmailMessage(id, msg, parentEle, otpMsgBlock, fontcolor="text-black") {						
                         let html = document.createElement("div");
                         html.classList.add("font-light")
+                        html.classList.add("text-sm")
                         html.classList.add(fontcolor)
                         html.classList.add("mb-2")
                         html.classList.add(otpMsgBlock)
@@ -828,14 +904,10 @@
                    
                     gsap.registerPlugin(ScrollTrigger);
 
-                    document.forms.offers.addEventListener("submit", (event) => {console.log("final submit");
+                    document.forms.offers.addEventListener("submit", (event) => {
                         console.log(formState)
                         event.preventDefault();
-						//
-						// document.querySelectorAll(".emailotpMsgBlock").forEach(s => s.remove());
-						// document.querySelectorAll(".validateemailotpMsgBlock").forEach(s => s.remove());
-						// document.querySelectorAll(".phoneotpMsgBlock").forEach(s => s.remove());
-						// document.querySelectorAll(".validatephoneotpMsgBlock").forEach(s => s.remove());
+						
                         if (!formState.emailOtpSent || !formState.mobileOtpSent) {
                             addFormError(999, 'You need to enter the OTP sent to your mobile and email', "font-red");
                             return;
@@ -866,26 +938,7 @@
                             company_landline: "",
                             company_name: "",
                             company_email: "",
-                        };
-                        // for (const [key, value] of output) {
-                        //     let ownerObj = key.match(/(?:owner.)(.+)/);
-                        //     let addressObj = key.match(/(?:address.)(.+)/);
-                        //     let companyObj = key.match(/(?:company\.)(.+)/);
-                        //     if (!!ownerObj) {
-                        //         payload["company_owner"][`${ownerObj[1]}`] = value
-                        //         continue;
-                        //     }
-                        //     if (!!addressObj) {
-                        //         payload["address"][addressObj[1]] = value;
-                        //         continue;
-                        //     }
-                        //     if (!!companyObj) {
-                        //         payload["company"][companyObj[1]] = value;
-                        //         continue;
-                        //     }
-                        //     payload[key] = value;
-                        // }
-                        // payload.company_owner.phone = formState.selectedCountry + payload.company_owner.phone
+                        };                       
                         payload.phone = formState.selectedCountry + document.querySelector('input[name="phone"]').value
                         loader.classList.toggle("active")
 						console.log(payload);
