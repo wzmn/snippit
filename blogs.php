@@ -222,7 +222,7 @@
 		<div class="parent-form-container">
 			<div class="form-container">
 				<div class="font-semibold text-2xl mb-2 text-center">Let's get Started</div>
-				<div class="text-lg mb-10 text-center">Enter Your Details for Our Expert Team to Contact You!</div>
+				<div class="text-lg mb-10 text-center">Let's Get Started! Fill in Your Details for Expert Assistance.</div>
 				<form autocomplete="on" id="offers">
 						<div class="form-body">
 								<div class="input-box">
@@ -293,22 +293,22 @@
 											<div class="mb-2 font-semibold text-sm">Enter Email OTP</div>
 											<div class="flex justify-between mb-2 otp-container">
 												<input required id="OTP-Email"
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<a class="bg-blue flex items-center cursor-pointer text-white px-4 validate-email-otp">Validate OTP</a>
 											</div>
@@ -341,22 +341,22 @@
 											<div class="mb-2 font-semibold text-sm">Enter Mobile OTP</div>
 											<div class="flex justify-between mb-2 otp-container">
 												<input required id="OTP-Mobile"
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<input required
-													class="w-[30px] md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
+													class="w-[30px] mr-1 md:p-2 bg-[#cddded] text-center focus:outline-none focus:ring"
 													type="text" inputmode="numeric" maxlength="1" />
 												<a class="bg-blue flex items-center cursor-pointer text-white px-4 validate-phone-otp">Validate OTP</a>
 											</div>
@@ -643,7 +643,7 @@
 								error_message.querySelectorAll("div").forEach(s => s.remove())
 								if(res.status == 200){									
 									form.classList.remove("has-error");
-                                    addFormError(1, "Form submitted sucessfully.");
+                                    addFormError(1, "Form Submitted Successfully! Our representative will contact you shortly.");
                                     form.reset();
 									document.querySelector('input[name="email"]').removeAttribute("readonly");
 									document.querySelector('input[name="phone"]').removeAttribute("readonly");
