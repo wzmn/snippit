@@ -402,7 +402,7 @@
 												<li><a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a></li>
 											</ul>
 										
-											<span class="required-field">
+											<span class="required-field text-sm">
 												<input type="checkbox" id="tnc" name="tnc" value="company_tnc" class="tnc-checkbox" style="height:auto;width:auto;" required>
 											<!-- <div class="mb-2 font-semibold text-sm">I agree to the terms and conditions as set out by the User Agreement and Privacy Policy<span class="required-field">*</span></div> -->
 											I agree to the terms and conditions as set out by the User Agreement and Privacy Policy*</span>
