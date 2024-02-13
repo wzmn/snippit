@@ -213,6 +213,10 @@
 					width: 100%;
 				}
 			}
+			input .tnc-checkbox{
+				height: auto;
+				width:auto;
+			}
 		</style>
 
 		<div class="container mx-auto px-5 mb-20">
@@ -388,6 +392,21 @@
 									<label class="mb-2 flex-1" for="postcode">
 										<div class="mb-2 font-semibold text-sm">Postcode<span class="required-field">*</span></div>
 										<input class="" type="number" name="postcode" required>
+									</label>
+								</div>
+								<div class="input-box">
+									<label class="mb-2 flex-1" for="tnc">
+										<div class="flex flex-col">
+											<ul class="list-none">
+												<li><a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/privacy-policy/', OBJECT, 'page')->ID);?>">Privacy Policy</a></li>
+												<li><a target="_blank" href="<?php echo get_post_permalink(get_page_by_path('/user-agreement/', OBJECT, 'page')->ID);?>">User Agreement</a></li>
+											</ul>
+										
+											<span class="required-field">
+												<input type="checkbox" id="tnc" name="tnc" value="company_tnc" class="tnc-checkbox" style="height:auto;width:auto;" required>
+											<!-- <div class="mb-2 font-semibold text-sm">I agree to the terms and conditions as set out by the User Agreement and Privacy Policy<span class="required-field">*</span></div> -->
+											I agree to the terms and conditions as set out by the User Agreement and Privacy Policy*</span>
+										</div>
 									</label>
 								</div>
 						</div>
