@@ -461,3 +461,15 @@
 	</script>
 	<?php wp_footer();?>
 </body>
+<script>
+  var x = 0;
+  var timer = setInterval(function() {
+    if (jQuery('.text-black').is(':visible')) {
+      if (x == 0) {
+        gtag('event', 'conversion', {'send_to': 'AW-11483890180/Zjn8CMj-hZIZEISE-eMq'});
+        x = 1;
+      }
+      clearInterval(timer)
+    }
+  })
+</script>
